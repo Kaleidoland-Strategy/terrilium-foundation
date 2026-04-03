@@ -1,77 +1,89 @@
 :root {
-    --vantablack: #050505;
-    --blood-red: #8A0303;
-    --grey-vanta: #111111;
-    --pure-white: #ffffff;
+    --brique-soft: #f4f1ee;
+    --bleu-travail: #1a2a44;
+    --or-lumiere: #d4af37;
+    --text-dark: #2d2d2d;
+    --white: #ffffff;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--vantablack);
-    color: var(--pure-white);
-    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--brique-soft);
+    color: var(--text-dark);
+    line-height: 1.7;
 }
 
-/* NAVIGATION EDGE-TO-EDGE */
-header {
-    background: rgba(5, 5, 5, 0.95);
-    padding: 25px 2%;
-    position: fixed;
-    width: 100%;
+/* NAVIGATION HUMAINE */
+nav {
+    padding: 20px 5%;
+    background: white;
+    position: sticky;
     top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid var(--blood-red);
+    z-index: 100;
 }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+.logo { font-weight: 800; letter-spacing: 2px; color: var(--bleu-travail); }
+nav ul { display: flex; list-style: none; gap: 30px; align-items: center; }
+nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.9rem; }
+.btn-nav { background: var(--bleu-travail); color: white; padding: 10px 20px; border-radius: 5px; }
 
-.edge-nav { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; }
-.logo span { color: var(--blood-red); }
-.edge-nav ul { display: flex; list-style: none; gap: 50px; }
-.edge-nav a { text-decoration: none; color: white; font-weight: 300; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
-
-/* HERO VANTABLACK */
-.hero-vanta {
-    height: 100vh;
+/* HERO : Doux et puissant */
+.hero {
+    height: 80vh;
     display: flex;
     align-items: center;
-    padding-left: 5%;
-    background: radial-gradient(circle at 20% 50%, #1a0000 0%, var(--vantablack) 100%);
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('votre-photo-terril.jpg') center/cover;
+    padding: 0 5%;
 }
+.tag { text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: var(--or-lumiere); font-weight: 700; }
+.hero h1 { font-size: 3.5rem; color: var(--bleu-travail); margin: 20px 0; line-height: 1.1; }
+.hero h1 span { font-family: 'Lora', serif; font-style: italic; font-weight: 400; }
+.hero p { max-width: 600px; margin: 0 auto 30px; font-size: 1.2rem; opacity: 0.8; }
 
-.hero-inner h1 { font-size: 6rem; line-height: 0.9; font-weight: 900; margin-bottom: 20px; }
-.blood-text { color: var(--blood-red); }
+/* MANIFESTE */
+.container-narrow { max-width: 800px; margin: 0 auto; padding: 100px 5%; }
+.dropcap { font-size: 1.4rem; margin-bottom: 40px; }
+.dropcap::first-letter { font-size: 4rem; float: left; padding-right: 15px; color: var(--or-lumiere); font-weight: 800; line-height: 1; }
 
-/* SECTIONS PLEINE LARGEUR */
-.vanta-section { padding: 120px 5%; border-bottom: 1px solid #111; }
-.full-content { width: 100%; }
-.bg-dark-grey { background-color: var(--grey-vanta); }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
+.story-item h3 { color: var(--or-lumiere); margin-bottom: 15px; }
 
-.dual-column { display: grid; grid-template-columns: 1.5fr 1fr; gap: 100px; align-items: center; }
-.blood-line { border-left: 4px solid var(--blood-red); padding-left: 20px; margin-bottom: 30px; font-size: 2.5rem; }
+.vision-box {
+    background: var(--bleu-travail);
+    color: white;
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+}
+.vision-box h2 { font-family: 'Lora', serif; font-size: 2.5rem; margin-bottom: 20px; }
 
-.big-stats { display: flex; gap: 50px; }
-.stat span { font-size: 4rem; font-weight: 900; display: block; }
-.stat label { font-size: 0.7rem; letter-spacing: 3px; color: #444; }
+/* CARDS MISSIONS */
+.missions { background: white; padding: 100px 5%; }
+.mission-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 50px auto; }
+.m-card { padding: 40px; border: 1px solid #eee; border-radius: 15px; transition: 0.3s; }
+.m-card:hover { border-color: var(--or-lumiere); transform: translateY(-5px); }
+.m-icon { font-size: 2.5rem; margin-bottom: 20px; }
 
-/* BENTO GRID NOIR */
-.bento-vanta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--blood-red); border: 1px solid var(--blood-red); }
-.vanta-card { background: var(--vantablack); padding: 60px; transition: 0.4s; }
-.vanta-card:hover { background: #0a0a0a; }
-.vanta-card.active { border: 1px solid var(--blood-red); }
-.card-head { font-weight: 900; font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+/* CTA SECTION */
+.cta-section { text-align: center; }
+.action-steps { text-align: left; margin: 40px 0; }
+.step { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; }
+.step span { background: var(--or-lumiere); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 800; }
 
-.blood-dots { list-style: none; margin-top: 30px; }
-.blood-dots li::before { content: "•"; color: var(--blood-red); margin-right: 10px; }
+.btn-main, .btn-final {
+    display: inline-block;
+    background: var(--or-lumiere);
+    color: white;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.btn-main:hover, .btn-final:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-/* MAP FULL WIDTH */
-#map { height: 70vh; width: 100%; filter: grayscale(1) invert(1) contrast(1.2); }
-
-/* BOUTONS */
-.cta-blood { border: 1px solid var(--blood-red); padding: 10px 20px; color: var(--blood-red) !important; }
-.btn-vanta { background: var(--blood-red); color: white; padding: 20px 40px; text-decoration: none; font-weight: 900; }
-.btn-outline { border: 1px solid white; color: white; padding: 20px 40px; text-decoration: none; margin-left: 20px; }
-
-footer { padding: 80px 5%; text-align: center; font-size: 0.7rem; letter-spacing: 4px; color: #333; }
-.blood-link { color: var(--blood-red); text-decoration: none; display: block; margin-top: 10px; font-size: 1rem; letter-spacing: 0; }
+footer { padding: 50px; text-align: center; opacity: 0.5; font-size: 0.8rem; }
