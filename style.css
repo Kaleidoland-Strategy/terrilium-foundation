@@ -1,8 +1,8 @@
 :root {
-    --brique-soft: #f4f1ee;
-    --bleu-travail: #1a2a44;
-    --or-lumiere: #d4af37;
-    --text-dark: #2d2d2d;
+    --lens-red: #B30838;    /* Rouge RCL */
+    --lens-gold: #FFB800;   /* Or RCL */
+    --vanta-tint: #0D0D0D;  /* Pour les contrastes forts */
+    --soft-bg: #F9F7F2;     /* Fond brique très clair */
     --white: #ffffff;
 }
 
@@ -10,80 +10,91 @@
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--brique-soft);
-    color: var(--text-dark);
-    line-height: 1.7;
+    background-color: var(--soft-bg);
+    color: var(--vanta-tint);
+    line-height: 1.8;
 }
 
-/* NAVIGATION HUMAINE */
+/* NAVIGATION */
 nav {
+    background: var(--white);
     padding: 20px 5%;
-    background: white;
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 3px solid var(--lens-gold);
 }
-.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-.logo { font-weight: 800; letter-spacing: 2px; color: var(--bleu-travail); }
-nav ul { display: flex; list-style: none; gap: 30px; align-items: center; }
-nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.9rem; }
-.btn-nav { background: var(--bleu-travail); color: white; padding: 10px 20px; border-radius: 5px; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+.logo { font-weight: 800; font-size: 1.5rem; color: var(--lens-red); }
+.logo span { color: var(--lens-gold); }
+nav ul { display: flex; list-style: none; gap: 40px; align-items: center; }
+nav a { text-decoration: none; color: var(--vanta-tint); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+.btn-nav { background: var(--lens-red); color: white !important; padding: 12px 25px; border-radius: 4px; }
 
-/* HERO : Doux et puissant */
+/* HERO */
 .hero {
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('votre-photo-terril.jpg') center/cover;
     padding: 0 5%;
 }
-.tag { text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: var(--or-lumiere); font-weight: 700; }
-.hero h1 { font-size: 3.5rem; color: var(--bleu-travail); margin: 20px 0; line-height: 1.1; }
-.hero h1 span { font-family: 'Lora', serif; font-style: italic; font-weight: 400; }
-.hero p { max-width: 600px; margin: 0 auto 30px; font-size: 1.2rem; opacity: 0.8; }
+.tag { font-weight: 800; color: var(--lens-red); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; }
+.hero h1 { font-size: 4rem; color: var(--vanta-tint); margin: 25px 0; line-height: 1.1; }
+.lens-gradient { color: var(--lens-red); }
 
 /* MANIFESTE */
-.container-narrow { max-width: 800px; margin: 0 auto; padding: 100px 5%; }
-.dropcap { font-size: 1.4rem; margin-bottom: 40px; }
-.dropcap::first-letter { font-size: 4rem; float: left; padding-right: 15px; color: var(--or-lumiere); font-weight: 800; line-height: 1; }
+.container-narrow { max-width: 900px; margin: 0 auto; padding: 100px 5%; }
+.dropcap::first-letter { font-size: 4.5rem; float: left; padding-right: 15px; color: var(--lens-red); font-weight: 800; line-height: 1; }
+.section-subtitle { font-family: 'Lora', serif; font-size: 2.5rem; color: var(--lens-red); margin-bottom: 20px; }
 
-.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; }
-.story-item h3 { color: var(--or-lumiere); margin-bottom: 15px; }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin: 60px 0; }
+.story-item h3 { color: var(--lens-gold); margin-bottom: 15px; border-bottom: 2px solid var(--lens-red); display: inline-block; }
 
 .vision-box {
-    background: var(--bleu-travail);
+    background: var(--lens-red);
     color: white;
     padding: 60px;
-    border-radius: 20px;
-    text-align: center;
+    border-radius: 4px; /* Côté industriel, plus carré */
+    border-right: 15px solid var(--lens-gold);
 }
-.vision-box h2 { font-family: 'Lora', serif; font-size: 2.5rem; margin-bottom: 20px; }
+.vision-box h2 { font-family: 'Lora', serif; font-size: 2.2rem; margin-bottom: 20px; }
 
-/* CARDS MISSIONS */
+/* CARDS */
 .missions { background: white; padding: 100px 5%; }
 .mission-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 50px auto; }
-.m-card { padding: 40px; border: 1px solid #eee; border-radius: 15px; transition: 0.3s; }
-.m-card:hover { border-color: var(--or-lumiere); transform: translateY(-5px); }
-.m-icon { font-size: 2.5rem; margin-bottom: 20px; }
+.m-card { padding: 40px; border: 1px solid #eee; border-top: 5px solid var(--lens-red); }
+.m-card.highlight { border-top: 5px solid var(--lens-gold); background: #fffcf0; }
+.m-icon { font-size: 3rem; margin-bottom: 20px; }
 
-/* CTA SECTION */
-.cta-section { text-align: center; }
-.action-steps { text-align: left; margin: 40px 0; }
-.step { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; }
-.step span { background: var(--or-lumiere); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 800; }
-
+/* BOUTONS */
 .btn-main, .btn-final {
-    display: inline-block;
-    background: var(--or-lumiere);
+    background: var(--lens-red);
     color: white;
-    padding: 18px 40px;
+    padding: 20px 45px;
     text-decoration: none;
-    font-weight: 700;
-    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
     transition: 0.3s;
 }
-.btn-main:hover, .btn-final:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.btn-main:hover { background: var(--vanta-tint); transform: translateY(-3px); }
 
-footer { padding: 50px; text-align: center; opacity: 0.5; font-size: 0.8rem; }
+.btn-outline {
+    border: 2px solid var(--lens-red);
+    color: var(--lens-red);
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+/* CTA STEPS */
+.step span { background: var(--lens-gold); color: var(--vanta-tint); width: 35px; height: 35px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 800; }
+
+footer { padding: 80px; text-align: center; background: var(--vanta-tint); color: white; }
