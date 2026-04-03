@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="full-nav">
             <div class="logo">TERRILIUM</div>
             <ul>
                 <li><a href="#vision">Vision</a></li>
@@ -32,76 +32,69 @@
         </div>
     </section>
 
-    <section id="vision" class="section-padding">
-        <div class="container">
+    <section id="vision" class="full-section">
+        <div class="content-wrapper">
             <div class="vision-grid">
                 <div class="vision-text">
-                    <h2>Une ambition pour le territoire</h2>
-                    <p>Fondée par <strong>Clément Legrand</strong>, Terrilium est née d'une conviction profonde : transformer les cicatrices industrielles en gisements d'opportunités technologiques et culturelles.</p>
-                    <p>Nous ne nous contentons pas de préserver le passé ; nous utilisons l'intelligence artificielle pour redonner vie à nos friches, nos terrils et nos histoires, en créant des ponts entre la mémoire minière et le monde de demain.</p>
+                    <h2>Deux enfants du Bassin Minier</h2>
+                    <p>Fondée par <strong>Clément et Quentin</strong>, Terrilium est le fruit d'une amitié née sur les terrils. Enfants de ce territoire, nous avons vu ses cicatrices et ses promesses.</p>
+                    <p>Notre mission est de transformer cet héritage en un gisement d'opportunités. Nous utilisons l'IA et le numérique pour redonner vie à nos friches et créer un pont entre la mémoire ouvrière et l'innovation mondiale.</p>
                 </div>
-                <div class="vision-quote">
-                    <blockquote>"Le patrimoine de demain se construit avec l'intelligence d'aujourd'hui."</blockquote>
+                <div class="vision-stats">
+                    <div class="stat-item"><span>334</span><p>Terrils cartographiés</p></div>
+                    <div class="stat-item"><span>100%</span><p>Engagement local</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="missions" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center">Nos 3 Univers d'Action</h2>
+    <section id="missions" class="full-section bg-light">
+        <div class="content-wrapper">
+            <h2 class="section-title">Nos Missions Stratégiques</h2>
             <div class="bento-grid">
                 <div class="card mission-card">
-                    <div class="icon">🧠</div>
+                    <span class="icon">🧠</span>
                     <h3>Le Cerveau</h3>
-                    <h4>Stratégie & Accompagnement</h4>
-                    <p>Nous accompagnons les élus et les associations dans la conception de projets d'avenir. De la réhabilitation de friches au montage de dossiers de financement complexes, nous apportons la précision de l'ingénierie territoriale pour transformer les idées en réalités concrètes.</p>
-                    <ul class="mission-list">
+                    <p>Ingénierie territoriale & conseil. Nous transformons les friches en actifs via l'indice de Symbiose Territoriale (IST).</p>
+                    <ul>
                         <li>Audit de maturité numérique</li>
-                        <li>Montage de dossiers de subvention</li>
-                        <li>Indice de Symbiose Territoriale</li>
+                        <li>Montage de dossiers complexes</li>
+                        <li>Stratégie GAFAM / Territoire</li>
                     </ul>
                 </div>
-
-                <div class="card mission-card">
-                    <div class="icon">❤️</div>
+                <div class="card mission-card highlight">
+                    <span class="icon">❤️</span>
                     <h3>Le Cœur</h3>
-                    <h4>Studio de Création Multimédia</h4>
-                    <p>Parce qu'une bonne idée doit être vue et entendue, nous utilisons les meilleures IA mondiales pour produire des contenus mémorables. Nous racontons l'histoire des territoires à travers des films, des podcasts et des expériences immersives uniques.</p>
-                    <ul class="mission-list">
-                        <li>Vidéos et visuels augmentés</li>
+                    <p>Studio de création. Nous utilisons l'IA pour raconter l'histoire du bassin à travers des contenus immersifs.</p>
+                    <ul>
+                        <li>Vidéos & visuels augmentés</li>
                         <li>Podcasts narratifs</li>
-                        <li>Design d'espaces physiques</li>
+                        <li>Design d'expaces physiques</li>
                     </ul>
                 </div>
-
                 <div class="card mission-card">
-                    <div class="icon">🛠️</div>
+                    <span class="icon">🛠️</span>
                     <h3>Le Muscle</h3>
-                    <h4>Tech, Formation & Traduction</h4>
-                    <p>Le numérique doit être un levier, pas un obstacle. Nous installons les infrastructures nécessaires et formons les acteurs locaux via la <strong>Kaleidoland Academy</strong> pour que chacun puisse maîtriser les outils de demain en toute autonomie.</p>
-                    <ul class="mission-list">
-                        <li>Déploiement de systèmes IT</li>
+                    <p>Technologie & Formation. La <strong>Kaleidoland Academy</strong> démystifie l'IA pour les acteurs locaux.</p>
+                    <ul>
+                        <li>Infrastructures IT locales</li>
                         <li>Formation IA & Logiciels</li>
-                        <li>Communication sans frontières</li>
+                        <li>Traduction experte multi-langues</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="carte" class="section-padding">
-        <div class="container">
-            <h2 class="text-center">La Matrice des 334 Pépites</h2>
-            <p class="text-center">Explorez notre base de données unique recensant chaque terril du bassin pour des projets de revitalisation.</p>
-            <div id="map"></div>
-        </div>
+    <section id="carte" class="full-section">
+        <h2 class="section-title">La Matrice des 334 Pépites</h2>
+        <div id="map"></div>
     </section>
 
-    <footer class="section-padding">
-        <div class="container text-center">
+    <footer>
+        <div class="footer-content">
             <p>© 2026 Terrilium - Association Loi 1901. Propulsé par Lanazrion OS.</p>
-            <p><a href="mailto:clement@terrilium.org">clement@terrilium.org</a></p>
+            <p>Contact direct : <a href="mailto:clement@terrilium.org">clement@terrilium.org</a></p>
         </div>
     </footer>
 
