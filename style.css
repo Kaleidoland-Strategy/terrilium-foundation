@@ -2,66 +2,91 @@
     --deep-blue: #191970;
     --solar-orange: #FF8C00;
     --sky-white: #F0F8FF;
-    --glass-bg: rgba(255, 255, 255, 0.1);
+    --dark-text: #1a1a1a;
 }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--sky-white);
-    color: var(--deep-blue);
-    margin: 0;
+    background-color: white;
+    color: var(--dark-text);
+    line-height: 1.6;
 }
 
-h1, h2, .logo {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-}
+h1, h2, h3, .logo { font-family: 'Nunito', sans-serif; font-weight: 900; }
 
+/* NAVIGATION SANS MARGES INUTILES */
 header {
-    padding: 20px 5%;
     background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 20px 2%;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
-nav { display: flex; justify-content: space-between; align-items: center; }
-nav ul { display: flex; list-style: none; gap: 30px; }
-nav a { text-decoration: none; color: var(--deep-blue); font-weight: 600; }
+.full-nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.full-nav ul { display: flex; list-style: none; gap: 40px; }
+.full-nav a { text-decoration: none; color: var(--deep-blue); font-weight: 700; font-size: 0.95rem; }
 
+/* HERO SECTION IMMERSIVE */
 .hero {
-    height: 80vh;
-    background: linear-gradient(135deg, var(--deep-blue) 0%, #3a3a9b 100%);
-    color: white;
+    height: 90vh;
+    background: linear-gradient(rgba(25, 25, 112, 0.8), rgba(25, 25, 112, 0.8)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2070') no-repeat center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
     text-align: center;
+    padding: 0 5%;
 }
 
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
 .hero h1 span { color: var(--solar-orange); }
 
+/* CONTENEUR LARGE POUR LAPTOP */
+.content-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.full-section { padding: 100px 0; width: 100%; }
+.bg-light { background-color: var(--sky-white); }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: var(--deep-blue); }
+
+/* BENTO GRID OPTIMISÉE */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 5% ;
+    gap: 30px;
 }
 
 .card {
     background: white;
-    padding: 30px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
 }
 
-.item-large { grid-column: span 2; }
+.card:hover { transform: translateY(-10px); }
+.mission-card h3 { margin: 15px 0; font-size: 1.8rem; }
+.mission-card ul { margin-top: 20px; list-style: none; }
+.mission-card li { margin-bottom: 10px; font-weight: 600; color: #555; }
+.mission-card li::before { content: "→ "; color: var(--solar-orange); }
 
+/* CARTE PLEINE LARGEUR */
 #map {
-    height: 500px;
-    width: 90%;
-    margin: 40px auto;
-    border-radius: 24px;
-    border: 4px solid white;
+    height: 600px;
+    width: 100%;
+    margin-top: 20px;
 }
+
+/* BOUTONS */
+.btn-primary { background: var(--solar-orange); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; margin-right: 20px; }
+.btn-secondary { background: transparent; border: 2px solid white; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; }
+
+footer { background: var(--deep-blue); color: white; padding: 60px 0; text-align: center; }
+footer a { color: var(--solar-orange); text-decoration: none; font-weight: 700; }
