@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRILIUM | Clément & Quentin — Patrimoine & Innovation</title>
+    <title>TERRILIUM | Patrimoine & Innovation</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Lora:italic,wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-container">
-                <a href="index.html" class="logo-link">
-                    <img src="src/logo.jpg" alt="TERRILIUM Logo" class="main-logo">
-                </a>
-                <ul>
-                    <li><a href="#association">L'Association</a></li>
-                    <li><a href="#missions">Missions</a></li>
-                    <li><a href="#agir">Agir</a></li>
-                    <li><a href="mailto:clement@terrilium.org" class="btn-nav">Nous rejoindre</a></li>
-                </ul>
-            </div>
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="src/logo.jpg" alt="TERRILIUM Logo" class="main-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#association">L'Association</a></li>
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#agir">Agir</a></li>
+                <li><a href="mailto:clement@terrilium.org" class="btn-nav">Rejoindre</a></li>
+            </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-text">
+        <div class="container-center">
             <span class="tag">Association Loi 1901 — SIREN : 993257070</span>
-            <h1>Le Bassin Minier n'est pas un souvenir, <br><span class="highlight-text">c'est notre moteur d'avenir.</span></h1>
-            <p>Clément et Quentin s'unissent pour valoriser, préserver et faire rayonner le patrimoine industriel du Nord–Pas-de-Calais.</p>
+            <h1 class="balance-text">Le Bassin Minier n'est pas un souvenir, <br><span class="highlight-text">c'est notre moteur d'avenir.</span></h1>
+            <p class="hero-p">Clément et Quentin s'unissent pour valoriser, préserver et faire rayonner le patrimoine industriel du Nord–Pas-de-Calais.</p>
             <div class="hero-btns">
                 <a href="#association" class="btn-brique">Découvrir l'Objet</a>
                 <a href="#missions" class="btn-gold">Nos Moyens d'Action</a>
@@ -37,63 +35,60 @@
     </section>
 
     <section id="association" class="content-section">
-        <div class="container-narrow">
+        <div class="container-narrow text-center">
             <h2 class="section-title brique-border">Valoriser. Préserver. Rayonner.</h2>
             <p class="statuts-text">
-                L’association <strong>Terrilium – Cultures & Patrimoines</strong> a pour objet de valoriser le patrimoine industriel, naturel et culturel de notre région, notamment les sites des terrils, à travers des projets artistiques, éducatifs et solidaires. 
+                L’association <strong>Terrilium – Cultures & Patrimoines</strong> a pour objet de valoriser le patrimoine industriel, naturel et culturel de notre région, notamment les sites des terrils, à travers des projets artistiques, éducatifs et solidaires.
             </p>
             <p class="statuts-subtext">
-                Nous œuvrons à renforcer le lien entre <strong>mémoire ouvrière</strong>, <strong>création contemporaine</strong> et <strong>transition écologique</strong>, dans une démarche de transmission, d’inclusion et d’innovation sociale.
+                Nous œuvrons à renforcer le lien entre <strong>mémoire ouvrière</strong>, <strong>création contemporaine</strong> et <strong>transition écologique</strong>.
             </p>
         </div>
     </section>
 
     <section id="missions" class="missions-grid-section">
         <div class="container">
-            <h2 class="section-title gold-border">Moyens d'Action</h2>
+            <h2 class="section-title gold-border text-center">Moyens d'Action</h2>
             <div class="mission-cards">
                 <div class="m-card brique-card">
                     <div class="m-icon">⚒️</div>
                     <h3>Événementiel & Culture</h3>
-                    <p>Organisation d’expositions, performances, projections et concerts. Nous mettons en place des résidences d’artistes pour réinterpréter nos paysages de schiste.</p>
+                    <p>Organisation d’expositions et de résidences d’artistes pour réinterpréter nos paysages de schiste.</p>
                 </div>
-
                 <div class="m-card gold-card">
                     <div class="m-icon">🎥</div>
                     <h3>Audiovisuel & Immersif</h3>
-                    <p>Valorisation du patrimoine minier par des projets numériques, des podcasts narratifs et des installations interactives qui font vibrer l'histoire.</p>
+                    <p>Valorisation numérique et podcasts narratifs qui font vibrer l'histoire du territoire.</p>
                 </div>
-
                 <div class="m-card brique-card">
                     <div class="m-icon">🤝</div>
                     <h3>Coopération Territoriale</h3>
-                    <p>Collaboration avec les collectivités, institutions et acteurs locaux pour le développement de partenariats régionaux et d'actions éducatives participatives.</p>
+                    <p>Collaboration avec les collectivités et acteurs locaux pour des actions éducatives.</p>
                 </div>
-
                 <div class="m-card gold-card">
                     <div class="m-icon">🍃</div>
                     <h3>Médiation & Transmission</h3>
-                    <p>Conception d’outils de narration innovants pour transmettre la mémoire ouvrière aux nouvelles générations dans un esprit de transition écologique.</p>
+                    <p>Outils de narration innovants pour transmettre la mémoire aux nouvelles générations.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="agir" class="cta-section">
-        <div class="container-narrow">
+        <div class="container-narrow text-center">
             <h2 class="gold-text">Devenir Membre</h2>
-            <p>L’adhésion est ouverte à toute personne partageant nos valeurs. Rejoignez Clément et Quentin pour contribuer à la mise en valeur du Nord–Pas-de-Calais.</p>
+            <p>L’adhésion est ouverte à toute personne partageant nos valeurs. Rejoignez-nous pour contribuer à la mise en valeur de notre région.</p>
             <ul class="steps-list">
                 <li><span>1</span> Validation par le bureau</li>
                 <li><span>2</span> Cotisation fixée en AG</li>
-                <li><span>3</span> Respect de l'éthique territoriale</li>
+                <li><span>3</span> Respect de l'éthique</li>
             </ul>
             <a href="mailto:clement@terrilium.org" class="btn-final">Contacter le bureau</a>
         </div>
     </section>
 
     <footer>
-        <p>Association Terrilium – Cultures & Patrimoines | SIREN : 993257070 | Siège : Lille</p>
+        <p>Association Terrilium – Cultures & Patrimoines | SIREN : 993257070 | Lille</p>
         <p class="duration">Durée de l’association : Illimitée</p>
     </footer>
 </body>
