@@ -100,3 +100,25 @@ nav a:hover { color: var(--brique-rc); }
     letter-spacing: 2px;
     display: inline-block;
     transition: 0.3s;
+}
+.btn-main:hover, .btn-final:hover { background: var(--gold-rc); color: var(--brique-rc); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3); }
+
+.btn-outline {
+    border: 2px solid var(--brique-rc);
+    color: var(--brique-rc);
+    padding: 18px 40px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+/* CTA STEPS */
+.cta-section { background: var(--brique-soft); padding: 100px 5%; text-align: center; }
+.action-steps { text-align: left; margin: 40px 0; }
+.step span { background: var(--gold-rc); color: var(--brique-rc); width: 35px; height: 35px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: 800; }
+
+footer { padding: 80px; text-align: center; background: #111; color: white; border-top: 2px solid var(--gold-rc); }
+footer p { font-size: 0.8rem; letter-spacing: 2px; opacity: 0.7; }
