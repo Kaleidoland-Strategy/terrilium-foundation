@@ -3,98 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRILIUM | Renaissance Noire</title>
+    <title>Terrilium | L'avenir commence maintenant</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&family=Lora:italic,wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="edge-nav">
-            <div class="logo">TERRILIUM<span>.</span></div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">TERRILIUM</div>
             <ul>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#missions">Missions</a></li>
-                <li><a href="#carte">Matrice</a></li>
-                <li><a href="mailto:clement@terrilium.org" class="cta-blood">Soutenir le Pacte</a></li>
+                <li><a href="#histoire">Notre Histoire</a></li>
+                <li><a href="#agir">Comment agir</a></li>
+                <li><a href="mailto:clement@terrilium.org" class="btn-nav">Rejoindre l'équipe</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <span class="tag">Histoire d’un enfant du Nord</span>
+            <h1>Le Bassin Minier n'est pas un souvenir, <br><span>c'est notre moteur d'avenir.</span></h1>
+            <p>"De là-haut, j’ai compris qu’on pouvait voir loin, même quand on vient du bas."</p>
+            <a href="#histoire" class="btn-main">Lire le manifeste</a>
+        </div>
     </header>
 
-    <section class="hero-vanta">
-        <div class="hero-inner">
-            <h1>L'AVENIR EST <br><span class="blood-text">SANG & CHARBON.</span></h1>
-            <p>Renaissance patrimoniale augmentée par Lanazrion OS.</p>
-            <div class="hero-btns">
-                <a href="#missions" class="btn-vanta">Opérations</a>
-                <a href="mailto:clement@terrilium.org" class="btn-outline">Contact Direct</a>
+    <section id="histoire" class="manifeste">
+        <div class="container-narrow">
+            <div class="bio-intro">
+                <p class="dropcap">Je m’appelle <strong>Clément Legrand</strong>. Je suis né le 4 juillet 1991 à Beuvry. J’y ai tout appris : la rigueur, la chaleur humaine, la mémoire du travail.</p>
+            </div>
+            
+            <div class="story-grid">
+                <div class="story-item">
+                    <h3>Mes Racines</h3>
+                    <p>Mes deux grands-pères à la métallurgie, mes grands-mères au service des autres, et ma mère qui m'a transmis la solidarité. Ces valeurs familiales coulent dans mes veines.</p>
+                </div>
+                <div class="story-item">
+                    <h3>Mon Nord</h3>
+                    <p>Le stade Bollaert, la friterie Sensas, les dimanches de match. C'est le collectif appris sur le terrain de foot et l'énergie des cathédrales de béton d'EuraTechnologies.</p>
+                </div>
+            </div>
+
+            <div class="vision-box">
+                <h2>Pourquoi Terrilium existe ?</h2>
+                <p>Pour redonner du sens au mot <strong>ensemble</strong>. Pour unir la mémoire du charbon et la lumière du numérique sans perdre notre humanité. C’est le Nord qui se relève par fierté.</p>
             </div>
         </div>
     </section>
 
-    <section id="vision" class="vanta-section">
-        <div class="full-content">
-            <div class="dual-column">
-                <div class="text-block">
-                    <h2 class="blood-line">Le Pacte de Renaissance</h2>
-                    <p>Fondée par <strong>Clément et Quentin</strong>, deux enfants du Bassin Minier. Nous ne regardons pas les terrils comme des ruines, mais comme des organes vitaux.</p>
-                    <p>Terrilium fusionne la mémoire ouvrière et l'intelligence chirurgicale pour extraire la valeur technologique de notre sol.</p>
+    <section id="missions" class="missions">
+        <div class="container">
+            <h2 class="section-title">Nos 3 piliers solidaires</h2>
+            <div class="mission-cards">
+                <div class="m-card">
+                    <div class="m-icon">🧠</div>
+                    <h3>Le Cerveau</h3>
+                    <p>Accompagner les mairies et les assos pour transformer les friches en lieux de vie.</p>
                 </div>
-                <div class="big-stats">
-                    <div class="stat"><span class="blood-text">334</span><label>PYRAMIDES</label></div>
-                    <div class="stat"><span class="blood-text">100%</span><label>SOUVERAIN</label></div>
+                <div class="m-card">
+                    <div class="m-icon">❤️</div>
+                    <h3>Le Cœur</h3>
+                    <p>Raconter nos histoires en images et en sons pour que personne ne soit oublié.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="missions" class="vanta-section bg-dark-grey">
-        <div class="full-content">
-            <h2 class="center-title">Unités d'Intervention</h2>
-            <div class="bento-vanta">
-                <div class="vanta-card">
-                    <div class="card-head">🧠 <span>CERVEAU</span></div>
-                    <p>Ingénierie territoriale. Nous transformons les friches en actifs via l'indice IST.</p>
-                    <ul class="blood-dots">
-                        <li>Audit stratégique</li>
-                        <li>Ingénierie financière</li>
-                        <li>IA Territoriale</li>
-                    </ul>
-                </div>
-                <div class="vanta-card active">
-                    <div class="card-head">❤️ <span>CŒUR</span></div>
-                    <p>Studio Multimédia. La mémoire du bassin capturée avec une précision cinématographique.</p>
-                    <ul class="blood-dots">
-                        <li>Captation UNESCO</li>
-                        <li>Podcasts narratifs</li>
-                        <li>Design immersif</li>
-                    </ul>
-                </div>
-                <div class="vanta-card">
-                    <div class="card-head">🛠️ <span>MUSCLE</span></div>
-                    <p>Tech & Formation. Déploiement de l'infrastructure Lanazrion et formation Academy.</p>
-                    <ul class="blood-dots">
-                        <li>Systèmes critiques</li>
-                        <li>Formation IA</li>
-                        <li>Cyber-patrimoine</li>
-                    </ul>
+                <div class="m-card">
+                    <div class="m-icon">🛠️</div>
+                    <h3>Le Muscle</h3>
+                    <p>Installer du matériel et former tout le monde aux outils de demain.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="carte" class="vanta-section no-padding">
-        <div id="map"></div>
+    <section id="agir" class="cta-section">
+        <div class="container-narrow">
+            <h2>J'ai besoin de vous.</h2>
+            <p>Terrilium, ce n’est pas mon histoire : c’est la vôtre. Je ne vous demande pas d’argent : je vous demande de croire encore au collectif.</p>
+            <div class="action-steps">
+                <div class="step"><span>1</span> Parlez-en autour de vous.</div>
+                <div class="step"><span>2</span> Proposez une compétence ou un lieu.</div>
+                <div class="step"><span>3</span> Venez simplement marcher avec nous.</div>
+            </div>
+            <a href="mailto:clement@terrilium.org" class="btn-final">Écrire à Clément</a>
+        </div>
     </section>
 
     <footer>
-        <div class="footer-vanta">
-            <p>TERRILIUM — ASSOCIATION 1901 — PROPULSÉ PAR LANAZRION OS</p>
-            <a href="mailto:clement@terrilium.org" class="blood-link">clement@terrilium.org</a>
-        </div>
+        <p>Terrilium — L’avenir commence toujours maintenant.</p>
     </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
