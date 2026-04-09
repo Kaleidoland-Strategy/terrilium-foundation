@@ -51,7 +51,7 @@ header {
 }
 .nav-links a:hover { color: var(--gold-bright); }
 
-.btn-nav { border: 1px solid var(--sang); padding: 10px 20px; color: var(--sang) !important; font-weight: 700; }
+.btn-nav { border: 1px solid var(--sang); padding: 10px 20px; color: var(--sang) !important; font-weight: 700; text-decoration: none; }
 .btn-nav:hover { background: var(--sang); color: white !important; }
 
 /* HERO */
@@ -74,17 +74,30 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 30p
 .statuts-text { font-size: 1.4rem; font-weight: 200; }
 .statuts-subtext { color: var(--text-dim); font-style: italic; }
 
-/* MISSIONS GRID (Cards statiques) */
+/* MISSIONS GRID (Cadre Or) */
 .missions-grid-section { background: var(--grey-vanta); padding: 120px 40px; }
 .mission-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
+
 .m-card { 
-    padding: 50px 30px; 
-    border: 1px solid rgba(255,255,255,0.05); 
-    background: rgba(255,255,255,0.01);
+    padding: 60px 40px; 
+    border: 1px solid var(--gold-bright); /* Cadre Or */
+    background: transparent;
+    text-align: center;
 }
-/* Retrait des effets de hover simulant un clic */
-.m-icon { font-size: 2.5rem; margin-bottom: 20px; color: var(--gold-bright); }
-.m-card h3 { text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+
+.m-card h3 { 
+    text-transform: uppercase; 
+    margin-bottom: 20px; 
+    letter-spacing: 2px; 
+    color: var(--gold-bright);
+    font-size: 1.4rem;
+}
+
+.m-card p {
+    font-size: 0.95rem;
+    color: var(--off-white);
+    font-weight: 200;
+}
 
 /* ACTION BOX */
 .action-box { margin-top: 50px; display: flex; justify-content: center; }
