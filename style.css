@@ -2,7 +2,6 @@
     --vantablack: #050505;
     --grey-vanta: #0d0d0d;
     --sang: #A20A0A;
-    --olive-gold: #808000;
     --gold-bright: #D4AF37;
     --off-white: #f0f0f0;
     --text-dim: #888888;
@@ -52,7 +51,7 @@ header {
 }
 .nav-links a:hover { color: var(--gold-bright); }
 
-.btn-nav { border: 1px solid var(--sang); padding: 10px 20px; color: var(--sang) !important; }
+.btn-nav { border: 1px solid var(--sang); padding: 10px 20px; color: var(--sang) !important; font-weight: 700; }
 .btn-nav:hover { background: var(--sang); color: white !important; }
 
 /* HERO */
@@ -75,14 +74,17 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 30p
 .statuts-text { font-size: 1.4rem; font-weight: 200; }
 .statuts-subtext { color: var(--text-dim); font-style: italic; }
 
-/* MISSIONS GRID */
+/* MISSIONS GRID (Cards statiques) */
 .missions-grid-section { background: var(--grey-vanta); padding: 120px 40px; }
 .mission-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
-.m-card { padding: 50px 30px; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s; }
-.m-card:hover { border-color: var(--gold-bright); transform: translateY(-10px); }
-.olive-gold-card { background: var(--olive-gold); color: white; border: none; }
-.m-icon { font-size: 2.5rem; margin-bottom: 20px; }
-.m-card h3 { text-transform: uppercase; margin-bottom: 15px; }
+.m-card { 
+    padding: 50px 30px; 
+    border: 1px solid rgba(255,255,255,0.05); 
+    background: rgba(255,255,255,0.01);
+}
+/* Retrait des effets de hover simulant un clic */
+.m-icon { font-size: 2.5rem; margin-bottom: 20px; color: var(--gold-bright); }
+.m-card h3 { text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
 
 /* ACTION BOX */
 .action-box { margin-top: 50px; display: flex; justify-content: center; }
@@ -91,7 +93,6 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 30p
     padding: 60px; 
     border: 1px solid var(--gold-bright); 
     max-width: 600px;
-    transition: 0.3s;
 }
 .action-card h3 { color: var(--gold-bright); margin-bottom: 20px; font-size: 1.8rem; }
 .action-card p { margin-bottom: 40px; color: var(--off-white); }
@@ -104,6 +105,7 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 30p
     text-decoration: none; 
     font-weight: 800; 
     text-transform: uppercase;
+    transition: 0.3s;
 }
 .btn-final:hover { background: white; }
 .inclusive-note { margin-top: 20px; font-size: 0.8rem; color: var(--text-dim); }
