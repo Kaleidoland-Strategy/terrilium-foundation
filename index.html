@@ -3,95 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRILIUM | Patrimoine & Innovation</title>
+    <title>TERRILIUM | Patrimoine, Innovation & Biodiversité</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="noise-overlay"></div>
+
     <header>
         <nav class="nav-container">
             <a href="index.html" class="logo-link">
                 <div class="logo-wrap">
-                    <img src="src/logo.jpg" alt="TERRILIUM" class="main-logo">
+                    <img src="src/logo.png" alt="TERRILIUM" class="main-logo">
                     <span class="logo-text">TERRILIUM</span>
                 </div>
             </a>
             <ul class="nav-links">
-                <li><a href="#association">L'Association</a></li>
+                <li><a href="#association">L'Objet</a></li>
                 <li><a href="#missions">Missions</a></li>
                 <li><a href="#agir">Agir</a></li>
-                <li><a href="mailto:clement@terrilium.org" class="btn-nav">Rejoindre</a></li>
+                <li><a href="mailto:clement@terrilium.org" class="btn-nav">Rejoindre le Bureau</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container-center">
-            <span class="tag">Association Loi 1901 — SIREN : 993257070</span>
-            <h1 class="balance-text">Le Bassin Minier n'est pas un souvenir, <br><span class="highlight-text">c'est notre moteur d'avenir.</span></h1>
-            <p class="hero-p">Valoriser, préserver et faire rayonner le patrimoine industriel du Nord–Pas-de-Calais à travers l'innovation et l'art.</p>
-            <div class="hero-btns">
-                <a href="#association" class="btn-brique">Découvrir l'Objet</a>
-                <a href="#missions" class="btn-gold">Nos Moyens d'Action</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="association" class="content-section">
-        <div class="container-narrow text-center">
-            <h2 class="section-title brique-border">Valoriser. Préserver. Rayonner.</h2>
-            <p class="statuts-text">
-                L’association <strong>Terrilium – Cultures & Patrimoines</strong> a pour objet de valoriser le patrimoine industriel, naturel et culturel de notre région, notamment les sites des terrils, à travers des projets artistiques, éducatifs et solidaires.
-            </p>
-            <p class="statuts-subtext">
-                Nous œuvrons à renforcer le lien entre <strong>mémoire ouvrière</strong>, <strong>création contemporaine</strong> et <strong>transition écologique</strong>.
-            </p>
-        </div>
-    </section>
-
-    <section id="missions" class="missions-grid-section">
-        <div class="container">
-            <h2 class="section-title gold-border text-center">Missions Fondatrices</h2>
-            <div class="mission-cards">
-                <div class="m-card brique-card">
-                    <div class="m-icon">⚒️</div>
-                    <h3>Culture & Résidences</h3>
-                    <p>Organisation d'expositions et de résidences d'artistes pour magnifier la mémoire industrielle par l'art contemporain.</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="reveal">
+                    <span class="tag">Association Loi 1901 — SIREN : 993257070</span>
                 </div>
-                
-                <div class="m-card gold-card">
-                    <div class="m-icon">🎥</div>
-                    <h3>Innovation & Récits</h3>
-                    <p>Valorisation audiovisuelle et création de contenus immersifs pour faire vibrer l'histoire du territoire dans l'ère numérique.</p>
-                </div>
-                
-                <div class="m-card brique-card">
-                    <div class="m-icon">🍃</div>
-                    <h3>Médiation & Territoire</h3>
-                    <p>Coopération avec les acteurs locaux pour transmettre aux nouvelles générations la richesse de notre héritage.</p>
+                <h1 class="balance-text">
+                    Le Bassin Minier n'est pas un souvenir, <br>
+                    <span class="highlight-text">c'est notre moteur d'avenir.</span>
+                </h1>
+                <p class="hero-p">
+                    Nous fusionnons <strong>mémoire ouvrière</strong> et <strong>stratégies d'innovation</strong> pour transformer nos sommets noirs en sanctuaires de biodiversité.
+                </p>
+                <div class="hero-btns">
+                    <a href="#association" class="btn-main btn-brique">Découvrir l'Objet</a>
+                    <a href="#missions" class="btn-main btn-gold">Moyens d'Action</a>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="scroll-indicator"></div>
+        </section>
 
-    <section id="agir" class="cta-section">
-        <div class="container-narrow text-center">
-            <h2 class="gold-text">Devenir Membre</h2>
-            <p>L’adhésion est ouverte à toute personne partageant nos valeurs. Rejoignez-nous pour contribuer à la mise en valeur de notre région.</p>
-            <ul class="steps-list">
-                <li><span>1</span> Validation par le bureau</li>
-                <li><span>2</span> Cotisation annuelle</li>
-                <li><span>3</span> Respect de la charte éthique</li>
-            </ul>
-            <a href="mailto:clement@terrilium.org" class="btn-final">Contacter le bureau</a>
-        </div>
-    </section>
+        <section id="association" class="content-section">
+            <div class="container-narrow">
+                <h2 class="section-title">Valoriser. Préserver. Rayonner.</h2>
+                <div class="statuts-grid">
+                    <div class="statuts-main">
+                        <p class="statuts-text">
+                            L’association <strong>Terrilium – Cultures & Patrimoines</strong> réinvente le paysage industriel du Nord–Pas-de-Calais par le prisme de l'art et de la transition écologique.
+                        </p>
+                    </div>
+                    <div class="statuts-aside">
+                        <p class="statuts-subtext">
+                            Nos terrils sont des matrices d'opportunités. Nous activons les leviers culturels pour financer la protection de ces écosystèmes uniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="missions" class="missions-grid-section">
+            <div class="container">
+                <h2 class="section-title text-center">Missions Fondatrices</h2>
+                <div class="mission-cards">
+                    <article class="m-card brique-card">
+                        <div class="m-icon">⚒️</div>
+                        <h3>Culture & Résidences</h3>
+                        <p>Financement de résidences d'artistes pour magnifier la mémoire ouvrière par le prisme de la création contemporaine.</p>
+                    </article>
+                    
+                    <article class="m-card olive-gold-card">
+                        <div class="m-icon">🌿</div>
+                        <h3>Écologie & Biodiversité</h3>
+                        <p>Préservation active de la faune et de la flore des terrils. Inventaire et protection des écosystèmes endémiques.</p>
+                    </article>
+                    
+                    <article class="m-card brique-card">
+                        <div class="m-icon">🎥</div>
+                        <h3>Innovation & Récits</h3>
+                        <p>Création de contenus immersifs et audiovisuels pour archiver l'histoire et propulser le territoire dans l'ère numérique.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="agir" class="cta-section">
+            <div class="container-narrow text-center">
+                <h2 class="gold-text gold-glow">Devenir Membre</h2>
+                <p class="cta-intro">L’adhésion est le premier levier de notre souveraineté culturelle.</p>
+                <div class="steps-container">
+                    <div class="step"><span>01</span> Validation Bureau</div>
+                    <div class="step"><span>02</span> Cotisation annuelle</div>
+                    <div class="step"><span>03</span> Charte Éthique</div>
+                </div>
+                <a href="mailto:clement@terrilium.org" class="btn-final">Contacter le bureau</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-inner">
-            <p><strong>Association Terrilium – Cultures & Patrimoines</strong></p>
-            <p class="legal-info">SIREN : 993257070 | Lille | Durée : Illimitée</p>
-            <p class="legal-small">Association reconnue d'intérêt général (en cours). © 2026</p>
+            <div class="footer-brand">
+                <p class="brand-title">Terrilium – Cultures & Patrimoines</p>
+                <p class="legal-info">SIREN : 993257070 | Lille | 25 rue de la Justice</p>
+            </div>
+            <div class="footer-bottom">
+                <p class="legal-small">Association reconnue d'intérêt général (en cours). © 2026. Premium/Vantablack Standard.</p>
+            </div>
         </div>
     </footer>
 </body>
