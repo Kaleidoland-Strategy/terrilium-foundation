@@ -14,17 +14,32 @@
         <nav class="nav-container">
             <a href="index.html" class="logo-link">
                 <div class="logo-wrap">
-                    <img src="src/logo%20sang%20et%20or%20Terrilium.png" alt="TERRILIUM" class="main-logo">
+                    <img src="src/logo%20sang%20et%20or%20Terrilium.png" alt="Logo TERRILIUM" class="main-logo">
                     <span class="logo-text">TERRILIUM</span>
                 </div>
             </a>
-            <ul class="nav-links">
+            
+            <ul class="nav-links desktop-only">
                 <li><a href="#manifeste">Le Manifeste</a></li>
                 <li><a href="#actions">Actions</a></li>
                 <li><a href="#soutenir">Soutenir</a></li>
                 <li><a href="mailto:clement@terrilium.org" class="btn-nav-minimal">Contact</a></li>
             </ul>
+
+            <button class="burger-menu" id="burgerTrigger" aria-label="Ouvrir le menu">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
         </nav>
+
+        <div class="mobile-nav-overlay" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="#manifeste">Le Manifeste</a></li>
+                <li><a href="#actions">Actions</a></li>
+                <li><a href="#soutenir">Soutenir</a></li>
+                <li><a href="mailto:clement@terrilium.org" class="sang-text">Contact</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -32,7 +47,7 @@
             <div class="hero-content">
                 <p class="pre-title">Renaissance du Bassin Minier</p>
                 <h1>L'héritage est une <br><span class="thin-italic">énergie cinétique.</span></h1>
-                <p class="hero-subtitle">Terrilium fusionne la mémoire industrielle et la transition technologique pour bâtir les paysages de demain.</p>
+                <p class="hero-subtitle">Terrilium fusionne les mémoires industrielles et les transitions technologiques pour bâtir les paysages de demain.</p>
                 <div class="hero-scroll-indicator">
                     <div class="line"></div>
                 </div>
@@ -47,7 +62,7 @@
                         Nous ne regardons pas le passé avec nostalgie, mais avec ambition. Nos terrils sont des bibliothèques biologiques.
                     </p>
                     <div class="manifeste-details">
-                        <p>Terrilium – Cultures & Patrimoines est une plateforme de convergence. Nous archivons le passé par le numérique et protégeons le futur par l'écologie.</p>
+                        <p>Terrilium – Cultures & Patrimoines est une plateforme de convergence. Nous archivons l'histoire par le numérique et protégeons les futurs par l'écologie.</p>
                         <a href="#soutenir" class="link-underlined">Rejoindre la démarche</a>
                     </div>
                 </div>
@@ -60,18 +75,18 @@
                 <div class="actions-minimal-grid">
                     <div class="action-item">
                         <span class="num">I</span>
-                        <h3>Art & Résidences</h3>
+                        <h3>Arts & Résidences</h3>
                         <p>Inviter la création contemporaine sur les sites miniers.</p>
                     </div>
                     <div class="action-item">
                         <span class="num">II</span>
-                        <h3>Bio-Diversité</h3>
-                        <p>Étudier et sanctuariser la faune endémique des terrils.</p>
+                        <h3>Biodiversités</h3>
+                        <p>Étudier et sanctuariser les faunes et flores endémiques des terrils.</p>
                     </div>
                     <div class="action-item">
                         <span class="num">III</span>
                         <h3>Archives Digitales</h3>
-                        <p>Propulser la mémoire ouvrière dans le numérique.</p>
+                        <p>Propulser les mémoires ouvrières dans le numérique.</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +96,7 @@
             <div class="container-narrow">
                 <div class="soutien-content">
                     <h2 class="letter-spacing">03. Engagement</h2>
-                    <p class="soutien-intro">La pérennité de nos actions repose sur une communauté de bâtisseurs. Votre contribution est un acte de préservation culturelle.</p>
+                    <p class="soutien-intro">La pérennité de nos actions repose sur une communauté de membres et de bâtisseurs·euses. Votre contribution est un acte de préservation culturelle.</p>
                     
                     <div class="split-soutien">
                         <div class="soutien-card">
@@ -112,7 +127,7 @@
             </div>
             <div class="f-legal">
                 <p>© 2026. Tous droits réservés.</p>
-                <p>Fait pour le futur.</p>
+                <p>Bâti pour les générations futures.</p>
             </div>
         </div>
     </footer>
@@ -131,15 +146,35 @@
             const modal = document.getElementById('haWidgetModal');
             const closeBtn = document.getElementById('closeHaWidgetBtn');
             const openBtn = document.getElementById('openHaOverlay');
-            
+            const burger = document.getElementById('burgerTrigger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const body = document.body;
+
+            // Gestion Burger
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Fermeture menu mobile au clic sur lien
+            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    burger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    body.style.overflow = '';
+                });
+            });
+
+            // Gestion Modal Don
             openBtn.addEventListener('click', () => {
                 modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
+                body.style.overflow = 'hidden';
             });
 
             closeBtn.addEventListener('click', () => {
                 modal.style.display = 'none';
-                document.body.style.overflow = '';
+                body.style.overflow = '';
             });
         });
     </script>
