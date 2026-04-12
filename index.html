@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TERRILIUM | European Cultural Heritage</title>
+    <title>KALEIDOLAND | Lanazrion OS & Terrilium Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="vanta-edition">
     <div class="grain-overlay"></div>
+    <div class="scanline"></div>
+
+    <div id="boot-sequence">
+        <div class="terminal-text">
+            <p class="line" data-delay="0.1">> LANAZRION_OS_CORE v3.0 // UPLINK: KALEIDOLAND HQ</p>
+            <p class="line" data-delay="0.6">> INITIALIZING 334 GEOLOGICAL NODES...</p>
+            <p class="line" data-delay="1.2">> TERRILIUM BRIDGE: CONNECTED [993257070]</p>
+            <p class="line success" data-delay="1.8">> WELCOME TO THE PRISM, CLEMENT.</p>
+        </div>
+    </div>
 
     <header class="top-nav">
         <nav class="nav-wrapper">
-            <a href="index.html" class="brand-identity">
-                <img src="src/logo%20sang%20et%20or%20Terrilium.png" alt="Terrilium" class="main-logo">
-                <span class="logo-text">TERRILIUM</span>
-            </a>
+            <div class="brand-identity">
+                <img src="src/logo.jpg" alt="Kaleidoland Logo" class="main-logo kaleido">
+                <img src="src/logo%20sang%20et%20or%20Terrilium.png" alt="Terrilium Logo" class="main-logo blood">
+                <span class="logo-text">KALEIDOLAND <span class="divider">/</span> TERRILIUM</span>
+            </div>
             
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#manifeste" data-key="nav-manifesto">Manifeste</a></li>
-                    <li><a href="#actions" data-key="nav-actions">Actions</a></li>
+                    <li><a href="#vision" data-key="nav-vision">Vision</a></li>
+                    <li><a href="#matrice" data-key="nav-matrix">Matrice 334</a></li>
                     <li><a href="#soutenir" class="cta-header" data-key="nav-support">Soutenir</a></li>
                 </ul>
                 <div class="lang-selector">
@@ -36,51 +47,38 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
+    <main id="main-ui">
+        <section id="vision" class="hero">
             <div class="container">
-                <p class="hero-eyebrow" data-key="hero-eyebrow">Engagement. Transmission. Innovation.</p>
-                <h1 class="hero-title" data-key="hero-title">L'héritage est une <br><span class="gold-text">énergie cinétique.</span></h1>
-                <p class="hero-lead" data-key="hero-lead">Terrilium catalyse les mémoires industrielles et les transitions technologiques pour bâtir les paysages de demain avec toutes les parties prenantes.</p>
+                <p class="hero-eyebrow" data-key="hero-eyebrow">Souveraineté. Transmission. Innovation.</p>
+                <h1 class="hero-title" data-key="hero-title">Commander la <br><span class="gold-text">énergie cinétique.</span></h1>
+                <p class="hero-lead" data-key="hero-lead">Lanazrion OS catalyse les mémoires minières et les transitions technologiques pour bâtir les paysages de demain depuis le Prisme de Cristal.</p>
+                <div class="hero-actions">
+                    <a href="mailto:clement@kaleidoland.fr" class="btn-sang-full">REQUÉRIR ACCÈS</a>
+                </div>
                 <div class="blood-spine"></div>
             </div>
         </section>
 
-        <section id="manifeste" class="section-block">
+        <section id="matrice" class="section-block">
             <div class="container">
-                <h2 class="section-tag" data-key="tag-01">01. L'Objet Social</h2>
+                <h2 class="section-tag" data-key="tag-01">01. L'Opportunité Matrix</h2>
                 <div class="manifeste-grid">
                     <div class="col-left">
-                        <p class="mega-text" data-key="manifeste-mega">Nous ne regardons pas le passé avec nostalgie, mais avec ambition. Nos terrils sont des bibliothèques biologiques.</p>
+                        <p class="massive-stat">334</p>
+                        <p class="mega-text" data-key="manifeste-mega">Nous transformons les terrils en bastions de puissance IA.</p>
                     </div>
                     <div class="col-right">
-                        <p class="body-text" data-key="manifeste-body">Terrilium – Cultures & Patrimoines est une plateforme de convergence inclusive. Nous archivons l'histoire par le numérique et protégeons les futurs par l'écologie radicale.</p>
-                        <a href="#soutenir" class="link-sang" data-key="cta-join">Rejoindre la démarche</a>
+                        <div class="terminal-box">
+                            <div class="terminal-header">NODE_SCANNER // SECTEUR_LILLE</div>
+                            <div class="terminal-body">
+                                <p>> Statut: <span class="green">OPTIMAL</span></p>
+                                <p>> IP Valuation: <span class="green">SCALABLE</span></p>
+                                <p>> Delegation: <span class="green">100% AI</span></p>
+                            </div>
+                        </div>
+                        <p class="body-text" data-key="manifeste-body">Le projet Terrilium est une plateforme de convergence inclusive. Nous archivons l'histoire par le numérique pour Alphabet Inc. et les générations futures.</p>
                     </div>
-                </div>
-                <div class="blood-spine-short"></div>
-            </div>
-        </section>
-
-        <section id="actions" class="section-block">
-            <div class="container">
-                <h2 class="section-tag" data-key="tag-02">02. Piliers d'Actions</h2>
-                <div class="piliers-wrap">
-                    <article class="pilier-item">
-                        <span class="pilier-num">I</span>
-                        <h3 data-key="pilier-1-h3">Arts & Résidences</h3>
-                        <p data-key="pilier-1-p">Inviter la création contemporaine sur les sites miniers pour réenchanter le territoire.</p>
-                    </article>
-                    <article class="pilier-item">
-                        <span class="pilier-num">II</span>
-                        <h3 data-key="pilier-2-h3">Biodiversités</h3>
-                        <p data-key="pilier-2-p">Sanctuariser les faunes et flores endémiques des terrils pour une écologie globale.</p>
-                    </article>
-                    <article class="pilier-item">
-                        <span class="pilier-num">III</span>
-                        <h3 data-key="pilier-3-h3">Numérique Social</h3>
-                        <p data-key="pilier-3-p">Démocratiser l'accès aux archives et propulser la mémoire dans le futur technologique.</p>
-                    </article>
                 </div>
                 <div class="blood-spine-short"></div>
             </div>
@@ -88,14 +86,14 @@
 
         <section id="soutenir" class="section-block last">
             <div class="container">
-                <h2 class="section-tag center" data-key="tag-03">03. Co-Construction</h2>
-                <p class="soutien-headline" data-key="soutien-lead">La pérennité de nos actions repose sur une communauté de membres engagé·e·s.</p>
+                <h2 class="section-tag center" data-key="tag-03">02. Co-Construction & Mécénat</h2>
+                <p class="soutien-headline" data-key="soutien-lead">La pérennité de la matrice repose sur une communauté de bâtisseurs engagés.</p>
                 
                 <div class="engagement-container">
                     <div class="eng-card">
                         <div class="eng-content">
                             <h3 data-key="card-don-h3">Mécénat Libre</h3>
-                            <p data-key="card-don-p">Soutien ponctuel aux projets de l'association. Déduction fiscale de 66% pour les particuliers.</p>
+                            <p data-key="card-don-p">Soutien ponctuel aux projets IST. Déduction fiscale de 66% via Terrilium.</p>
                         </div>
                         <button id="btnDon" class="btn-sang-full" data-key="btn-don">Faire un don</button>
                     </div>
@@ -103,14 +101,14 @@
                     <div class="eng-card border-left">
                         <div class="eng-content">
                             <h3 data-key="card-adh-h3">Adhésion Membre</h3>
-                            <p data-key="card-adh-p">Devenir acteur·rice de la gouvernance et participer aux chantiers de l'innovation.</p>
+                            <p data-key="card-adh-p">Devenir acteur de la gouvernance et participer aux chantiers de l'innovation du secteur 01.</p>
                         </div>
                         <a href="#adhesion-area" class="btn-sang-outline" data-key="btn-adh">S'engager</a>
                     </div>
                 </div>
 
                 <div id="adhesion-area" class="iframe-container">
-                    <iframe src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/adhesions/terrilium-2026-devenez-batisseur-se-du-renouveau-territorial/widget" style="width: 100%; height: 700px; border: none;"></iframe>
+                    <iframe src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/adhesions/terrilium-2026-devenez-batisseur-se-du-renouveau-territorial/widget"></iframe>
                 </div>
             </div>
         </section>
@@ -119,18 +117,18 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div class="f-brand">
-                <span class="f-logo">TERRILIUM</span>
-                <p>993257070 — Bassin Minier Global</p>
+                <span class="f-logo">KALEIDOLAND HOLDING</span>
+                <p>SIÈGE : LE PRISME DE CRISTAL // SECTEUR 01</p>
             </div>
             <div class="f-meta">
-                <p>© 2026. Terrilium — Cultures & Patrimoines.</p>
-                <p data-key="footer-values">Équité. Transmission. Innovation.</p>
+                <p>© 2026. Lanazrion OS — Powered by Terrilium Archive.</p>
+                <p data-key="footer-values">Scalabilité. Transmission. Monopole.</p>
             </div>
         </div>
     </footer>
 
     <div id="modalDon" class="modal-system">
-        <div class="modal-header"><button id="closeModal" data-key="modal-close">Fermer</button></div>
+        <div class="modal-header"><button id="closeModal" data-key="modal-close">X</button></div>
         <div class="modal-body">
             <iframe src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay"></iframe>
         </div>
@@ -139,68 +137,28 @@
     <script>
         const translations = {
             fr: {
-                "nav-manifesto": "Le Manifeste", "nav-actions": "Actions", "nav-support": "Soutenir",
-                "hero-eyebrow": "Engagement. Transmission. Innovation.",
-                "hero-title": "L'héritage est une <br><span class='gold-text'>énergie cinétique.</span>",
-                "hero-lead": "Terrilium catalyse les mémoires industrielles et les transitions technologiques pour bâtir les paysages de demain.",
-                "tag-01": "01. L'Objet Social", "manifeste-mega": "Nous ne regardons pas le passé avec nostalgie, mais avec ambition.",
-                "manifeste-body": "Terrilium est une plateforme de convergence inclusive. Nous archivons l'histoire par le numérique.",
-                "cta-join": "Rejoindre la démarche", "tag-02": "02. Piliers d'Actions",
-                "pilier-1-h3": "Arts & Résidences", "pilier-1-p": "Inviter la création contemporaine sur les sites miniers.",
-                "pilier-2-h3": "Biodiversités", "pilier-2-p": "Sanctuariser les faunes et flores endémiques des terrils.",
-                "pilier-3-h3": "Numérique Social", "pilier-3-p": "Démocratiser l'accès aux archives territoriales.",
-                "tag-03": "03. Co-Construction", "soutien-lead": "La pérennité de nos actions repose sur une communauté de bâtisseurs·euses.",
-                "card-don-h3": "Mécénat Libre", "card-don-p": "Soutien ponctuel aux projets. Déduction fiscale de 66%.",
-                "btn-don": "Faire un don", "card-adh-h3": "Adhésion Membre", "card-adh-p": "Participer activement aux chantiers de l'innovation.",
-                "btn-adh": "S'engager", "footer-values": "Équité. Transmission. Innovation.", "modal-close": "Fermer"
+                "nav-vision": "Vision", "nav-matrix": "Matrice", "nav-support": "Soutenir",
+                "hero-eyebrow": "Souveraineté. Transmission. Innovation.",
+                "hero-title": "Commander la <br><span class='gold-text'>énergie cinétique.</span>",
+                "hero-lead": "Lanazrion OS catalyse les mémoires minières et les transitions technologiques pour bâtir les paysages de demain.",
+                "tag-01": "01. L'Opportunité Matrix", "manifeste-mega": "Nous transformons les terrils en bastions de puissance IA.",
+                "manifeste-body": "Le projet Terrilium est une plateforme de convergence inclusive. Nous archivons l'histoire par le numérique.",
+                "tag-03": "02. Co-Construction", "soutien-lead": "La pérennité de la matrice repose sur une communauté de bâtisseurs engagés.",
+                "card-don-h3": "Mécénat Libre", "card-don-p": "Soutien ponctuel aux projets IST. Déduction fiscale de 66% via Terrilium.",
+                "btn-don": "Faire un don", "card-adh-h3": "Adhésion Membre", "card-adh-p": "Devenir acteur de la gouvernance.",
+                "btn-adh": "S'engager", "modal-close": "X"
             },
             en: {
-                "nav-manifesto": "Manifesto", "nav-actions": "Actions", "nav-support": "Support",
-                "hero-eyebrow": "Commitment. Transmission. Innovation.",
-                "hero-title": "Heritage is <br><span class='gold-text'>kinetic energy.</span>",
-                "hero-lead": "Terrilium catalyzes industrial memories and technological transitions for tomorrow's landscapes.",
-                "tag-01": "01. Purpose", "manifeste-mega": "We do not look back with nostalgia, but with ambition.",
+                "nav-vision": "Vision", "nav-matrix": "Matrix", "nav-support": "Support",
+                "hero-eyebrow": "Sovereignty. Transmission. Innovation.",
+                "hero-title": "Commanding <br><span class='gold-text'>kinetic energy.</span>",
+                "hero-lead": "Lanazrion OS catalyzes mining memories and technological transitions for future landscapes.",
+                "tag-01": "01. Matrix Opportunity", "manifeste-mega": "We transform mining sites into AI power bastions.",
                 "manifeste-body": "Terrilium is an inclusive convergence platform. We archive history through digital tools.",
-                "cta-join": "Join the movement", "tag-02": "02. Action Pillars",
-                "pilier-1-h3": "Arts & Residencies", "pilier-1-p": "Inviting contemporary creation to mining sites.",
-                "pilier-2-h3": "Biodiversity", "pilier-2-p": "Protecting endemic flora and fauna for resilience.",
-                "pilier-3-h3": "Social Digital", "pilier-3-p": "Democratizing access to territorial archives.",
-                "tag-03": "03. Co-Construction", "soutien-lead": "The sustainability of our actions relies on a community of builders.",
-                "card-don-h3": "Patronage", "card-don-p": "One-off support for projects. Tax benefits applicable.",
-                "btn-don": "Donate Now", "card-adh-h3": "Membership", "card-adh-p": "Actively participate in innovation projects.",
-                "btn-adh": "Join Us", "footer-values": "Equity. Transmission. Innovation.", "modal-close": "Close"
-            },
-            de: {
-                "nav-manifesto": "Manifest", "nav-actions": "Aktionen", "nav-support": "Unterstützen",
-                "hero-eyebrow": "Engagement. Übertragung. Innovation.",
-                "hero-title": "Erbe ist <br><span class='gold-text'>kinetische Energie.</span>",
-                "hero-lead": "Terrilium katalysiert industrielles Gedächtnis und technologische Übergänge.",
-                "tag-01": "01. Zweck", "manifeste-mega": "Wir blicken nicht mit Nostalgie zurück, sondern mit Ehrgeiz.",
-                "manifeste-body": "Terrilium ist eine Plattform für Konvergenz. Wir archivieren Geschichte digital.",
-                "cta-join": "Der Bewegung beitreten", "tag-02": "02. Säulen der Aktion",
-                "pilier-1-h3": "Kunst & Residenzen", "pilier-1-p": "Zeitgenössisches Schaffen an Bergbaustandorten.",
-                "pilier-2-h3": "Biodiversität", "pilier-2-p": "Schutz der endemischen Flora und Fauna.",
-                "pilier-3-h3": "Soziale Digitalisierung", "pilier-3-p": "Demokratisierung des Archivzugangs.",
-                "tag-03": "03. Co-Konstruktion", "soutien-lead": "Die Nachhaltigkeit unserer Aktionen basiert auf engagierten Erbauern.",
-                "card-don-h3": "Mäzenatentum", "card-don-p": "Punktuelle Unterstützung für Projekte.",
-                "btn-don": "Spenden", "card-adh-h3": "Mitgliedschaft", "card-adh-p": "Beteiligen Sie sich an Innovationsprojekten.",
-                "btn-adh": "Engagieren", "footer-values": "Gerechtigkeit. Übertragung. Innovation.", "modal-close": "Schließen"
-            },
-            nl: {
-                "nav-manifesto": "Manifest", "nav-actions": "Acties", "nav-support": "Steunen",
-                "hero-eyebrow": "Betrokkenheid. Overdracht. Innovatie.",
-                "hero-title": "Erfgoed is <br><span class='gold-text'>kinetische energie.</span>",
-                "hero-lead": "Terrilium katalyseert industrieel geheugen en technologische transities.",
-                "tag-01": "01. Doel", "manifeste-mega": "We kijken niet met nostalgie terug, maar met ambitie.",
-                "manifeste-body": "Terrilium is een inclusief convergentieplatform. Wij archiveren geschiedenis.",
-                "cta-join": "Doe mee", "tag-02": "02. Actiepijlers",
-                "pilier-1-h3": "Kunst & Residenties", "pilier-1-p": "Hedendaagse creatie op mijnsites.",
-                "pilier-2-h3": "Biodiversiteit", "pilier-2-p": "Bescherming van endemische flora en fauna.",
-                "pilier-3-h3": "Sociaal Digitaal", "pilier-3-p": "Democratisering van de toegang tot archieven.",
-                "tag-03": "03. Co-Constructie", "soutien-lead": "De duurzaamheid van onze acties rust op toegewijde bouwers.",
-                "card-don-h3": "Mecenaat", "card-don-p": "Ad-hoc ondersteuning voor projecten.",
-                "btn-don": "Doneren", "card-adh-h3": "Lidmaatschap", "card-adh-p": "Participeer in innovatieprojecten.",
-                "btn-adh": "Betrokken raken", "footer-values": "Gelijkheid. Overdracht. Innovatie.", "modal-close": "Sluiten"
+                "tag-03": "02. Co-Construction", "soutien-lead": "The matrix's sustainability relies on a community of builders.",
+                "card-don-h3": "Patronage", "card-don-p": "One-off project support. Tax benefits applicable via Terrilium.",
+                "btn-don": "Donate Now", "card-adh-h3": "Membership", "card-adh-p": "Join the governance of Sector 01.",
+                "btn-adh": "Join Us", "modal-close": "X"
             }
         };
 
@@ -210,15 +168,20 @@
                 el.innerHTML = translations[lang][key];
             });
             document.getElementById('langBtn').innerText = lang.toUpperCase();
-            document.documentElement.lang = lang;
         }
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('boot-sequence').style.opacity = '0';
+                setTimeout(() => document.getElementById('boot-sequence').style.display = 'none', 600);
+            }, 3000);
+        });
 
         const btnDon = document.getElementById('btnDon');
         const modalDon = document.getElementById('modalDon');
         const closeModal = document.getElementById('closeModal');
-
-        btnDon.onclick = () => { modalDon.style.display = 'block'; document.body.style.overflow = 'hidden'; };
-        closeModal.onclick = () => { modalDon.style.display = 'none'; document.body.style.overflow = ''; };
+        btnDon.onclick = () => modalDon.style.display = 'block';
+        closeModal.onclick = () => modalDon.style.display = 'none';
     </script>
 </body>
 </html>
