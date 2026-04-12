@@ -23,7 +23,7 @@ body {
 
 .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
 
-/* NAVIGATION PRESTIGE (NO BURGER) */
+/* NAVIGATION DEFINITIVE */
 .top-nav {
     height: 100px; display: flex; align-items: center;
     position: sticky; top: 0; z-index: 1000;
@@ -34,8 +34,8 @@ body {
 .nav-right { display: flex; align-items: center; gap: 40px; }
 
 .brand-identity { text-decoration: none; border-bottom: 2px solid var(--sang); padding-bottom: 5px; flex-shrink: 0; display: flex; align-items: center; }
-.logo { height: 35px; }
-.logo-text { color: var(--gold); font-weight: 800; letter-spacing: 3px; font-size: 0.85rem; margin-left: 12px; }
+.main-logo { height: 40px; width: auto; display: block; }
+.logo-text { color: var(--gold); font-weight: 800; letter-spacing: 3px; font-size: 0.85rem; margin-left: 15px; }
 
 .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
 .nav-links a { 
@@ -46,15 +46,15 @@ body {
 .cta-header { color: var(--sang) !important; border: 1px solid var(--sang); padding: 8px 18px; }
 
 /* LANG SELECTOR */
-.lang-selector { position: relative; display: inline-block; }
+.lang-selector { position: relative; }
 .lang-current { background: none; border: 1px solid var(--border); color: var(--gold); font-weight: 800; padding: 8px 12px; cursor: pointer; font-size: 0.65rem; }
 .lang-dropdown { 
     position: absolute; top: 100%; right: 0; background: var(--near-black); 
-    border: 1px solid var(--border); display: none; min-width: 60px;
+    border: 1px solid var(--border); display: none; min-width: 70px;
 }
 .lang-selector:hover .lang-dropdown { display: block; }
 .lang-dropdown span { 
-    display: block; padding: 10px; color: var(--grey); font-size: 0.65rem; 
+    display: block; padding: 12px; color: var(--grey); font-size: 0.65rem; 
     cursor: pointer; text-align: center; font-weight: 700;
 }
 .lang-dropdown span:hover { background: var(--sang); color: white; }
@@ -68,7 +68,7 @@ body {
 .hero-eyebrow { color: var(--sang); font-size: 0.75rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 800; margin-bottom: 30px; }
 .hero-title { font-size: clamp(2.5rem, 10vw, 6rem); line-height: 1.05; font-weight: 200; margin-bottom: 40px; }
 .gold-text { color: var(--gold); font-style: italic; }
-.hero-lead { max-width: 800px; margin: 0 auto; font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--grey); font-weight: 300; }
+.hero-lead { max-width: 800px; margin: 0 auto; font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--grey); font-weight: 300; line-height: 1.6; }
 
 /* SECTIONS */
 .section-block { padding: 120px 0 0; }
@@ -78,7 +78,7 @@ body {
 .mega-text { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 200; line-height: 1.2; }
 .manifeste-grid { display: grid; grid-template-columns: 1fr; gap: 60px; }
 @media (min-width: 1024px) { .manifeste-grid { grid-template-columns: 1.5fr 1fr; } }
-.body-text { font-size: 1.15rem; color: var(--grey); line-height: 1.8; margin-bottom: 40px; }
+.body-text { font-size: 1.1rem; color: var(--grey); line-height: 1.8; margin-bottom: 40px; }
 .link-sang { color: var(--gold); text-decoration: none; border-bottom: 2px solid var(--sang); padding-bottom: 5px; font-weight: 800; }
 
 /* PILIERS */
@@ -87,7 +87,7 @@ body {
 .pilier-item:hover { border-color: var(--sang); transform: translateY(-10px); }
 .pilier-num { color: var(--gold); font-weight: 800; font-size: 1.5rem; display: block; margin-bottom: 20px; }
 
-/* SOUTENIR (ESPACEMENT MAXIMAL) */
+/* SOUTENIR */
 .soutien-headline { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 200; text-align: center; margin-bottom: 100px; line-height: 1.5; }
 .engagement-container { display: flex; flex-wrap: wrap; border: 1px solid var(--border); }
 .eng-card { 
@@ -96,7 +96,7 @@ body {
 }
 .eng-content { margin-bottom: 80px; }
 .eng-card h3 { color: var(--gold); font-size: 1.5rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; }
-.eng-card p { color: var(--grey); font-size: 1.05rem; line-height: 1.7; max-width: 450px; }
+.eng-card p { color: var(--grey); font-size: 1rem; line-height: 1.7; max-width: 450px; }
 
 .border-left { border-left: 1px solid var(--border); }
 
@@ -104,28 +104,28 @@ body {
 .btn-sang-outline { background: transparent; color: white; border: 1px solid var(--white); padding: 22px 50px; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: 800; width: 100%; max-width: 320px; text-decoration: none; display: inline-block; transition: 0.3s; }
 .btn-sang-full:hover, .btn-sang-outline:hover { background: var(--white); color: var(--vanta); border-color: var(--white); }
 
-.iframe-container { margin-top: 150px; background: #fff; padding: 10px; border-radius: 4px; }
+.iframe-container { margin-top: 150px; background: #fff; padding: 10px; }
 
 /* FOOTER */
 .footer { padding: 100px 0; border-top: 1px solid var(--border); margin-top: 150px; }
 .footer-grid { display: flex; flex-direction: column; gap: 40px; align-items: center; text-align: center; }
 @media (min-width: 768px) { .footer-grid { flex-direction: row; justify-content: space-between; text-align: left; } }
-.f-logo { color: var(--gold); font-weight: 800; letter-spacing: 3px; font-size: 1.2rem; display: block; margin-bottom: 15px; }
-.f-meta { color: var(--grey); font-size: 0.8rem; line-height: 1.8; }
+.f-logo { color: var(--gold); font-weight: 800; letter-spacing: 3px; font-size: 1.2rem; }
 
 /* MODAL */
 .modal-system { position: fixed; inset: 0; background: var(--vanta); display: none; z-index: 100000; }
 .modal-header { padding: 30px; display: flex; justify-content: flex-end; }
-#closeModal { background: none; border: none; color: var(--sang); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; }
-.modal-body { height: calc(100vh - 100px); padding: 0 5% 5%; }
+#closeModal { background: none; border: none; color: var(--sang); font-weight: 800; text-transform: uppercase; cursor: pointer; }
+.modal-body { height: calc(100vh - 100px); padding: 5%; }
 .modal-body iframe { width: 100%; height: 100%; border: none; border-radius: 8px; }
 
-/* MOBILE (IPHONE 11 / 600px) */
+/* RESPONSIVE IPHONE 11 */
 @media (max-width: 650px) {
     .nav-links { display: none; }
     .logo-text { display: none; }
     .nav-right { gap: 20px; }
-    .hero { padding: 60px 0; }
+    .top-nav { height: 80px; }
+    .main-logo { height: 35px; }
     .eng-card { padding: 80px 30px; }
     .border-left { border-left: none; border-top: 1px solid var(--border); }
 }
