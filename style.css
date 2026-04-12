@@ -1,10 +1,10 @@
 :root {
-    --black: #050505;
-    --near-black: #0a0a0a;
-    --gold: #D4AF37;
-    --sang: #A20A0A;
+    --black: #050505; /* Vantablack */
+    --near-black: #0d0d0d;
+    --gold: #D4AF37; /* Or */
+    --sang: #A20A0A; /* Sang */
     --white: #F5F5F7;
-    --grey-dim: #666;
+    --grey-dim: #777;
     --border: rgba(255,255,255,0.08);
 }
 
@@ -14,8 +14,10 @@ body {
     color: var(--white); 
     font-family: 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
+/* Texture de grain subtile */
 .noise-overlay {
     position: fixed; inset: 0; 
     background: url('https://grainy-gradients.vercel.app/noise.svg');
@@ -25,76 +27,109 @@ body {
 .container-narrow { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-/* NAV DISTINGUÉE */
+/* HEADER & NAV - CORRECTION COULEUR */
 header {
     padding: 30px 0;
     border-bottom: 1px solid var(--border);
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+.logo-link { 
+    text-decoration: none; 
+    border-bottom: 2px solid var(--sang); /* Soulignement Sang sous tout le bloc logo */
+    padding-bottom: 5px;
+}
+
+.logo-wrap { display: flex; align-items: center; gap: 12px; }
 .main-logo { height: 35px; }
 .logo-text { font-weight: 800; color: var(--gold); letter-spacing: 3px; font-size: 0.9rem; }
-.nav-links { list-style: none; display: flex; gap: 40px; }
-.nav-links a { color: var(--grey-dim); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
-.nav-links a:hover { color: var(--white); }
-.btn-nav-minimal { border: 1px solid var(--grey-dim); padding: 8px 20px; color: var(--white) !important; }
 
-/* HERO MINIMALISTE */
-.hero-minimal { height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.nav-links { list-style: none; display: flex; gap: 40px; }
+.nav-links a { 
+    color: var(--grey-dim); 
+    text-decoration: none; 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Hover et Active en Sang */
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--sang);
+}
+
+.btn-nav-minimal { 
+    border: 1px solid var(--sang) !important; 
+    padding: 8px 20px; 
+    color: var(--sang) !important; 
+    font-weight: 600;
+}
+.btn-nav-minimal:hover {
+    background: var(--sang);
+    color: var(--white) !important;
+}
+
+/* HERO */
+.hero-minimal { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; }
 .pre-title { color: var(--sang); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 20px; font-weight: 700; }
 h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 200; line-height: 1.1; margin-bottom: 30px; }
-.thin-italic { font-style: italic; font-weight: 200; opacity: 0.8; }
+.thin-italic { font-style: italic; font-weight: 200; color: var(--gold); }
 .hero-subtitle { max-width: 600px; margin: 0 auto; color: var(--grey-dim); font-size: 1.1rem; font-weight: 300; }
 
 .hero-scroll-indicator { margin-top: 60px; height: 100px; display: flex; justify-content: center; }
-.hero-scroll-indicator .line { width: 1px; height: 100%; background: linear-gradient(var(--gold), transparent); }
+.hero-scroll-indicator .line { width: 1px; height: 100%; background: linear-gradient(var(--sang), transparent); }
 
 /* SECTIONS */
-.section-manifeste, .section-actions, .section-soutenir { padding: 140px 0; border-bottom: 1px solid var(--border); }
+.section-manifeste, .section-actions, .section-soutenir { padding: 120px 0; border-bottom: 1px solid var(--border); }
 .letter-spacing { font-size: 0.8rem; letter-spacing: 6px; color: var(--grey-dim); margin-bottom: 60px; text-transform: uppercase; }
 
 .large-text { font-size: 2.2rem; font-weight: 200; line-height: 1.3; margin-bottom: 40px; }
-.manifeste-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: flex-start; }
+.manifeste-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; }
 .manifeste-details p { color: var(--grey-dim); line-height: 1.8; margin-bottom: 30px; }
-.link-underlined { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 5px; font-size: 0.9rem; }
+.link-underlined { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--sang); padding-bottom: 5px; font-size: 0.9rem; }
 
-/* ACTIONS GRID */
+/* ACTIONS */
 .actions-minimal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.action-item { padding: 40px; border: 1px solid var(--border); transition: 0.3s; }
-.action-item:hover { border-color: var(--gold); }
-.action-item .num { display: block; color: var(--sang); font-weight: 800; margin-bottom: 20px; }
+.action-item { padding: 40px; border-left: 1px solid var(--sang); background: var(--near-black); transition: 0.3s; }
+.action-item .num { display: block; color: var(--gold); font-weight: 800; margin-bottom: 20px; }
 .action-item h3 { margin-bottom: 15px; font-weight: 600; letter-spacing: 1px; }
-.action-item p { color: var(--grey-dim); font-size: 0.9rem; font-weight: 300; }
+.action-item p { color: var(--grey-dim); font-size: 0.9rem; }
 
 /* SOUTENIR */
-.soutien-intro { font-size: 1.4rem; font-weight: 200; margin-bottom: 80px; max-width: 800px; }
-.split-soutien { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.soutien-intro { font-size: 1.4rem; font-weight: 200; margin-bottom: 80px; }
+.split-soutien { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
 .soutien-card { padding: 60px 40px; }
 .border-left { border-left: 1px solid var(--border); }
-.soutien-card h3 { font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 2px; }
+.soutien-card h3 { font-size: 1.1rem; margin-bottom: 15px; letter-spacing: 2px; color: var(--gold); }
 .soutien-card p { color: var(--grey-dim); margin-bottom: 40px; font-size: 0.9rem; }
 
 .btn-minimal {
-    background: transparent; color: var(--white); border: 1px solid var(--white);
+    background: transparent; color: var(--white); border: 1px solid var(--sang);
     padding: 15px 30px; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px;
     cursor: pointer; transition: 0.3s;
 }
-.btn-minimal:hover { background: var(--white); color: var(--black); }
+.btn-minimal:hover { background: var(--sang); }
 
-.adhesion-container { margin-top: 100px; background: #fff; padding: 20px; border-radius: 4px; }
+.adhesion-container { margin-top: 100px; background: #fff; padding: 10px; border-radius: 2px; }
 
 /* FOOTER */
-.footer-minimal { padding: 80px 40px; font-size: 0.75rem; color: var(--grey-dim); letter-spacing: 2px; }
-.footer-grid { display: flex; justify-content: space-between; }
+.footer-minimal { padding: 60px 40px; font-size: 0.75rem; color: var(--grey-dim); }
 .f-logo { font-weight: 800; color: var(--gold); margin-bottom: 10px; display: block; }
 
-/* MODAL SUBTILE */
-.modal-overlay {
-    position: fixed; inset: 0; background: var(--black); display: none; z-index: 99999;
-}
+/* MODAL */
+.modal-overlay { position: fixed; inset: 0; background: var(--black); display: none; z-index: 99999; }
 .modal-header { padding: 20px 40px; display: flex; justify-content: flex-end; }
-#closeHaWidgetBtn { background: none; border: none; color: var(--white); text-transform: uppercase; letter-spacing: 3px; cursor: pointer; }
-.modal-body { height: calc(100vh - 80px); padding: 40px; }
+#closeHaWidgetBtn { background: none; border: none; color: var(--sang); text-transform: uppercase; letter-spacing: 3px; cursor: pointer; font-weight: 800; }
+.modal-body { height: calc(100vh - 80px); padding: 20px; }
 
 @media (max-width: 900px) {
     .manifeste-grid, .actions-minimal-grid, .split-soutien { grid-template-columns: 1fr; }
