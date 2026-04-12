@@ -120,7 +120,7 @@
         <div class="container footer-grid">
             <div class="f-brand">
                 <span class="f-logo">TERRILIUM</span>
-                <p>Association Loi 1901 — Bassin Minier Global</p>
+                <p>993257070 — Bassin Minier Global</p>
             </div>
             <div class="f-meta">
                 <p>© 2026. Terrilium — Cultures & Patrimoines.</p>
@@ -131,7 +131,7 @@
 
     <div id="modalDon" class="modal-system">
         <div class="modal-header">
-            <span style="font-family: monospace; font-size: 0.6rem; letter-spacing: 2px;">SECURE_GATEWAY // HELLOASSO</span>
+            <span class="modal-title">SECURE GATEWAY // HELLOASSO</span>
             <button id="closeModal" data-key="modal-close">FERMER [X]</button>
         </div>
         <div class="modal-body">
@@ -173,31 +173,26 @@
                 "btn-don": "Donate Now", "card-adh-h3": "Membership", "card-adh-p": "Actively participate in innovation projects.",
                 "btn-adh": "Join Us", "footer-values": "Equity. Transmission. Innovation.", "modal-close": "Close"
             }
-            // ... (Ajouter DE et NL si besoin sur le même modèle)
         };
 
         function setLang(lang) {
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
-                if(translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
+                if(translations[lang][key]) el.innerHTML = translations[lang][key];
             });
             document.getElementById('langBtn').innerText = lang.toUpperCase();
             document.documentElement.lang = lang;
         }
 
-        // Logique Modale Don
+        // Script Modale
         const modal = document.getElementById('modalDon');
         const triggers = [document.getElementById('navDonTrigger'), document.getElementById('mainDonTrigger')];
         const closeBtn = document.getElementById('closeModal');
 
         triggers.forEach(btn => {
-            if(btn) {
-                btn.onclick = () => {
-                    modal.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
-                }
+            if(btn) btn.onclick = () => {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
             }
         });
 
@@ -205,6 +200,8 @@
             modal.style.display = 'none';
             document.body.style.overflow = '';
         }
+
+        window.onclick = (e) => { if(e.target == modal) closeBtn.onclick(); }
     </script>
 </body>
 </html>
