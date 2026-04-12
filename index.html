@@ -7,117 +7,127 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="premium-theme">
     <div class="noise-overlay"></div>
 
     <header class="main-header">
         <nav class="nav-container">
-            <a href="index.html" class="brand-identity">
-                <img src="src/logo%20sang%20et%20or%20Terrilium.png" alt="Terrilium" class="logo-img">
-                <span class="logo-name">TERRILIUM</span>
+            <a href="index.html" class="brand-link">
+                <div class="brand-wrap">
+                    <img src="src/logo%20sang%20et%20or%20Terrilium.png" alt="Terrilium" class="logo-img">
+                    <span class="logo-name">TERRILIUM</span>
+                </div>
             </a>
             
-            <div class="nav-right">
-                <ul class="nav-menu desktop-links">
+            <div class="nav-controls">
+                <ul class="nav-desktop">
                     <li><a href="#manifeste">Manifeste</a></li>
                     <li><a href="#actions">Actions</a></li>
-                    <li><a href="#soutenir" class="gold-link">Soutenir</a></li>
+                    <li><a href="#soutenir" class="nav-cta">Soutenir</a></li>
                 </ul>
-                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <button class="burger" id="btnMenu" aria-label="Menu de navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
             </div>
         </nav>
 
-        <div class="full-screen-menu" id="fullMenu">
-            <ul class="mobile-links">
-                <li><a href="#manifeste">Manifeste</a></li>
-                <li><a href="#actions">Actions</a></li>
-                <li><a href="#soutenir">Soutenir</a></li>
-                <li><a href="mailto:clement@terrilium.org" class="sang-text">Contact</a></li>
+        <div class="mobile-overlay" id="mobileOverlay">
+            <ul class="mobile-nav-list">
+                <li><a href="#manifeste">01. Manifeste</a></li>
+                <li><a href="#actions">02. Actions</a></li>
+                <li><a href="#soutenir">03. Soutenir</a></li>
+                <li><a href="mailto:clement@terrilium.org" class="sang-link">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-inner">
-                <p class="eyebrow">Engagement Collectif & Global</p>
-                <h1 class="main-title">L'héritage est une <br><span class="italic-gold">énergie cinétique.</span></h1>
-                <p class="hero-desc">Terrilium catalyse les mémoires industrielles et les transitions technologiques pour bâtir les paysages de demain avec toutes les parties prenantes.</p>
-                <div class="scroll-vibe"></div>
+        <section class="hero-block">
+            <div class="container">
+                <p class="eyebrow-text">Renaissance & Innovation Territoriale</p>
+                <h1 class="hero-title">L'héritage est une <br><span class="gold-italic">énergie cinétique.</span></h1>
+                <p class="hero-subline">Terrilium catalyse les mémoires industrielles et les transitions technologiques pour bâtir les paysages de demain avec toutes les parties prenantes.</p>
+                <div class="blood-divider-hero"></div>
             </div>
         </section>
 
-        <section id="manifeste" class="content-block">
+        <section id="manifeste" class="section-padding">
             <div class="container">
-                <div class="manifeste-wrapper">
-                    <h2 class="section-label">01. L'Objet Social</h2>
+                <div class="section-header">
+                    <h2 class="section-number">01. L'Objet Social</h2>
+                </div>
+                <div class="manifeste-content">
                     <p class="display-text">
                         Nous ne regardons pas le passé avec nostalgie, mais avec ambition. Nos terrils sont des bibliothèques biologiques et des socles de résilience.
                     </p>
-                    <div class="details-text">
+                    <div class="details-box">
                         <p>Terrilium – Cultures & Patrimoines est une plateforme de convergence inclusive. Nous archivons l'histoire par le numérique et protégeons les futurs par l'écologie radicale.</p>
-                        <a href="#soutenir" class="cta-line">Rejoindre la démarche</a>
+                        <a href="#soutenir" class="sang-underlined">Rejoindre la démarche</a>
                     </div>
                 </div>
+                <div class="blood-divider"></div>
             </div>
         </section>
 
-        <section id="actions" class="piliers-block">
+        <section id="actions" class="section-padding">
             <div class="container">
-                <h2 class="section-label">02. Piliers d'Actions</h2>
-                <div class="piliers-grid">
-                    <div class="pilier">
-                        <span class="pilier-num">I</span>
-                        <h3>Arts & Résidences</h3>
-                        <p>Inviter la création contemporaine sur les sites miniers pour réenchanter le territoire.</p>
-                    </div>
-                    <div class="pilier">
-                        <span class="pilier-num">II</span>
-                        <h3>Biodiversités</h3>
-                        <p>Sanctuariser les faunes et flores endémiques des terrils pour une écologie globale.</p>
-                    </div>
-                    <div class="pilier">
-                        <span class="pilier-num">III</span>
-                        <h3>Numérique Social</h3>
-                        <p>Démocratiser l'accès aux archives et propulser la mémoire dans le futur technologique.</p>
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-number">02. Piliers d'Actions</h2>
                 </div>
+                <div class="piliers-grid">
+                    <article class="pilier-card">
+                        <span class="card-index">I</span>
+                        <h3>Arts & Résidences</h3>
+                        <p>Inviter la création contemporaine sur les sites miniers pour réenchanter le territoire et ses récits.</p>
+                    </article>
+                    <article class="pilier-card">
+                        <span class="card-index">II</span>
+                        <h3>Biodiversités</h3>
+                        <p>Sanctuariser les faunes et flores endémiques des terrils pour une écologie globale et pérenne.</p>
+                    </article>
+                    <article class="pilier-card">
+                        <span class="card-index">III</span>
+                        <h3>Numérique Social</h3>
+                        <p>Démocratiser l'accès aux archives et propulser la mémoire collective dans le futur technologique.</p>
+                    </article>
+                </div>
+                <div class="blood-divider"></div>
             </div>
         </section>
 
-        <section id="soutenir" class="soutien-block">
-            <div class="container-narrow">
-                <h2 class="section-label center">03. Co-Construction</h2>
-                <p class="soutien-lead">La pérennité de nos actions repose sur une communauté de membres et de bâtisseurs·euses engagé·e·s.</p>
+        <section id="soutenir" class="section-padding">
+            <div class="container-mid">
+                <div class="section-header center">
+                    <h2 class="section-number">03. Co-Construction</h2>
+                </div>
+                <p class="soutien-intro">La pérennité de nos actions repose sur une communauté de membres et de bâtisseurs·euses engagé·e·s pour le rayonnement du Bassin Minier.</p>
                 
-                <div class="cards-split">
-                    <div class="card card-left">
+                <div class="engagement-grid">
+                    <div class="eng-card">
                         <h3>Mécénat Libre</h3>
-                        <p>Soutien ponctuel aux projets. Déductible fiscalement à 66%.</p>
-                        <button id="openHaOverlay" class="btn-sang">Faire un don</button>
+                        <p>Soutien ponctuel aux projets de l'association. Déduction fiscale de 66% pour les particuliers.</p>
+                        <button id="triggerDon" class="btn-premium">Faire un don</button>
                     </div>
-                    <div class="card card-right">
+                    <div class="eng-card border-left">
                         <h3>Adhésion Membre</h3>
-                        <p>Participer activement à la gouvernance et au rayonnement.</p>
-                        <a href="#adhesion-form" class="btn-sang outline">S'engager</a>
+                        <p>Devenir acteur·rice de la gouvernance et participer activement aux chantiers de l'innovation.</p>
+                        <a href="#adhesion-area" class="btn-premium ghost">S'engager</a>
                     </div>
                 </div>
 
-                <div id="adhesion-form" class="form-wrapper">
-                    <iframe id="haWidget" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/adhesions/terrilium-2026-devenez-batisseur-se-du-renouveau-territorial/widget" style="width: 100%; height: 650px; border: none;"></iframe>
+                <div id="adhesion-area" class="widget-box">
+                    <iframe id="haAdhesion" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/adhesions/terrilium-2026-devenez-batisseur-se-du-renouveau-territorial/widget" style="width: 100%; height: 650px; border: none;"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <div class="container footer-content">
-            <div class="f-brand">
+        <div class="container footer-wrap">
+            <div class="f-identity">
                 <span class="f-logo">TERRILIUM</span>
-                <p>993257070 — Bassin Minier Global</p>
+                <p>SIREN 993257070 — Bassin Minier Global</p>
             </div>
             <div class="f-meta">
                 <p>© 2026. Terrilium — Cultures & Patrimoines.</p>
@@ -126,44 +136,44 @@
         </div>
     </footer>
 
-    <div id="haWidgetModal" class="ha-overlay">
-        <div class="ha-header">
-            <button id="closeHaWidgetBtn">Retour au site</button>
+    <div id="donModal" class="modal-system">
+        <div class="modal-nav">
+            <button id="closeModal">Fermer l'interface</button>
         </div>
-        <div class="ha-body">
-            <iframe id="haWidgetOverlay" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay"></iframe>
+        <div class="modal-view">
+            <iframe src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay"></iframe>
         </div>
     </div>
 
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const fullMenu = document.getElementById('fullMenu');
-        const modal = document.getElementById('haWidgetModal');
-        const openBtn = document.getElementById('openHaOverlay');
-        const closeBtn = document.getElementById('closeHaWidgetBtn');
+        const btnMenu = document.getElementById('btnMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const donModal = document.getElementById('donModal');
+        const triggerDon = document.getElementById('triggerDon');
+        const closeModal = document.getElementById('closeModal');
 
-        menuToggle.onclick = () => {
-            menuToggle.classList.toggle('active');
-            fullMenu.classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
+        btnMenu.onclick = () => {
+            btnMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('lock-scroll');
         };
 
-        openBtn.onclick = () => {
-            modal.style.display = 'block';
-            document.body.classList.add('no-scroll');
+        triggerDon.onclick = () => {
+            donModal.style.display = 'block';
+            document.body.classList.add('lock-scroll');
         };
 
-        closeBtn.onclick = () => {
-            modal.style.display = 'none';
-            document.body.classList.remove('no-scroll');
+        closeModal.onclick = () => {
+            donModal.style.display = 'none';
+            document.body.classList.remove('lock-scroll');
         };
 
-        // Fermeture automatique du menu mobile lors du clic sur un lien
-        document.querySelectorAll('.mobile-links a').forEach(link => {
+        // Fermeture automatique du menu mobile
+        document.querySelectorAll('.mobile-nav-list a').forEach(link => {
             link.onclick = () => {
-                menuToggle.classList.remove('active');
-                fullMenu.classList.remove('active');
-                document.body.classList.remove('no-scroll');
+                btnMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.classList.remove('lock-scroll');
             };
         });
     </script>
