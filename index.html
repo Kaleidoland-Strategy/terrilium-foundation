@@ -19,27 +19,12 @@
                 </div>
             </a>
             
-            <div class="nav-controls">
-                <ul class="nav-desktop">
-                    <li><a href="#manifeste">Manifeste</a></li>
-                    <li><a href="#actions">Actions</a></li>
-                    <li><a href="#soutenir" class="nav-cta">Soutenir</a></li>
-                </ul>
-                <button class="burger" id="btnMenu" aria-label="Menu de navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
-        </nav>
-
-        <div class="mobile-overlay" id="mobileOverlay">
-            <ul class="mobile-nav-list">
-                <li><a href="#manifeste">01. Manifeste</a></li>
-                <li><a href="#actions">02. Actions</a></li>
-                <li><a href="#soutenir">03. Soutenir</a></li>
-                <li><a href="mailto:clement@terrilium.org" class="sang-link">Contact</a></li>
+            <ul class="nav-global">
+                <li><a href="#manifeste">Manifeste</a></li>
+                <li><a href="#actions">Actions</a></li>
+                <li><a href="#soutenir" class="nav-cta">Soutenir</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <main>
@@ -106,12 +91,12 @@
                 <div class="engagement-grid">
                     <div class="eng-card">
                         <h3>Mécénat Libre</h3>
-                        <p>Soutien ponctuel aux projets de l'association. Déduction fiscale de 66% pour les particuliers.</p>
+                        <p>Soutien ponctuel aux projets. Déduction fiscale de 66% pour les particuliers.</p>
                         <button id="triggerDon" class="btn-premium">Faire un don</button>
                     </div>
                     <div class="eng-card border-left">
                         <h3>Adhésion Membre</h3>
-                        <p>Devenir acteur·rice de la gouvernance et participer activement aux chantiers de l'innovation.</p>
+                        <p>Devenir acteur·rice de la gouvernance et participer aux chantiers de l'innovation.</p>
                         <a href="#adhesion-area" class="btn-premium ghost">S'engager</a>
                     </div>
                 </div>
@@ -138,7 +123,7 @@
 
     <div id="donModal" class="modal-system">
         <div class="modal-nav">
-            <button id="closeModal">Fermer l'interface</button>
+            <button id="closeModal">Retour</button>
         </div>
         <div class="modal-view">
             <iframe src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay"></iframe>
@@ -146,36 +131,19 @@
     </div>
 
     <script>
-        const btnMenu = document.getElementById('btnMenu');
-        const mobileOverlay = document.getElementById('mobileOverlay');
         const donModal = document.getElementById('donModal');
         const triggerDon = document.getElementById('triggerDon');
         const closeModal = document.getElementById('closeModal');
 
-        btnMenu.onclick = () => {
-            btnMenu.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
-            document.body.classList.toggle('lock-scroll');
-        };
-
         triggerDon.onclick = () => {
             donModal.style.display = 'block';
-            document.body.classList.add('lock-scroll');
+            document.body.style.overflow = 'hidden';
         };
 
         closeModal.onclick = () => {
             donModal.style.display = 'none';
-            document.body.classList.remove('lock-scroll');
+            document.body.style.overflow = '';
         };
-
-        // Fermeture automatique du menu mobile
-        document.querySelectorAll('.mobile-nav-list a').forEach(link => {
-            link.onclick = () => {
-                btnMenu.classList.remove('active');
-                mobileOverlay.classList.remove('active');
-                document.body.classList.remove('lock-scroll');
-            };
-        });
     </script>
 </body>
 </html>
