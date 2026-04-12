@@ -21,7 +21,7 @@
             <ul class="nav-links">
                 <li><a href="#association">L'Objet</a></li>
                 <li><a href="#missions">Missions</a></li>
-                <li><a href="#don">Faire un don</a></li>
+                <li><a href="#" id="openHaOverlayNav" class="nav-don">Faire un don</a></li>
                 <li><a href="#agir">Adhérer</a></li>
                 <li><a href="mailto:clement@terrilium.org" class="btn-nav">Contact</a></li>
             </ul>
@@ -57,47 +57,29 @@
             </div>
         </section>
 
-        <section id="missions" class="missions-grid-section">
-            <div class="container">
-                <h2 class="section-title text-center">Missions Fondatrices</h2>
-                <div class="mission-cards">
-                    <div class="m-card">
-                        <h3>Culture</h3>
-                        <p>Organisation de résidences d'artistes et d'expositions pour magnifier l'histoire industrielle et la transmettre aux nouvelles générations.</p>
-                    </div>
-                    <div class="m-card">
-                        <h3>Écologie</h3>
-                        <p>Protection de la biodiversité endémique et inventaire rigoureux des écosystèmes spécifiques à nos terrils.</p>
-                    </div>
-                    <div class="m-card">
-                        <h3>Innovation</h3>
-                        <p>Création de récits immersifs et de contenus numériques haute fidélité pour archiver et propulser notre mémoire.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="don" class="donation-section">
+        <section id="mecenat" class="donation-section">
             <div class="container-narrow">
                 <div class="donation-wrapper">
                     <div class="donation-content">
                         <span class="tag">Mécénat & Action</span>
-                        <h2 class="section-title">Financer la <br><span class="highlight-text">Renaissance</span></h2>
+                        <h2 class="section-title">Soutenir le rayonnement <br><span class="highlight-text">du patrimoine</span></h2>
                         <p class="donation-desc">
-                            Chaque don est une pierre posée pour la préservation de notre biodiversité et le financement direct de nos artistes résidents.<br><br>
-                            <strong>Votre impact est immédiat, local et mesurable.</strong>
+                            Vos dons financent les résidences d'artistes et la protection des écosystèmes endémiques des terrils.
+                            <br><br><strong>66% de votre don est déductible de vos impôts.</strong>
                         </p>
                         <ul class="impact-list">
                             <li><span class="bullet-gold"></span> Sécurisation des écosystèmes endémiques</li>
-                            <li><span class="bullet-gold"></span> Rémunération des créateurs régionaux</li>
-                            <li><span class="bullet-gold"></span> Reçu fiscal (déduction 66%) généré automatiquement</li>
+                            <li><span class="bullet-gold"></span> Financement de la création contemporaine</li>
+                            <li><span class="bullet-gold"></span> Reçu fiscal immédiat et automatisé</li>
                         </ul>
                     </div>
                     
                     <div class="donation-form-container">
                         <div class="form-glow"></div>
-                        <div class="form-inner">
-                            <iframe id="haWidgetLight" allowtransparency="true" allow="payment" scrolling="auto" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=form" style="width: 100%; border: none;" onload="window.addEventListener('message', function(e) { const dataHeight = e.data.height; const haWidgetElement = document.getElementById('haWidgetLight'); if (dataHeight > parseFloat(haWidgetElement.height || 0)) { haWidgetElement.height = dataHeight + 'px';}})"></iframe>
+                        <div class="form-static-card">
+                            <h3>Impact Immédiat</h3>
+                            <p>Soutenez nos actions en un clic via notre interface sécurisée.</p>
+                            <button id="openHaOverlay" class="btn-main btn-gold">Faire un don maintenant</button>
                         </div>
                     </div>
                 </div>
@@ -107,20 +89,14 @@
         <section id="agir" class="cta-section">
             <div class="container-narrow text-center">
                 <h2 class="gold-text">Rejoindre l'Aventure</h2>
-                <p class="cta-intro">L'adhésion est ouverte à toute personne souhaitant bâtir le futur de notre patrimoine. Devenez acteur·rice du changement.</p>
-                
                 <div class="action-box">
                     <div class="action-card">
                         <h3>Adhésion & Soutien Annuel</h3>
-                        <p>Cotisation annuelle, accès aux projets en avant-première et participation à la vie associative.</p>
-                        
                         <div class="widget-container">
-                            <iframe id="haWidget" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/adhesions/terrilium-2026-devenez-batisseur-se-du-renouveau-territorial/widget" style="width: 100%; height: 750px; border: none;" onload="window.addEventListener('message', function(e) { const dataHeight = e.data.height; const haWidgetElement = document.getElementById('haWidget'); if (dataHeight > parseFloat(haWidgetElement.height || 0)) { haWidgetElement.height = dataHeight + 'px';}})"></iframe>
+                            <iframe id="haWidgetAdhesion" allowtransparency="true" scrolling="auto" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/adhesions/terrilium-2026-devenez-batisseur-se-du-renouveau-territorial/widget" style="width: 100%; height: 750px; border: none;" onload="window.addEventListener('message', function(e) { const dataHeight = e.data.height; const haWidgetElement = document.getElementById('haWidgetAdhesion'); if (dataHeight > parseFloat(haWidgetElement.height || 0)) { haWidgetElement.height = dataHeight + 'px';}})"></iframe>
                         </div>
                     </div>
                 </div>
-                
-                <p class="inclusive-note">Ouvert à tou·te·s les passionné·e·s du territoire.</p>
             </div>
         </section>
     </main>
@@ -134,5 +110,42 @@
             <p class="legal-small">© 2026 TERRILIUM. Plateforme inclusive et engagée.</p>
         </div>
     </footer>
+
+    <div id="haWidgetModal" style="position: fixed; inset: 0; display: none; align-items: center; justify-content: center; backdrop-filter: blur(20px) brightness(0.2); z-index: 2147483647;">
+        <button id="closeHaWidgetBtn" style="position: absolute; top: 1.5rem; right: 1.5rem; z-index: 2147483648; background: #A20A0A; border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: 0.3s;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="modal-content" style="position: relative; width: 95%; max-width: 900px; height: 90vh; overflow: hidden; border-radius: 16px; background: #fff;">
+            <iframe id="haWidgetOverlay" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('haWidgetModal');
+            const closeBtn = document.getElementById('closeHaWidgetBtn');
+            const body = document.body;
+            const triggers = ['openHaOverlay', 'openHaOverlayNav'];
+
+            triggers.forEach(id => {
+                const trigger = document.getElementById(id);
+                if(trigger) {
+                    trigger.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        modal.style.display = 'flex';
+                        body.style.overflow = 'hidden';
+                    });
+                }
+            });
+
+            const closeModal = () => {
+                modal.style.display = 'none';
+                body.style.overflow = '';
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+        });
+    </script>
 </body>
 </html>
