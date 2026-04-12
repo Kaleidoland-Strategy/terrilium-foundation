@@ -13,34 +13,30 @@
 
     <div id="boot-sequence">
         <div class="terminal-text">
-            <p class="line" data-delay="0.1">> LANAZRION_OS_CORE v3.0 // UPLINK: KALEIDOLAND HQ</p>
-            <p class="line" data-delay="0.6">> INITIALIZING 334 GEOLOGICAL NODES...</p>
-            <p class="line" data-delay="1.2">> TERRILIUM BRIDGE: CONNECTED [993257070]</p>
-            <p class="line success" data-delay="1.8">> WELCOME TO THE PRISM, CLEMENT.</p>
+            <p class="line" data-delay="0.1">> CORE_INIT: KALEIDOLAND_OS</p>
+            <p class="line" data-delay="0.6">> UPLINK: TERRILIUM_ARCHIVE [993257070]</p>
+            <p class="line success" data-delay="1.2">> SOUVERAINETÉ ÉTABLIE. PRÊT AU DÉPLOIEMENT.</p>
         </div>
     </div>
 
     <header class="top-nav">
         <nav class="nav-wrapper">
             <div class="brand-identity">
-                <img src="src/logo.jpg" alt="Kaleidoland Logo" class="main-logo kaleido">
-                <img src="src/logo%20sang%20et%20or%20Terrilium.png" alt="Terrilium Logo" class="main-logo blood">
+                <img src="src/logo.jpg" alt="Kaleidoland" class="main-logo kaleido">
                 <span class="logo-text">KALEIDOLAND <span class="divider">/</span> TERRILIUM</span>
             </div>
             
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#vision" data-key="nav-vision">Vision</a></li>
-                    <li><a href="#matrice" data-key="nav-matrix">Matrice 334</a></li>
-                    <li><a href="#soutenir" class="cta-header" data-key="nav-support">Soutenir</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#matrice">Matrice</a></li>
+                    <li><button id="navDonTrigger" class="cta-header">Soutenir</button></li>
                 </ul>
                 <div class="lang-selector">
                     <button class="lang-current" id="langBtn">FR</button>
                     <div class="lang-dropdown">
                         <span onclick="setLang('fr')">FR</span>
                         <span onclick="setLang('en')">EN</span>
-                        <span onclick="setLang('de')">DE</span>
-                        <span onclick="setLang('nl')">NL</span>
                     </div>
                 </div>
             </div>
@@ -50,60 +46,49 @@
     <main id="main-ui">
         <section id="vision" class="hero">
             <div class="container">
-                <p class="hero-eyebrow" data-key="hero-eyebrow">Souveraineté. Transmission. Innovation.</p>
-                <h1 class="hero-title" data-key="hero-title">Commander la <br><span class="gold-text">énergie cinétique.</span></h1>
-                <p class="hero-lead" data-key="hero-lead">Lanazrion OS catalyse les mémoires minières et les transitions technologiques pour bâtir les paysages de demain depuis le Prisme de Cristal.</p>
-                <div class="hero-actions">
-                    <a href="mailto:clement@kaleidoland.fr" class="btn-sang-full">REQUÉRIR ACCÈS</a>
-                </div>
+                <p class="hero-eyebrow">Engagement. Transmission. Rareté.</p>
+                <h1 class="hero-title">L'héritage est une <br><span class="gold-text">énergie cinétique.</span></h1>
+                <p class="hero-lead">Lanazrion OS catalyse les mémoires industrielles pour bâtir les infrastructures souveraines de demain depuis le Secteur 01.</p>
                 <div class="blood-spine"></div>
             </div>
         </section>
 
         <section id="matrice" class="section-block">
-            <div class="container">
-                <h2 class="section-tag" data-key="tag-01">01. L'Opportunité Matrix</h2>
-                <div class="manifeste-grid">
-                    <div class="col-left">
-                        <p class="massive-stat">334</p>
-                        <p class="mega-text" data-key="manifeste-mega">Nous transformons les terrils en bastions de puissance IA.</p>
-                    </div>
-                    <div class="col-right">
-                        <div class="terminal-box">
-                            <div class="terminal-header">NODE_SCANNER // SECTEUR_LILLE</div>
-                            <div class="terminal-body">
-                                <p>> Statut: <span class="green">OPTIMAL</span></p>
-                                <p>> IP Valuation: <span class="green">SCALABLE</span></p>
-                                <p>> Delegation: <span class="green">100% AI</span></p>
-                            </div>
-                        </div>
-                        <p class="body-text" data-key="manifeste-body">Le projet Terrilium est une plateforme de convergence inclusive. Nous archivons l'histoire par le numérique pour Alphabet Inc. et les générations futures.</p>
-                    </div>
+            <div class="container grid-split">
+                <div class="col-left">
+                    <span class="section-tag">01. L'Opportunité Matrix</span>
+                    <p class="massive-stat">334</p>
+                    <p class="mega-text">Terrils sous monitoring algorithmique IST.</p>
                 </div>
-                <div class="blood-spine-short"></div>
+                <div class="col-right">
+                    <div class="terminal-box">
+                        <div class="terminal-header">ASSET_VALUATION // ALPHA_V</div>
+                        <p>> Scalabilité: <span class="green">100%</span></p>
+                        <p>> IA Delegation: <span class="green">ACTIF</span></p>
+                        <p>> IP Status: <span class="green">SOVEREIGN</span></p>
+                    </div>
+                    <p class="body-text">Nous archivons l'histoire par le numérique et protégeons les futurs par l'écologie radicale et la data de précision.</p>
+                </div>
             </div>
         </section>
 
         <section id="soutenir" class="section-block last">
             <div class="container">
-                <h2 class="section-tag center" data-key="tag-03">02. Co-Construction & Mécénat</h2>
-                <p class="soutien-headline" data-key="soutien-lead">La pérennité de la matrice repose sur une communauté de bâtisseurs engagés.</p>
-                
+                <h2 class="section-tag center">02. Financer la Structure</h2>
                 <div class="engagement-container">
                     <div class="eng-card">
                         <div class="eng-content">
-                            <h3 data-key="card-don-h3">Mécénat Libre</h3>
-                            <p data-key="card-don-p">Soutien ponctuel aux projets IST. Déduction fiscale de 66% via Terrilium.</p>
+                            <h3>Mécénat Libre</h3>
+                            <p>Soutien ponctuel aux projets de l'association. Déduction fiscale de 66% pour les particuliers.</p>
                         </div>
-                        <button id="btnDon" class="btn-sang-full" data-key="btn-don">Faire un don</button>
+                        <button id="mainDonTrigger" class="btn-sang-full">FAIRE UN DON</button>
                     </div>
-
                     <div class="eng-card border-left">
                         <div class="eng-content">
-                            <h3 data-key="card-adh-h3">Adhésion Membre</h3>
-                            <p data-key="card-adh-p">Devenir acteur de la gouvernance et participer aux chantiers de l'innovation du secteur 01.</p>
+                            <h3>Adhésion Membre</h3>
+                            <p>Devenir acteur de la gouvernance et participer aux chantiers de l'innovation territoriale.</p>
                         </div>
-                        <a href="#adhesion-area" class="btn-sang-outline" data-key="btn-adh">S'engager</a>
+                        <a href="#adhesion-area" class="btn-sang-outline">S'ENGAGER</a>
                     </div>
                 </div>
 
@@ -114,74 +99,50 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="f-brand">
-                <span class="f-logo">KALEIDOLAND HOLDING</span>
-                <p>SIÈGE : LE PRISME DE CRISTAL // SECTEUR 01</p>
-            </div>
-            <div class="f-meta">
-                <p>© 2026. Lanazrion OS — Powered by Terrilium Archive.</p>
-                <p data-key="footer-values">Scalabilité. Transmission. Monopole.</p>
-            </div>
-        </div>
-    </footer>
-
     <div id="modalDon" class="modal-system">
-        <div class="modal-header"><button id="closeModal" data-key="modal-close">X</button></div>
+        <div class="modal-header">
+            <span>SCELLER LE PACTE // DONATION_GATE</span>
+            <button id="closeModal">FERMER [X]</button>
+        </div>
         <div class="modal-body">
             <iframe src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay"></iframe>
         </div>
     </div>
 
     <script>
-        const translations = {
-            fr: {
-                "nav-vision": "Vision", "nav-matrix": "Matrice", "nav-support": "Soutenir",
-                "hero-eyebrow": "Souveraineté. Transmission. Innovation.",
-                "hero-title": "Commander la <br><span class='gold-text'>énergie cinétique.</span>",
-                "hero-lead": "Lanazrion OS catalyse les mémoires minières et les transitions technologiques pour bâtir les paysages de demain.",
-                "tag-01": "01. L'Opportunité Matrix", "manifeste-mega": "Nous transformons les terrils en bastions de puissance IA.",
-                "manifeste-body": "Le projet Terrilium est une plateforme de convergence inclusive. Nous archivons l'histoire par le numérique.",
-                "tag-03": "02. Co-Construction", "soutien-lead": "La pérennité de la matrice repose sur une communauté de bâtisseurs engagés.",
-                "card-don-h3": "Mécénat Libre", "card-don-p": "Soutien ponctuel aux projets IST. Déduction fiscale de 66% via Terrilium.",
-                "btn-don": "Faire un don", "card-adh-h3": "Adhésion Membre", "card-adh-p": "Devenir acteur de la gouvernance.",
-                "btn-adh": "S'engager", "modal-close": "X"
-            },
-            en: {
-                "nav-vision": "Vision", "nav-matrix": "Matrix", "nav-support": "Support",
-                "hero-eyebrow": "Sovereignty. Transmission. Innovation.",
-                "hero-title": "Commanding <br><span class='gold-text'>kinetic energy.</span>",
-                "hero-lead": "Lanazrion OS catalyzes mining memories and technological transitions for future landscapes.",
-                "tag-01": "01. Matrix Opportunity", "manifeste-mega": "We transform mining sites into AI power bastions.",
-                "manifeste-body": "Terrilium is an inclusive convergence platform. We archive history through digital tools.",
-                "tag-03": "02. Co-Construction", "soutien-lead": "The matrix's sustainability relies on a community of builders.",
-                "card-don-h3": "Patronage", "card-don-p": "One-off project support. Tax benefits applicable via Terrilium.",
-                "btn-don": "Donate Now", "card-adh-h3": "Membership", "card-adh-p": "Join the governance of Sector 01.",
-                "btn-adh": "Join Us", "modal-close": "X"
-            }
-        };
-
-        function setLang(lang) {
-            document.querySelectorAll('[data-key]').forEach(el => {
-                const key = el.getAttribute('data-key');
-                el.innerHTML = translations[lang][key];
-            });
-            document.getElementById('langBtn').innerText = lang.toUpperCase();
-        }
-
+        // Séquence de démarrage
         window.addEventListener('load', () => {
             setTimeout(() => {
-                document.getElementById('boot-sequence').style.opacity = '0';
-                setTimeout(() => document.getElementById('boot-sequence').style.display = 'none', 600);
-            }, 3000);
+                const boot = document.getElementById('boot-sequence');
+                boot.style.opacity = '0';
+                setTimeout(() => boot.style.display = 'none', 600);
+            }, 2500);
         });
 
-        const btnDon = document.getElementById('btnDon');
-        const modalDon = document.getElementById('modalDon');
-        const closeModal = document.getElementById('closeModal');
-        btnDon.onclick = () => modalDon.style.display = 'block';
-        closeModal.onclick = () => modalDon.style.display = 'none';
+        // Logique de la modale de don
+        const modal = document.getElementById('modalDon');
+        const btnNav = document.getElementById('navDonTrigger');
+        const btnMain = document.getElementById('mainDonTrigger');
+        const btnClose = document.getElementById('closeModal');
+
+        const openModal = () => {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeModal = () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+
+        btnNav.onclick = openModal;
+        btnMain.onclick = openModal;
+        btnClose.onclick = closeModal;
+
+        // Fermer au clic extérieur
+        window.onclick = (event) => {
+            if (event.target == modal) closeModal();
+        };
     </script>
 </body>
 </html>
