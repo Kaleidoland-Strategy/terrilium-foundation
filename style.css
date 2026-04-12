@@ -61,11 +61,27 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 30p
 .highlight-text { color: var(--gold-bright); }
 .hero-p { max-width: 700px; margin: 0 auto 40px; color: var(--text-dim); font-size: 1.2rem; }
 
-.hero-btns { display: flex; gap: 20px; justify-content: center; }
+.hero-btns { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; /* Permet un affichage propre sur mobile */
+}
+
 .btn-main { padding: 20px 40px; font-weight: 800; text-decoration: none; text-transform: uppercase; transition: 0.4s var(--bezier); }
-.btn-brique { background: var(--sang); color: white; }
-.btn-gold { border: 1px solid var(--gold-bright); color: var(--gold-bright); }
+.btn-brique { background: var(--sang); color: white; border: 1px solid var(--sang); }
 .btn-main:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+
+/* Conteneur spécifique pour le bouton HelloAsso */
+.helloasso-btn-container {
+    width: 280px; /* Adapté à la largeur standard du bouton HelloAsso */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    transition: 0.4s var(--bezier);
+}
+.helloasso-btn-container:hover { transform: translateY(-5px); }
 
 /* SECTIONS */
 .container-narrow { max-width: 1100px; margin: 0 auto; padding: 120px 40px; }
@@ -74,13 +90,13 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 30p
 .statuts-text { font-size: 1.4rem; font-weight: 200; }
 .statuts-subtext { color: var(--text-dim); font-style: italic; }
 
-/* MISSIONS GRID (Cadre Or) */
+/* MISSIONS GRID */
 .missions-grid-section { background: var(--grey-vanta); padding: 120px 40px; }
 .mission-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
 
 .m-card { 
     padding: 60px 40px; 
-    border: 1px solid var(--gold-bright); /* Cadre Or */
+    border: 1px solid var(--gold-bright); 
     background: transparent;
     text-align: center;
 }
@@ -105,22 +121,22 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 30p
     background: var(--grey-vanta); 
     padding: 60px; 
     border: 1px solid var(--gold-bright); 
-    max-width: 600px;
+    max-width: 800px; /* Élargi pour intégrer confortablement le widget */
+    width: 100%;
 }
-.action-card h3 { color: var(--gold-bright); margin-bottom: 20px; font-size: 1.8rem; }
+.action-card h3 { color: var(--gold-bright); margin-bottom: 20px; font-size: 1.8rem; text-transform: uppercase; }
 .action-card p { margin-bottom: 40px; color: var(--off-white); }
 
-.btn-final { 
-    display: inline-block;
-    padding: 20px 40px; 
-    background: var(--gold-bright); 
-    color: var(--vantablack); 
-    text-decoration: none; 
-    font-weight: 800; 
-    text-transform: uppercase;
-    transition: 0.3s;
+/* Conteneur du Widget HelloAsso */
+.widget-container {
+    width: 100%;
+    background: #ffffff; /* Fond blanc imposé pour la lisibilité du formulaire externe */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
 }
-.btn-final:hover { background: white; }
+
 .inclusive-note { margin-top: 20px; font-size: 0.8rem; color: var(--text-dim); }
 
 /* FOOTER */
@@ -134,4 +150,7 @@ footer { padding: 80px 40px; text-align: center; border-top: 1px solid rgba(255,
     .mission-cards { grid-template-columns: 1fr; }
     .statuts-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+    .action-card { padding: 40px 20px; }
 }
