@@ -141,9 +141,10 @@
                 <p>Bassin Minier Global</p>
             </div>
             <div class="f-links">
-                <a href="/mentions-legales.html" class="legal-link" data-key="footer-legal">Mentions Légales</a>
-                <a href="/politique-confidentialite.html" class="legal-link" data-key="footer-privacy">Politique de Confidentialité</a>
-                <a href="mailto:clement@terrilium.org" class="legal-link" data-key="footer-contact">Contact</a>
+                <!-- Boutons qui ouvrent les modales légales -->
+                <button id="btnLegal" class="legal-btn" data-key="footer-legal" aria-haspopup="dialog">Mentions Légales</button>
+                <button id="btnPrivacy" class="legal-btn" data-key="footer-privacy" aria-haspopup="dialog">Politique de Confidentialité</button>
+                <a href="mailto:clement@terrilium.org" class="legal-link" data-key="footer-contact">clement@terrilium.org</a>
             </div>
             <div class="f-meta">
                 <p>© 2026. Terrilium — Cultures & Patrimoines.</p>
@@ -165,13 +166,60 @@
     </div>
 
     <!-- MODALE DE DON -->
-    <div id="modalDon" class="modal-system" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modalDon" class="modal-system" role="dialog" aria-modal="true" aria-labelledby="modal-title-don">
         <div class="modal-header">
-            <span id="modal-title" class="modal-title">SECURE GATEWAY // HELLOASSO</span>
-            <button id="closeModal" data-key="modal-close" aria-label="Fermer la fenêtre">FERMER[X]</button>
+            <span id="modal-title-don" class="modal-title">SECURE GATEWAY // HELLOASSO</span>
+            <button id="closeModalDon" class="close-btn" data-key="modal-close" aria-label="Fermer la fenêtre">FERMER [X]</button>
         </div>
         <div class="modal-body">
             <iframe title="Formulaire de don HelloAsso" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- MODALE MENTIONS LÉGALES -->
+    <div id="modalLegal" class="modal-system text-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-legal">
+        <div class="modal-header">
+            <span id="modal-title-legal" class="modal-title" data-key="footer-legal">MENTIONS LÉGALES</span>
+            <button id="closeModalLegal" class="close-btn" data-key="modal-close" aria-label="Fermer la fenêtre">FERMER[X]</button>
+        </div>
+        <div class="modal-body scroll-body">
+            <div class="legal-content">
+                <h2>Éditeur du site</h2>
+                <p>Le présent site est édité par l'association <strong>TERRILIUM – Cultures & Patrimoines</strong>, association déclarée régie par la loi du 1er juillet 1901 et le décret du 16 août 1901.</p>
+                <p><strong>Siège social :</strong> [Adresse du siège de l'association, ex: Bassin Minier, France]</p>
+                <p><strong>E-mail :</strong> clement@terrilium.org</p>
+                
+                <h2>Directeur de la publication</h2>
+                <p>Clément LEGRAND, en qualité de Président de l'association TERRILIUM.</p>
+
+                <h2>Hébergement</h2>
+                <p>Le site est hébergé par <strong>[Nom de l'hébergeur, ex: OVH SAS]</strong><br>
+                Adresse :[Adresse de l'hébergeur, ex: 2 rue Kellermann - 59100 Roubaix - France]</p>
+
+                <h2>Propriété intellectuelle</h2>
+                <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE POLITIQUE DE CONFIDENTIALITÉ -->
+    <div id="modalPrivacy" class="modal-system text-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-privacy">
+        <div class="modal-header">
+            <span id="modal-title-privacy" class="modal-title" data-key="footer-privacy">POLITIQUE DE CONFIDENTIALITÉ</span>
+            <button id="closeModalPrivacy" class="close-btn" data-key="modal-close" aria-label="Fermer la fenêtre">FERMER [X]</button>
+        </div>
+        <div class="modal-body scroll-body">
+            <div class="legal-content">
+                <h2>Collecte des données personnelles</h2>
+                <p>L'association TERRILIUM s'engage à ce que la collecte et le traitement de vos données, effectués à partir du site terrilium.org, soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.</p>
+                <p>Les données personnelles recueillies sur le site résultent de la communication volontaire lors de vos dons et adhésions. Ces transactions sont sécurisées et gérées par notre partenaire <strong>HelloAsso</strong>.</p>
+                
+                <h2>Utilisation des cookies</h2>
+                <p>Le site utilise des cookies techniques strictement nécessaires à son fonctionnement. Des cookies tiers liés à l'intégration des formulaires HelloAsso peuvent être déposés. Vous pouvez paramétrer vos choix via le bandeau prévu à cet effet lors de votre première visite.</p>
+
+                <h2>Vos droits</h2>
+                <p>Conformément à la réglementation applicable, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données. Pour exercer ces droits, vous pouvez nous contacter par e-mail à : <strong>clement@terrilium.org</strong></p>
+            </div>
         </div>
     </div>
 
@@ -234,35 +282,51 @@
             document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
         }
 
-        // Script Modale de Don
-        const modal = document.getElementById('modalDon');
-        const triggers =[document.getElementById('navDonTrigger'), document.getElementById('mainDonTrigger')];
-        const closeBtn = document.getElementById('closeModal');
-
-        triggers.forEach(btn => {
-            if(btn) btn.addEventListener('click', () => {
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-                closeBtn.focus(); // Accessibilité : focus direct sur le bouton fermer
+        // --- GESTION DES MODALES ---
+        function setupModal(triggerIds, modalId, closeBtnId) {
+            const modal = document.getElementById(modalId);
+            const closeBtn = document.getElementById(closeBtnId);
+            
+            triggerIds.forEach(id => {
+                const btn = document.getElementById(id);
+                if(btn) {
+                    btn.addEventListener('click', () => {
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                        closeBtn.focus();
+                    });
+                }
             });
-        });
 
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-            document.getElementById('mainDonTrigger').focus();
-        });
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
 
-        window.addEventListener('click', (e) => { if(e.target == modal) closeBtn.click(); });
+            window.addEventListener('click', (e) => {
+                if (e.target == modal) {
+                    closeBtn.click();
+                }
+            });
+        }
 
-        // Accessibilité : fermer la modale avec la touche Echap
+        // Init Modales
+        setupModal(['navDonTrigger', 'mainDonTrigger'], 'modalDon', 'closeModalDon');
+        setupModal(['btnLegal'], 'modalLegal', 'closeModalLegal');
+        setupModal(['btnPrivacy'], 'modalPrivacy', 'closeModalPrivacy');
+
+        // Accessibilité globale Modales (Echap)
         document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape" && modal.style.display === 'block') {
-                closeBtn.click();
+            if (e.key === "Escape") {
+                document.querySelectorAll('.modal-system').forEach(modal => {
+                    if(modal.style.display === 'block') {
+                        modal.querySelector('.close-btn').click();
+                    }
+                });
             }
         });
 
-        // Gestion du bandeau RGPD
+        // --- BANDEAU RGPD ---
         const cookieBanner = document.getElementById('cookieBanner');
         if (!localStorage.getItem('terrilium_cookies_accepted')) {
             setTimeout(() => { cookieBanner.classList.add('show'); }, 1000);
