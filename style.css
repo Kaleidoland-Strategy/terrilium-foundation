@@ -4,9 +4,9 @@
     --sang: #A20A0A;
     --gold: #D4AF37;
     --white: #F5F5F7;
-    /* Amélioration contraste WCAG : passage d'un gris #8a8a8a à #b3b3b3 */
+    /* Amélioration contraste WCAG */
     --grey-text: #b3b3b3; 
-    --border: rgba(255,255,255,0.12); /* Légèrement éclairci pour délimiter les zones */
+    --border: rgba(255,255,255,0.12);
     --focus-ring: #D4AF37;
 }
 
@@ -55,7 +55,7 @@ body {
 
 .nav-links { display: flex; list-style: none; gap: 25px; }
 .nav-links a { 
-    color: var(--grey-text); text-decoration: none; font-size: 0.7rem; /* Taille augmentée pour lisibilité */
+    color: var(--grey-text); text-decoration: none; font-size: 0.7rem; 
     text-transform: uppercase; letter-spacing: 2px; font-weight: 700; transition: 0.3s;
 }
 .nav-links a:hover, .nav-links a:focus-visible { color: var(--white); }
@@ -126,19 +126,34 @@ body {
 .f-logo { color: var(--gold); font-weight: 800; letter-spacing: 3px; font-size: 1.2rem; }
 .f-brand p { color: var(--grey-text); margin-top: 10px; font-size: 0.9rem;}
 .f-links { display: flex; flex-direction: column; gap: 15px; }
-.legal-link { color: var(--grey-text); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
-.legal-link:hover { color: var(--gold); text-decoration: underline; }
+
+/* Liens et boutons du footer */
+.legal-link, .legal-btn { 
+    color: var(--grey-text); font-size: 0.85rem; transition: color 0.3s;
+    background: none; border: none; padding: 0; cursor: pointer; text-align: left;
+    font-family: inherit;
+}
+.legal-link { text-decoration: none; }
+.legal-link:hover, .legal-btn:hover { color: var(--gold); text-decoration: underline; }
 .f-meta p { color: var(--grey-text); font-size: 0.85rem; margin-top: 5px; }
 
-/* MODAL DON */
+/* --- MODALES GLOBALES --- */
 .modal-system { position: fixed; inset: 0; background: rgba(5,5,5,0.95); backdrop-filter: blur(10px); display: none; z-index: 100000; }
 .modal-header { padding: 30px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); align-items: center; background: var(--vanta); }
 .modal-title { font-family: monospace; font-size: 0.8rem; letter-spacing: 2px; color: var(--grey-text); }
-#closeModal { background: none; border: none; color: var(--sang); font-weight: 800; cursor: pointer; font-size: 0.9rem; padding: 5px; }
+.close-btn { background: none; border: none; color: var(--sang); font-weight: 800; cursor: pointer; font-size: 0.9rem; padding: 5px; }
 .modal-body { height: calc(100vh - 100px); padding: 2%; display: flex; justify-content: center; }
 .modal-body iframe { width: 100%; max-width: 800px; height: 100%; border: none; background: #fff; border-radius: 8px;}
 
-/* BANDEAU RGPD / COOKIES */
+/* Modales Texte (Mentions Légales & Privacy) */
+.scroll-body { overflow-y: auto; align-items: flex-start; padding: 50px 20px; }
+.legal-content { max-width: 800px; width: 100%; background: var(--near-black); padding: 50px; border: 1px solid var(--border); border-radius: 4px; }
+.legal-content h2 { color: var(--gold); font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content p { color: var(--grey-text); line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem; }
+.legal-content strong { color: var(--white); font-weight: 600; }
+
+/* --- BANDEAU RGPD / COOKIES --- */
 .cookie-banner {
     position: fixed; bottom: -150%; left: 5%; right: 5%; max-width: 900px; margin: 0 auto;
     background: var(--near-black); border: 1px solid var(--border); padding: 25px 35px;
@@ -165,4 +180,5 @@ body {
     .border-left { border-left: none; border-top: 1px solid var(--border); }
     .cookie-actions { flex-direction: column; width: 100%; }
     .btn-cookie { width: 100%; }
+    .legal-content { padding: 30px 20px; }
 }
