@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Instagram, Linkedin, ChevronDown, Globe, Mail, X, ArrowRight } from 'lucide-react';
+import { Instagram, Linkedin, Facebook, ChevronDown, Globe, Mail, X, ArrowRight } from 'lucide-react';
 
 const translations: any = {
   fr: {
@@ -188,6 +188,16 @@ export default function App() {
                 <Linkedin size={20} strokeWidth={2.5} />
               </a>
 
+              <a 
+                href="https://www.facebook.com/terrilium.heritage/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#D4AF37] hover:scale-125 transition-all glow-gold" 
+                title="Facebook"
+              >
+                <Facebook size={20} strokeWidth={2.5} />
+              </a>
+
               <div className="relative">
                 <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center gap-2 text-[10px] font-black border-2 border-[#D4AF37]/40 px-3 py-1.5 rounded-sm uppercase tracking-widest hover:border-[#D4AF37] transition-all text-[#D4AF37] bg-[#8B0000]/5">
                   <Globe size={12} /> {lang} <ChevronDown size={10} className={`transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
@@ -311,6 +321,7 @@ export default function App() {
             <div className="flex gap-6">
               <a href="https://www.instagram.com/terrilium.heritage/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 border-2 border-[#D4AF37] rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#020202] transition-all text-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.3)]"><Instagram size={26} /></a>
               <a href="https://www.linkedin.com/company/terrilium" target="_blank" rel="noopener noreferrer" className="w-14 h-14 border-2 border-[#D4AF37] rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#020202] transition-all text-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.3)]"><Linkedin size={26} /></a>
+              <a href="https://www.facebook.com/terrilium.heritage/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 border-2 border-[#D4AF37] rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#020202] transition-all text-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.3)]"><Facebook size={26} /></a>
               <a href="mailto:clement@terrilium.org" className="w-14 h-14 border-2 border-[#8B0000] rounded-full flex items-center justify-center hover:bg-[#8B0000] hover:text-[#FFFFF0] transition-all text-[#8B0000] shadow-[0_0_20px_rgba(139,0,0,0.3)]"><Mail size={26} /></a>
             </div>
           </div>
