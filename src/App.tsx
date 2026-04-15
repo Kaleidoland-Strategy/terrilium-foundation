@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Instagram, ChevronDown, Globe, Mail } from 'lucide-react';
+import { Instagram, ChevronDown, Globe, Mail, Menu, X } from 'lucide-react';
 
 const translations = {
   fr: {
@@ -21,9 +21,8 @@ const translations = {
     "btn-adh": "S'engager", "footer-values": "Équité. Transmission. Innovation.", 
     "footer-legal": "Mentions Légales", "footer-privacy": "Politique de Confidentialité", "footer-contact": "Contact",
     "modal-close": "Fermer [X]",
-    "cookie-title": "Gestion des cookies", "cookie-desc": "Nous utilisons des cookies fonctionnels et des services tiers (comme HelloAsso) pour assurer le bon fonctionnement du site.",
-    "cookie-accept": "Accepter", "cookie-decline": "Refuser",
-    "instagram-follow": "Suivez-nous sur Instagram"
+    "cookie-title": "Gestion des cookies", "cookie-desc": "Nous utilisons des cookies fonctionnels pour assurer le bon fonctionnement du site.",
+    "cookie-accept": "Accepter", "cookie-decline": "Refuser"
   },
   en: {
     "skip-link": "Skip to main content",
@@ -43,123 +42,12 @@ const translations = {
     "btn-adh": "Join Us", "footer-values": "Equity. Transmission. Innovation.",
     "footer-legal": "Legal Notice", "footer-privacy": "Privacy Policy", "footer-contact": "Contact",
     "modal-close": "Close [X]",
-    "cookie-title": "Cookie Management", "cookie-desc": "We use functional cookies and third-party services (like HelloAsso) to ensure the proper functioning of the site.",
-    "cookie-accept": "Accept", "cookie-decline": "Decline",
-    "instagram-follow": "Follow us on Instagram"
-  },
-  de: {
-    "skip-link": "Zum Hauptinhalt springen",
-    "nav-manifesto": "Manifest", "nav-actions": "Aktionen", "nav-support": "Unterstützen",
-    "hero-eyebrow": "Engagement. Übertragung. Innovation.",
-    "hero-title": "Das Erbe ist eine <br/><span class='gold-text'>kinetische Energie.</span>",
-    "hero-lead": "Terrilium katalysiert <span class='text-gold'>industrielle Erinnerungen</span> und technologische Übergänge, um die Landschaften von morgen zu gestalten.",
-    "tag-01": "01. Gesellschaftszweck", "manifeste-mega": "Wir blicken nicht mit Nostalgie zurück, sondern mit <span class='text-gold'>Ehrgeiz</span>.",
-    "manifeste-body": "Terrilium ist eine integrative <span class='text-gold'>Konvergenzplattform</span>. Wir archivieren Geschichte durch digitale Werkzeuge und schützen die Zukunft durch radikale Ökologie.",
-    "cta-join": "Der Initiative beitreten", "tag-02": "02. Aktionssäulen",
-    "pilier-1-h3": "Kunst & Residenzen", "pilier-1-p": "Zeitgenössisches Schaffen an Bergbaustandorte einladen.",
-    "pilier-2-h3": "Biodiversität", "pilier-2-p": "Schutz der endemischen Flora und Fauna der Halden.",
-    "pilier-3-h3": "Soziales Digitales", "pilier-3-p": "Demokratisierung des Zugangs zu territorialen Archiven.",
-    "tag-03": "03. Co-Konstruktion", "soutien-lead": "Die Nachhaltigkeit unseres Handelns beruht auf einer <span class='text-gold'>Gemeinschaft von Erbauern</span>.",
-    "card-don-h3": "Freies Mäzenatentum", "card-don-p": "Punktuelle Unterstützung für Projekte. Steuerabzug möglich.",
-    "btn-don": "Spenden", "card-adh-h3": "Mitgliedschaft", "card-adh-p": "Aktiv an Innovationsprojekten teilnehmen.",
-    "btn-adh": "Mitmachen", "footer-values": "Gerechtigkeit. Übertragung. Innovation.",
-    "footer-legal": "Impressum", "footer-privacy": "Datenschutz", "footer-contact": "Kontakt",
-    "modal-close": "Schließen [X]",
-    "cookie-title": "Cookie-Verwaltung", "cookie-desc": "Wir verwenden funktionale Cookies und Dienste von Drittanbietern (wie HelloAsso), um das ordnungsgemäße Funktionieren der Website zu gewährleisten.",
-    "cookie-accept": "Akzeptieren", "cookie-decline": "Ablehnen",
-    "instagram-follow": "Folgen Sie uns auf Instagram"
-  },
-  nl: {
-    "skip-link": "Ga naar de hoofdinhoud",
-    "nav-manifesto": "Manifest", "nav-actions": "Acties", "nav-support": "Steunen",
-    "hero-eyebrow": "Engagement. Overdracht. Innovatie.",
-    "hero-title": "Erfgoed is <br/><span class='gold-text'>kinetische energie.</span>",
-    "hero-lead": "Terrilium katalyseert <span class='text-gold'>industriële herinneringen</span> en technologische transities om de landschappen van morgen te bouwen.",
-    "tag-01": "01. Maatschappelijk Doel", "manifeste-mega": "We kijken niet met nostalgie terug, maar met <span class='text-gold'>ambitie</span>.",
-    "manifeste-body": "Terrilium is een inclusief <span class='text-gold'>convergentieplatform</span>. We archiveren geschiedenis via digitale tools en beschermen de toekomst via radicale ecologie.",
-    "cta-join": "Sluit je aan bij het initiatief", "tag-02": "02. Actiepijlers",
-    "pilier-1-h3": "Kunst & Residenties", "pilier-1-p": "Hedendaagse creatie uitnodigen op mijnsites.",
-    "pilier-2-h3": "Biodiversiteit", "pilier-2-p": "Bescherming van endemische flora and fauna van de mijnterrils.",
-    "pilier-3-h3": "Sociaal Digitaal", "pilier-3-p": "Democratisering van de toegang tot territoriale archieven.",
-    "tag-03": "03. Co-constructie", "soutien-lead": "De duurzaamheid van onze acties rust op een <span class='text-gold'>gemeenschap van bouwers</span>.",
-    "card-don-h3": "Vrij Mecenaat", "card-don-p": "Eenmalige steun voor projecten. Belastingaftrek mogelijk.",
-    "btn-don": "Doneren", "card-adh-h3": "Lidmaatschap", "card-adh-p": "Actief deelnemen aan innovatieprojecten.",
-    "btn-adh": "Meedoen", "footer-values": "Rechtvaardigheid. Overdracht. Innovatie.",
-    "footer-legal": "Juridische Informatie", "footer-privacy": "Privacybeleid", "footer-contact": "Contact",
-    "modal-close": "Sluiten [X]",
-    "cookie-title": "Cookiebeheer", "cookie-desc": "We gebruiken functionele cookies and diensten van derden (zoals HelloAsso) para garantir o funcionamento correto do site.",
-    "cookie-accept": "Accepteren", "cookie-decline": "Weigeren",
-    "instagram-follow": "Volg ons op Instagram"
-  },
-  it: {
-    "skip-link": "Vai al contenuto principale",
-    "nav-manifesto": "Il Manifesto", "nav-actions": "Azioni", "nav-support": "Sostenere",
-    "hero-eyebrow": "Impegno. Trasmissione. Innovazione.",
-    "hero-title": "L'eredità è un' <br/><span class='gold-text'>energia cinetica.</span>",
-    "hero-lead": "Terrilium catalizza le <span class='text-gold'>memorie industriali</span> e le transizioni tecnologiche per costruire i paesaggi di domani.",
-    "tag-01": "01. Scopo Sociale", "manifeste-mega": "Non guardiamo al passato con nostalgia, ma con <span class='text-gold'>ambizione</span>.",
-    "manifeste-body": "Terrilium è una piattaforma di <span class='text-gold'>convergenza inclusiva</span>. Archiviamo la storia attraverso strumenti digitali e proteggiamo il futuro attraverso l'ecologia radicale.",
-    "cta-join": "Unisciti all'iniziativa", "tag-02": "02. Pilastri d'Azione",
-    "pilier-1-h3": "Arti & Residenze", "pilier-1-p": "Invitare la création contemporaine nei siti minerari.",
-    "pilier-2-h3": "Biodiversità", "pilier-2-p": "Proteggere la flora e la fauna endemiche dei cumuli di scorie.",
-    "pilier-3-h3": "Digitale Sociale", "pilier-3-p": "Democratizzare l'accesso agli archivi territoriali.",
-    "tag-03": "03. Co-Costruzione", "soutien-lead": "La sostenibilità delle nostre azioni si basa su una <span class='text-gold'>comunità di costruttori</span>.",
-    "card-don-h3": "Mecenatismo Libero", "card-don-p": "Supporto puntuale ai progetti. Detrazione fiscale applicabile.",
-    "btn-don": "Fai una donazione", "card-adh-h3": "Adesione Membro", "card-adh-p": "Partecipare attivamente ai progetti di innovazione.",
-    "btn-adh": "Impegnarsi", "footer-values": "Equità. Trasmissione. Innovazione.",
-    "footer-legal": "Note Legali", "footer-privacy": "Informativa sulla Privacy", "footer-contact": "Contatto",
-    "modal-close": "Chiudi [X]",
-    "cookie-title": "Gestione dei cookie", "cookie-desc": "Utilizziamo cookie funzionali e servizi di terze parti (come HelloAsso) per garantire il corretto funzionamento del sito.",
-    "cookie-accept": "Accetta", "cookie-decline": "Rifiuta",
-    "instagram-follow": "Seguici su Instagram"
-  },
-  es: {
-    "skip-link": "Ir al contenido principal",
-    "nav-manifesto": "El Manifiesto", "nav-actions": "Acciones", "nav-support": "Apoyar",
-    "hero-eyebrow": "Compromiso. Transmisión. Innovación.",
-    "hero-title": "El legado es una <br/><span class='gold-text'>energía cinética.</span>",
-    "hero-lead": "Terrilium cataliza las <span class='text-gold'>memorias industriales</span> y las transiciones tecnológicas para construir los paisajes del mañana.",
-    "tag-01": "01. Objeto Social", "manifeste-mega": "No miramos al pasado con nostalgia, sino con <span class='text-gold'>ambición</span>.",
-    "manifeste-body": "Terrilium es una plataforma de <span class='text-gold'>convergencia inclusiva</span>. Archivamos la historia a través de herramientas digitales y protegemos el futuro mediante la ecología radical.",
-    "cta-join": "Unirse a la iniciativa", "tag-02": "02. Pilares de Acción",
-    "pilier-1-h3": "Artes & Residencias", "pilier-1-p": "Invitar a la creación contemporánea a los sitios mineros.",
-    "pilier-2-h3": "Biodiversidad", "pilier-2-p": "Proteger la flora y fauna endémicas de las escombreras.",
-    "pilier-3-h3": "Digital Social", "pilier-3-p": "Democratizar el acceso a los archivos territoriales.",
-    "tag-03": "03. Co-Construcción", "soutien-lead": "La sostenibilidad de nuestras acciones se basa en una <span class='text-gold'>comunidad de constructores</span>.",
-    "card-don-h3": "Mecenazgo Libre", "card-don-p": "Apoyo puntual a proyectos. Deducción fiscal aplicable.",
-    "btn-don": "Donar", "card-adh-h3": "Membresía", "card-adh-p": "Participar activamente en proyectos de innovación.",
-    "btn-adh": "Comprometerse", "footer-values": "Equidad. Transmisión. Innovación.",
-    "footer-legal": "Aviso Legal", "footer-privacy": "Política de Privacidad", "footer-contact": "Contacto",
-    "modal-close": "Cerrar [X]",
-    "cookie-title": "Gestión de cookies", "cookie-desc": "Utilizamos cookies funcionales y servicios de terceros (como HelloAsso) para garantizar el correcto funcionamiento del sitio.",
-    "cookie-accept": "Aceptar", "cookie-decline": "Rechazar",
-    "instagram-follow": "Síguenos en Instagram"
-  },
-  pt: {
-    "skip-link": "Ir para o conteúdo principal",
-    "nav-manifesto": "O Manifesto", "nav-actions": "Ações", "nav-support": "Apoiar",
-    "hero-eyebrow": "Compromisso. Transmissão. Inovação.",
-    "hero-title": "O legado é uma <br/><span class='gold-text'>energia cinética.</span>",
-    "hero-lead": "Terrilium catalisa as <span class='text-gold'>memórias industriais</span> e as transições tecnológicas para construir as paisagens de amanhã.",
-    "tag-01": "01. Objeto Social", "manifeste-mega": "Não olhamos para o passado with nostalgia, mas com <span class='text-gold'>ambição</span>.",
-    "manifeste-body": "Terrilium é uma plataforma de <span class='text-gold'>convergência inclusiva</span>. Arquivamos a história através de ferramentas digitais e protegemos o futuro através da ecologia radical.",
-    "cta-join": "Juntar-se à iniciativa", "tag-02": "02. Pilares de Ação",
-    "pilier-1-h3": "Artes & Residências", "pilier-1-p": "Convidar a criação contemporânea para os locais mineiros.",
-    "pilier-2-h3": "Biodiversidade", "pilier-2-p": "Proteger a flora e fauna endémicas das escombreiras.",
-    "pilier-3-h3": "Digital Social", "pilier-3-p": "Democratizar o acesso aos arquivos territoriais.",
-    "tag-03": "03. Co-Construção", "soutien-lead": "A sustentabilidade das nossas ações baseia-se numa <span class='text-gold'>comunidade de construtores</span>.",
-    "card-don-h3": "Mecenato Libre", "card-don-p": "Apoio pontual a projetos. Dedução fiscal aplicable.",
-    "btn-don": "Doar", "card-adh-h3": "Adesão de Membro", "card-adh-p": "Participar ativamente em projetos de inovação.",
-    "btn-adh": "Comprometer-se", "footer-values": "Equidade. Transmissão. Inovação.",
-    "footer-legal": "Aviso Legal", "footer-privacy": "Política de Privacidade", "footer-contact": "Contacto",
-    "modal-close": "Fechar [X]",
-    "cookie-title": "Gestão de cookies", "cookie-desc": "Utilizamos cookies funcionales e serviços de terceiros (como HelloAsso) para garantir o correto funcionamento do site.",
-    "cookie-accept": "Aceitar", "cookie-decline": "Recusar",
-    "instagram-follow": "Siga-nos no Instagram"
+    "cookie-title": "Cookie Management", "cookie-desc": "We use functional cookies to ensure the proper functioning of the site.",
+    "cookie-accept": "Accept", "cookie-decline": "Decline"
   }
 };
 
-type Language = 'fr' | 'en' | 'de' | 'nl' | 'it' | 'es' | 'pt';
+type Language = 'fr' | 'en';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('fr');
@@ -175,7 +63,7 @@ export default function App() {
     }
   }, []);
 
-  const t = (key: keyof typeof translations['fr']) => translations[lang][key] || translations['fr'][key];
+  const t = (key: any) => (translations[lang] as any)[key] || (translations['fr'] as any)[key];
 
   const handleCookieAction = (accepted: boolean) => {
     localStorage.setItem('terrilium_cookies_accepted', accepted.toString());
@@ -193,29 +81,31 @@ export default function App() {
   };
 
   return (
-    <div className="vanta-edition min-h-screen">
-      <header className="top-nav" role="banner">
-        <nav className="nav-wrapper">
-          <a href="/" className="brand-identity">
-            <img src="/src/logo sang et or Terrilium.png" alt="Logo" className="h-12 w-auto" />
-            <span className="logo-text">TERRILIUM</span>
+    <div className="vanta-edition min-h-screen bg-[#0a0a0a] text-white font-sans">
+      {/* Header */}
+      <header className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5">
+        <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-3">
+            <img src="/logo.png" alt="Terrilium" className="h-10 w-auto" />
+            <span className="text-xl font-bold tracking-tighter text-white">TERRILIUM</span>
           </a>
-          <div className="nav-right">
-            <ul className="nav-links">
-              <li><a href="#manifeste">{t('nav-manifesto')}</a></li>
-              <li><a href="#actions">{t('nav-actions')}</a></li>
-              <li><button onClick={() => openModal('don')} className="cta-header">{t('nav-support')}</button></li>
+          
+          <div className="flex items-center gap-8">
+            <ul className="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase">
+              <li><a href="#manifeste" className="hover:text-[#D4AF37] transition-colors">{t('nav-manifesto')}</a></li>
+              <li><a href="#actions" className="hover:text-[#D4AF37] transition-colors">{t('nav-actions')}</a></li>
+              <li><button onClick={() => openModal('don')} className="bg-[#8B0000] px-5 py-2 rounded-full hover:bg-red-700 transition-all">{t('nav-support')}</button></li>
             </ul>
-            <div className="lang-selector">
-              <button className="lang-current" onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}>
-                <Globe size={14} /> {lang.toUpperCase()}
+
+            <div className="relative">
+              <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center gap-2 text-xs border border-white/10 px-3 py-1 rounded-full uppercase">
+                <Globe size={14} /> {lang} <ChevronDown size={12} />
               </button>
               <AnimatePresence>
                 {isLangMenuOpen && (
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="lang-dropdown !flex">
-                    {(['fr', 'en', 'de', 'nl', 'it', 'es', 'pt'] as Language[]).map((l) => (
-                      <button key={l} onClick={() => { setLang(l); setIsLangMenuOpen(false); }}>{l.toUpperCase()}</button>
-                    ))}
+                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute right-0 mt-2 bg-[#1a1a1a] border border-white/10 rounded-lg overflow-hidden flex flex-col min-w-[120px]">
+                    <button onClick={() => { setLang('fr'); setIsLangMenuOpen(false); }} className="px-4 py-2 text-left hover:bg-white/5 text-xs">FRANÇAIS</button>
+                    <button onClick={() => { setLang('en'); setIsLangMenuOpen(false); }} className="px-4 py-2 text-left hover:bg-white/5 text-xs">ENGLISH</button>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -224,52 +114,120 @@ export default function App() {
         </nav>
       </header>
 
-      <main id="main-content">
-        <section className="hero">
-          <div className="container-custom">
-            <p className="hero-eyebrow">{t('hero-eyebrow')}</p>
-            <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: t('hero-title') }} />
-            <p className="hero-lead">{t('hero-lead')}</p>
+      <main className="pt-20">
+        {/* Hero */}
+        <section className="min-h-[80vh] flex items-center px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-xs mb-6">{t('hero-eyebrow')}</p>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8" dangerouslySetInnerHTML={{ __html: t('hero-title') }} />
+            <p className="text-xl text-white/60 max-w-2xl mx-auto leading-relaxed" dangerouslySetInnerHTML={{ __html: t('hero-lead') }} />
           </div>
         </section>
-        <section id="manifeste" className="section-block">
-          <div className="container-custom">
-            <h2 className="section-tag">{t('tag-01')}</h2>
-            <p className="mega-text" dangerouslySetInnerHTML={{ __html: t('manifeste-mega') }} />
-            <p className="body-text" dangerouslySetInnerHTML={{ __html: t('manifeste-body') }} />
+
+        {/* Manifeste */}
+        <section id="manifeste" className="py-32 px-6 bg-white/5">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+            <div>
+              <h2 className="text-[#8B0000] font-mono text-sm mb-12">{t('tag-01')}</h2>
+              <p className="text-3xl md:text-5xl font-medium leading-tight" dangerouslySetInnerHTML={{ __html: t('manifeste-mega') }} />
+            </div>
+            <div className="flex flex-col justify-end">
+              <p className="text-lg text-white/70 mb-8 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('manifeste-body') }} />
+              <a href="#soutenir" className="text-[#8B0000] font-bold uppercase tracking-widest flex items-center gap-4 hover:gap-6 transition-all">
+                {t('cta-join')} <span className="text-2xl">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Actions */}
+        <section id="actions" className="py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-[#8B0000] font-mono text-sm mb-20">{t('tag-02')}</h2>
+            <div className="grid md:grid-cols-3 gap-12">
+              {[1, 2, 3].map((num) => (
+                <div key={num} className="group p-8 border border-white/5 hover:border-[#D4AF37]/30 transition-all bg-white/[0.02]">
+                  <span className="text-4xl font-serif italic text-white/10 group-hover:text-[#D4AF37]/20 transition-colors mb-8 block">0{num}</span>
+                  <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">{t(`pilier-${num}-h3`)}</h3>
+                  <p className="text-white/50 leading-relaxed">{t(`pilier-${num}-p`)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Soutenir */}
+        <section id="soutenir" className="py-32 px-6 bg-[#8B0000]/10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-[#8B0000] font-mono text-sm mb-12">{t('tag-03')}</h2>
+            <p className="text-3xl font-medium mb-16" dangerouslySetInnerHTML={{ __html: t('soutien-lead') }} />
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-20">
+              <div className="p-10 bg-[#0a0a0a] border border-white/5 text-left">
+                <h3 className="text-xl font-bold mb-4">{t('card-don-h3')}</h3>
+                <p className="text-white/50 text-sm mb-8">{t('card-don-p')}</p>
+                <button onClick={() => openModal('don')} className="w-full py-4 bg-[#8B0000] font-bold uppercase tracking-widest text-xs hover:bg-red-700 transition-all">{t('btn-don')}</button>
+              </div>
+              <div className="p-10 bg-[#0a0a0a] border border-white/5 text-left">
+                <h3 className="text-xl font-bold mb-4">{t('card-adh-h3')}</h3>
+                <p className="text-white/50 text-sm mb-8">{t('card-adh-p')}</p>
+                <a href="#adhesion-area" className="block w-full py-4 border border-[#8B0000] text-[#8B0000] text-center font-bold uppercase tracking-widest text-xs hover:bg-[#8B0000] hover:text-white transition-all">{t('btn-adh')}</a>
+              </div>
+            </div>
+
+            <div id="adhesion-area" className="w-full aspect-[4/5] md:aspect-video bg-white rounded-lg overflow-hidden">
+              <iframe title="HelloAsso" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/adhesions/terrilium-2026-devenez-batisseur-se-du-renouveau-territorial/widget" className="w-full h-full border-0"></iframe>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="footer-custom">
-        <div className="container-custom">
-          <div className="flex items-center gap-4 mb-4">
-            <img src="/src/logo sang et or Terrilium.png" alt="" className="h-10 w-auto" />
-            <span className="f-logo">TERRILIUM</span>
+      <footer className="py-20 px-6 border-t border-white/5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="flex items-center gap-4">
+            <img src="/logo.png" alt="" className="h-8 w-auto" />
+            <span className="font-bold tracking-tighter">TERRILIUM</span>
           </div>
-          <p>© 2026. Terrilium — Cultures & Patrimoines.</p>
+          <div className="flex gap-8 text-xs text-white/40 uppercase tracking-widest">
+            <button onClick={() => openModal('legal')} className="hover:text-white transition-colors">{t('footer-legal')}</button>
+            <button onClick={() => openModal('privacy')} className="hover:text-white transition-colors">{t('footer-privacy')}</button>
+            <a href="mailto:clement@terrilium.org" className="hover:text-white transition-colors">{t('footer-contact')}</a>
+          </div>
+          <p className="text-[10px] text-white/20 uppercase tracking-[0.2em]">© 2026. Terrilium — Cultures & Patrimoines.</p>
         </div>
       </footer>
 
+      {/* Modals */}
       <AnimatePresence>
         {activeModal && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="modal-system-custom !block">
-            <div className="modal-header-custom">
-              <span>{activeModal.toUpperCase()}</span>
-              <button onClick={closeModal}>{t('modal-close')}</button>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] bg-[#0a0a0a] flex flex-col">
+            <div className="h-20 px-6 flex items-center justify-between border-b border-white/5">
+              <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-widest">{activeModal} gateway</span>
+              <button onClick={closeModal} className="p-2 hover:bg-white/5 rounded-full transition-colors"><X size={24} /></button>
             </div>
-            <div className="modal-body-custom">
-              {activeModal === 'don' ? <iframe src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay" /> : <p>Contenu légal...</p>}
+            <div className="flex-1 overflow-y-auto p-6">
+              {activeModal === 'don' ? (
+                <iframe title="Don" src="https://www.helloasso.com/associations/terrilium-cultures-patrimoines/formulaires/1/widget?view=overlay" className="w-full h-full border-0"></iframe>
+              ) : (
+                <div className="max-w-2xl mx-auto py-20 prose prose-invert">
+                  <h2 className="text-3xl font-bold mb-10">Mentions Légales & RGPD</h2>
+                  <p className="text-white/60 leading-relaxed">Association TERRILIUM – Cultures & Patrimoines, Loi 1901. Siège social : Lille. Directeur de la publication : Clément LEGRAND.</p>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
+      {/* Cookie Banner */}
       <AnimatePresence>
         {showCookieBanner && (
-          <motion.div initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} className="cookie-banner-custom show">
-            <p>{t('cookie-desc')}</p>
-            <button onClick={() => handleCookieAction(true)}>{t('cookie-accept')}</button>
+          <motion.div initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} className="fixed bottom-6 left-6 right-6 md:left-auto md:w-96 z-[200] bg-[#1a1a1a] border border-white/10 p-6 rounded-xl shadow-2xl">
+            <p className="text-sm text-white/70 mb-6 leading-relaxed">{t('cookie-desc')}</p>
+            <div className="flex gap-3">
+              <button onClick={() => handleCookieAction(true)} className="flex-1 py-3 bg-white text-black text-xs font-bold uppercase rounded-lg hover:bg-gray-200 transition-all">{t('cookie-accept')}</button>
+              <button onClick={() => handleCookieAction(false)} className="px-6 py-3 border border-white/10 text-xs font-bold uppercase rounded-lg hover:bg-white/5 transition-all">{t('cookie-decline')}</button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
