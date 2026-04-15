@@ -4,5 +4,6 @@
   --color-gold: #D4AF37;
 }
 :root { --sang: #8B0000; --gold: #D4AF37; }
-body { margin: 0; background-color: #0a0a0a; color: white; overflow-x: hidden; }
-.gold-text { color: var(--gold); font-weight: 800; }
+body { margin: 0; background-color: #0a0a0a; color: white; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+.gold-text { color: var(--gold); font-weight: 900; }
+.rtl { direction: rtl; font-family: sans-serif; }
