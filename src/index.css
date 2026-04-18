@@ -1,9 +1,109 @@
 @import "tailwindcss";
+
 @theme {
   --color-sang: #8B0000;
   --color-gold: #D4AF37;
+  --color-ivory: #FFFFF0;
+  --font-jakarta: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --radius-google: 1.25rem;
 }
-:root { --sang: #8B0000; --gold: #D4AF37; }
-body { margin: 0; background-color: #0a0a0a; color: white; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-.gold-text { color: var(--gold); font-weight: 900; }
-.rtl { direction: rtl; font-family: sans-serif; }
+
+:root {
+  --sang: #8B0000;
+  --gold: #D4AF37;
+  --ivory: #FFFFF0;
+}
+
+body {
+  margin: 0;
+  background-color: #020202;
+  color: var(--ivory);
+  font-family: var(--font-jakarta);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+.gold-text {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.sang-text {
+  color: var(--sang);
+  font-weight: 700;
+}
+
+/* Custom Scrollbar - Minimal */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020202;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sang);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: var(--gold);
+  color: black;
+}
+
+/* Vanta Edition Background - Cleaner radial */
+.vanta-edition {
+  position: relative;
+  background: #020202;
+}
+
+/* Grain Overlay - More subtle */
+.grain-overlay {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.15;
+  filter: contrast(120%) brightness(100%);
+}
+
+.rtl {
+  direction: rtl;
+}
+
+/* Glow Effects - Refined */
+.glow-gold {
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+}
+
+.glow-sang {
+  filter: drop-shadow(0 0 8px rgba(139, 0, 0, 0.3));
+}
+
+.border-subtle {
+  border-color: rgba(212, 175, 55, 0.15);
+}
+
+/* Utility Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
