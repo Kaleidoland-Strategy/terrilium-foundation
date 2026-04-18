@@ -308,24 +308,27 @@ export default function App() {
     <div className={`vanta-edition min-h-screen bg-[#020202] text-[#FFFFF0] font-['Plus_Jakarta_Sans',sans-serif] ${lang === 'ar' ? 'rtl' : 'ltr'}`}>
       <div className="grain-overlay fixed inset-0 pointer-events-none z-[9999]" />
 
-      {/* Header */}
-      <header className="fixed top-0 w-full z-50 bg-[#020202]/80 backdrop-blur-xl">
-        <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-4 group">
+      <header className="fixed top-0 w-full z-50 bg-[#020202]/80 backdrop-blur-xl transition-all duration-300">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-3 sm:gap-4 group">
             <div className="relative">
-              <img src="/logo.png" alt="Terrilium" className="h-10 w-auto transition-all duration-500 group-hover:scale-105 relative z-10 glow-gold" />
+              <img 
+                src="/logo.png" 
+                alt="Terrilium" 
+                className="h-8 sm:h-10 w-auto transition-transform duration-500 lg:group-hover:scale-105 relative z-10 glow-gold will-change-transform" 
+              />
             </div>
-            <span className="text-lg font-black tracking-[0.2em] text-[#FFFFF0] group-hover:text-[#D4AF37] transition-colors uppercase">TERRILIUM</span>
+            <span className="text-sm sm:text-lg font-black tracking-[0.2em] text-[#FFFFF0] lg:group-hover:text-[#D4AF37] transition-colors uppercase whitespace-nowrap">TERRILIUM</span>
           </a>
           
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-3 sm:gap-8">
             <ul className="hidden lg:flex items-center gap-10 text-[10px] font-bold tracking-[0.25em] uppercase text-[#FFFFF0]/80">
               <li><a href="#manifeste" className="hover:text-[#D4AF37] transition-all hover:text-glow-gold">{t('nav-manifesto')}</a></li>
               <li><a href="#actions" className="hover:text-[#D4AF37] transition-all hover:text-glow-gold">{t('nav-actions')}</a></li>
             </ul>
 
-            <div className="flex items-center gap-5">
-              <div className="hidden sm:flex items-center gap-4 border-r border-subtle pr-5 border-opacity-30">
+            <div className="flex items-center gap-3 sm:gap-5">
+              <div className="hidden md:flex items-center gap-4 border-r border-subtle pr-5 border-opacity-30">
                 {[
                   { icon: Instagram, href: "https://www.instagram.com/terrilium.heritage/", label: "Instagram" },
                   { icon: Linkedin, href: "https://www.linkedin.com/company/terrilium", label: "LinkedIn" },
@@ -347,14 +350,14 @@ export default function App() {
 
               <button 
                 onClick={() => openModal('don')} 
-                className="bg-[#8B0000] text-[#FFFFF0] px-6 py-2.5 rounded-full text-[10px] font-black tracking-widest hover:bg-[#D4AF37] hover:text-[#020202] transition-all duration-300 shadow-lg shadow-[#8B0000]/20 border border-[#D4AF37]/20"
+                className="bg-[#8B0000] text-[#FFFFF0] px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-[9px] sm:text-[10px] font-black tracking-widest hover:bg-[#D4AF37] hover:text-[#020202] active:scale-95 transition-all duration-300 shadow-lg shadow-[#8B0000]/20 border border-[#D4AF37]/20 whitespace-nowrap"
               >
                 {t('nav-support')}
               </button>
 
               <div className="relative">
-                <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center gap-2 text-[10px] font-black border border-subtle px-3 py-1.5 rounded-full uppercase tracking-widest hover:border-[#D4AF37] transition-all text-[#FFFFF0]/60 bg-white/5">
-                  <Globe size={12} /> {lang} <ChevronDown size={10} className={`transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+                <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center gap-1.5 sm:gap-2 text-[9px] sm:text-[10px] font-black border border-subtle px-2 sm:px-3 py-1.5 rounded-full uppercase tracking-widest hover:border-[#D4AF37] active:scale-95 transition-all text-[#FFFFF0]/60 bg-white/5">
+                  <Globe size={11} className="sm:w-[12px]" /> {lang} <ChevronDown size={10} className={`transition-transform duration-300 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {isLangMenuOpen && (
@@ -375,16 +378,16 @@ export default function App() {
 
       <main className="pt-16">
         {/* Hero */}
-        <section className="min-h-screen flex items-center px-6 relative overflow-hidden bg-gradient-to-b from-[#050505] to-[#020202]">
+        <section className="min-h-screen flex items-center px-4 sm:px-6 relative overflow-hidden bg-gradient-to-b from-[#050505] to-[#020202]">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[#8B0000]/5 blur-[200px] rounded-full pointer-events-none animate-pulse-subtle" />
           
-          <div className="max-w-6xl mx-auto text-center relative z-10 w-full">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-subtle bg-white/5 backdrop-blur-md mb-12">
-              <div className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-              <span className="text-[#D4AF37] uppercase tracking-[0.4em] text-[10px] font-bold">{t('hero-eyebrow')}</span>
+          <div className="max-w-6xl mx-auto text-center relative z-10 w-full pt-20 sm:pt-0">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-subtle bg-white/5 backdrop-blur-md mb-8 sm:mb-12">
+              <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+              <span className="text-[#D4AF37] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[8px] sm:text-[10px] font-bold">{t('hero-eyebrow')}</span>
             </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-5xl md:text-8xl lg:text-[100px] font-black leading-[0.9] mb-12 tracking-tight uppercase text-[#FFFFF0] text-glow-gold" dangerouslySetInnerHTML={{ __html: t('hero-title') }} />
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-xl md:text-2xl lg:text-3xl text-[#FFFFF0]/70 max-w-4xl mx-auto leading-relaxed font-light mb-16" dangerouslySetInnerHTML={{ __html: t('hero-lead') }} />
+            <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-4xl sm:text-6xl md:text-8xl lg:text-[100px] font-black leading-[1.0] sm:leading-[0.9] mb-8 sm:mb-12 tracking-tight uppercase text-[#FFFFF0] text-glow-gold" dangerouslySetInnerHTML={{ __html: t('hero-title') }} />
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-base sm:text-xl md:text-2xl lg:text-3xl text-[#FFFFF0]/70 max-w-4xl mx-auto leading-relaxed font-light mb-12 sm:mb-16 px-4" dangerouslySetInnerHTML={{ __html: t('hero-lead') }} />
             {/* Coulée Verticale Rouge Sang */}
             <motion.div 
               initial={{ opacity: 0, scaleY: 0 }} 
@@ -396,18 +399,18 @@ export default function App() {
         </section>
 
         {/* Manifeste */}
-        <section id="manifeste" className="py-16 md:py-24 px-6 relative bg-gradient-to-b from-transparent via-[#8B0000]/5 to-transparent">
-          <div className="max-w-7xl mx-auto space-y-12">
+        <section id="manifeste" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 relative bg-gradient-to-b from-transparent via-[#8B0000]/5 to-transparent">
+          <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
             <div className="relative">
-              <div className="flex items-center justify-center gap-4 md:gap-6 mb-8 md:mb-12">
-                <div className="w-8 md:w-12 h-[2px] bg-[#8B0000]" />
-                <h2 className="text-[#D4AF37] font-black text-[9px] md:text-[10px] tracking-[0.4em] md:tracking-[0.5em] uppercase">{t('tag-01')}</h2>
-                <div className="w-8 md:w-12 h-[2px] bg-[#8B0000]" />
+              <div className="flex items-center justify-center gap-3 sm:gap-6 mb-6 sm:mb-12">
+                <div className="w-6 sm:w-12 h-[2px] bg-[#8B0000]" />
+                <h2 className="text-[#D4AF37] font-black text-[8px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.5em] uppercase">{t('tag-01')}</h2>
+                <div className="w-6 sm:w-12 h-[2px] bg-[#8B0000]" />
               </div>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.2] lg:leading-[1.1] tracking-tight text-[#FFFFF0] uppercase text-center" dangerouslySetInnerHTML={{ __html: t('manifeste-mega') }} />
+              <p className="text-2xl sm:text-4xl lg:text-5xl font-black leading-[1.2] lg:leading-[1.1] tracking-tight text-[#FFFFF0] uppercase text-center px-2" dangerouslySetInnerHTML={{ __html: t('manifeste-mega') }} />
             </div>
-            <div className="flex flex-col items-center space-y-8 md:space-y-12 text-center">
-              <p className="text-base md:text-lg lg:text-xl text-[#FFFFF0]/60 leading-relaxed font-light max-w-3xl mx-auto">{t('manifeste-body')}</p>
+            <div className="flex flex-col items-center space-y-6 sm:space-y-12 text-center">
+              <p className="text-sm sm:text-lg lg:text-xl text-[#FFFFF0]/60 leading-relaxed font-light max-w-3xl mx-auto px-4">{t('manifeste-body')}</p>
               <div>
                 <a href="#soutenir" className="group inline-flex items-center gap-4 md:gap-6 text-[#D4AF37] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[10px] hover:translate-x-2 transition-transform duration-500">
                   <span className="border-b border-[#D4AF37]/30 pb-1 group-hover:border-[#D4AF37] transition-colors">{t('cta-join')}</span>
@@ -430,13 +433,13 @@ export default function App() {
               </div>
               <div className="text-[10px] font-bold text-[#FFFFF0]/30 tracking-[0.4em] uppercase">Architecture du Futur</div>
             </div>
-            <div className="lg:col-span-10 lg:col-start-2 grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {[1, 2, 3].map((num) => (
-                <div key={num} className="group p-10 lg:p-12 rounded-google border border-subtle bg-[#080808]/50 hover:bg-[#8B0000]/5 transition-all duration-500 relative overflow-hidden backdrop-blur-sm flex flex-col">
-                  <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span className="text-7xl font-black text-[#FFFFF0]/5 group-hover:text-[#D4AF37]/5 mb-10 block tracking-tighter transition-colors">0{num}</span>
-                  <h3 className="text-xl font-black mb-6 uppercase tracking-wide text-[#D4AF37]">{t(`pilier-${num}-h3`)}</h3>
-                  <p className="text-[#FFFFF0]/50 leading-relaxed font-light text-base group-hover:text-[#FFFFF0]/80 transition-colors flex-1">{t(`pilier-${num}-p`)}</p>
+                <div key={num} className="group p-8 sm:p-10 lg:p-12 rounded-google border border-subtle bg-[#080808]/50 hover:bg-[#8B0000]/5 transition-all duration-500 relative overflow-hidden backdrop-blur-sm flex flex-col">
+                  <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity" />
+                  <span className="text-5xl sm:text-7xl font-black text-[#FFFFF0]/5 lg:group-hover:text-[#D4AF37]/5 mb-6 sm:mb-10 block tracking-tighter transition-colors">0{num}</span>
+                  <h3 className="text-lg sm:text-xl font-black mb-4 sm:mb-6 uppercase tracking-wide text-[#D4AF37]">{t(`pilier-${num}-h3`)}</h3>
+                  <p className="text-[#FFFFF0]/50 leading-relaxed font-light text-sm sm:text-base lg:group-hover:text-[#FFFFF0]/80 transition-colors flex-1">{t(`pilier-${num}-p`)}</p>
                 </div>
               ))}
             </div>
@@ -447,31 +450,31 @@ export default function App() {
         <div className="w-[1px] md:w-[2px] h-12 md:h-20 bg-gradient-to-b from-transparent via-[#8B0000] to-transparent opacity-40 mx-auto" />
 
         {/* Soutenir */}
-        <section id="soutenir" className="py-16 md:py-24 px-6 relative overflow-hidden bg-[#020202]">
+        <section id="soutenir" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 relative overflow-hidden bg-[#020202]">
           <div className="max-w-5xl mx-auto text-center relative z-10">
-            <h2 className="text-[#D4AF37] font-black text-[10px] tracking-[0.8em] uppercase mb-16">{t('tag-03')}</h2>
-            <p className="text-4xl md:text-6xl font-black mb-32 tracking-tight leading-[1.1] text-[#FFFFF0]" dangerouslySetInnerHTML={{ __html: t('soutien-lead') }} />
+            <h2 className="text-[#D4AF37] font-black text-[8px] sm:text-[10px] tracking-[0.6em] sm:tracking-[0.8em] uppercase mb-10 sm:mb-16">{t('tag-03')}</h2>
+            <p className="text-2xl sm:text-4xl md:text-6xl font-black mb-16 sm:mb-32 tracking-tight leading-[1.2] sm:leading-[1.1] text-[#FFFFF0] px-2" dangerouslySetInnerHTML={{ __html: t('soutien-lead') }} />
             
-            <div className="grid md:grid-cols-12 gap-10 mb-32">
-              <div className="md:col-span-7 flex flex-col p-12 lg:p-14 rounded-google border border-subtle bg-[#050505] text-left group hover:scale-[1.01] transition-all duration-500 shadow-2xl shadow-black/50">
-                <h3 className="text-2xl font-black mb-6 uppercase tracking-tight text-[#D4AF37]">{t('card-don-h3')}</h3>
-                <p className="text-[#FFFFF0]/40 text-base mb-10 font-light leading-relaxed">{t('card-don-p')}</p>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-10 mb-16 sm:mb-32">
+              <div className="md:col-span-7 flex flex-col p-8 sm:p-12 lg:p-14 rounded-google border border-subtle bg-[#050505] text-left group hover:scale-[1.01] transition-all duration-500 shadow-2xl shadow-black/50">
+                <h3 className="text-xl sm:text-2xl font-black mb-4 sm:mb-6 uppercase tracking-tight text-[#D4AF37]">{t('card-don-h3')}</h3>
+                <p className="text-[#FFFFF0]/40 text-sm sm:text-base mb-8 sm:mb-10 font-light leading-relaxed">{t('card-don-p')}</p>
                 <div className="mt-auto">
                   <button 
                     onClick={() => openModal('don')} 
-                    className="w-full py-5 bg-[#8B0000] text-[#FFFFF0] rounded-full font-black uppercase tracking-[0.3em] text-[10px] hover:bg-[#D4AF37] hover:text-[#020202] transition-all shadow-xl shadow-[#8B0000]/20"
+                    className="w-full py-4 sm:py-5 bg-[#8B0000] text-[#FFFFF0] rounded-full font-black uppercase tracking-[0.3em] text-[10px] hover:bg-[#D4AF37] hover:text-[#020202] active:scale-95 transition-all duration-300 shadow-xl shadow-[#8B0000]/20 border border-[#D4AF37]/20"
                   >
                     {t('btn-don')}
                   </button>
                 </div>
               </div>
-              <div className="md:col-span-5 flex flex-col p-12 lg:p-14 rounded-google border border-[#D4AF37]/30 bg-[#050505] text-left group hover:scale-[1.01] transition-all duration-500 shadow-2xl shadow-black/50">
-                <h3 className="text-2xl font-black mb-6 uppercase tracking-tight text-[#D4AF37]">{t('card-adh-h3')}</h3>
-                <p className="text-[#FFFFF0]/40 text-base mb-10 font-light leading-relaxed">{t('card-adh-p')}</p>
+              <div className="md:col-span-5 flex flex-col p-8 sm:p-12 lg:p-14 rounded-google border border-[#D4AF37]/30 bg-[#050505] text-left group hover:scale-[1.01] transition-all duration-500 shadow-2xl shadow-black/50">
+                <h3 className="text-xl sm:text-2xl font-black mb-4 sm:mb-6 uppercase tracking-tight text-[#D4AF37]">{t('card-adh-h3')}</h3>
+                <p className="text-[#FFFFF0]/40 text-sm sm:text-base mb-8 sm:mb-10 font-light leading-relaxed">{t('card-adh-p')}</p>
                 <div className="mt-auto">
                   <a 
                     href="#adhesion-area" 
-                    className="block w-full py-5 border-2 border-[#D4AF37] text-[#D4AF37] rounded-full text-center font-black uppercase tracking-[0.3em] text-[10px] hover:bg-[#D4AF37] hover:text-[#020202] transition-all"
+                    className="block w-full py-4 sm:py-5 border-2 border-[#D4AF37] text-[#D4AF37] rounded-full text-center font-black uppercase tracking-[0.3em] text-[10px] hover:bg-[#D4AF37] hover:text-[#020202] active:scale-95 transition-all"
                   >
                     {t('btn-adh')}
                   </a>
@@ -486,15 +489,15 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="py-24 md:py-40 px-6 bg-[#010101] relative z-10">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-24 lg:gap-32 items-start">
-          <div className="space-y-12">
-            <div className="flex items-center gap-4 group">
-              <img src="/logo.png" alt="" className="h-10 w-auto opacity-70 group-hover:opacity-100 transition-opacity glow-gold" />
-              <span className="font-black tracking-[0.2em] text-xl uppercase text-[#FFFFF0]">TERRILIUM</span>
+      <footer className="py-16 sm:py-24 md:py-40 px-4 sm:px-6 bg-[#010101] relative z-10 text-center md:text-left">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 sm:gap-24 lg:gap-32 items-start">
+          <div className="space-y-8 sm:space-y-12">
+            <div className="flex items-center justify-center md:justify-start gap-4 group">
+              <img src="/logo.png" alt="" className="h-8 sm:h-10 w-auto opacity-70 lg:group-hover:opacity-100 transition-opacity glow-gold" />
+              <span className="font-black tracking-[0.2em] text-lg sm:text-xl uppercase text-[#FFFFF0]">TERRILIUM</span>
             </div>
-            <p className="text-[#FFFFF0]/40 text-base font-light leading-relaxed max-w-sm">Bassin Minier Global — Plateforme de Réhabilitation Culturelle & Territoriale.</p>
-            <div className="flex gap-4">
+            <p className="text-[#FFFFF0]/40 text-sm sm:text-base font-light leading-relaxed max-w-sm mx-auto md:mx-0">Bassin Minier Global — Plateforme de Réhabilitation Culturelle & Territoriale.</p>
+            <div className="flex justify-center md:justify-start gap-4">
               {[
                 { icon: Instagram, href: "https://www.instagram.com/terrilium.heritage/", label: "Instagram" },
                 { icon: Linkedin, href: "https://www.linkedin.com/company/terrilium", label: "LinkedIn" },
@@ -506,24 +509,24 @@ export default function App() {
                   href={social.href} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-12 h-12 border border-subtle rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#020202] transition-all text-[#FFFFF0]/30 hover:border-[#D4AF37]"
+                  className="w-10 h-10 sm:w-12 sm:h-12 border border-subtle rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#020202] active:scale-95 transition-all text-[#FFFFF0]/30 hover:border-[#D4AF37]"
                 >
-                  <social.icon size={20} />
+                  <social.icon size={18} />
                 </a>
               ))}
-              <a href="mailto:clement@kaleidoland.fr" className="w-12 h-12 border border-subtle rounded-full flex items-center justify-center hover:bg-[#8B0000] hover:text-[#FFFFF0] transition-all text-[#8B0000] shadow-lg shadow-black/50 hover:border-[#D4AF37]"><Mail size={20} /></a>
+              <a href="mailto:clement@kaleidoland.fr" className="w-10 h-10 sm:w-12 sm:h-12 border border-subtle rounded-full flex items-center justify-center hover:bg-[#8B0000] hover:text-[#FFFFF0] active:scale-95 transition-all text-[#8B0000] shadow-lg shadow-black/50 hover:border-[#D4AF37]"><Mail size={18} /></a>
             </div>
           </div>
-          <div className="space-y-12">
+          <div className="space-y-10 sm:space-y-12">
             <h4 className="text-[10px] font-black tracking-[0.5em] uppercase text-[#D4AF37]">{t('navigation')}</h4>
-            <div className="flex flex-col gap-5">
-              <button onClick={() => openModal('legal')} className="text-left text-base text-[#FFFFF0]/60 hover:text-[#D4AF37] transition-colors font-bold uppercase tracking-widest">{t('footer-legal')}</button>
-              <button onClick={() => openModal('privacy')} className="text-left text-base text-[#FFFFF0]/60 hover:text-[#D4AF37] transition-colors font-bold uppercase tracking-widest">{t('footer-privacy')}</button>
+            <div className="flex flex-col gap-4 sm:gap-5">
+              <button onClick={() => openModal('legal')} className="text-center md:text-left text-base text-[#FFFFF0]/60 hover:text-[#D4AF37] transition-colors font-bold uppercase tracking-widest">{t('footer-legal')}</button>
+              <button onClick={() => openModal('privacy')} className="text-center md:text-left text-base text-[#FFFFF0]/60 hover:text-[#D4AF37] transition-colors font-bold uppercase tracking-widest">{t('footer-privacy')}</button>
               <a href="mailto:clement@kaleidoland.fr" className="text-base text-[#FFFFF0]/60 hover:text-[#8B0000] transition-colors font-bold uppercase tracking-widest">{t('footer-contact')}</a>
             </div>
           </div>
-          <div className="md:text-right space-y-12">
-            <div className="p-10 border border-subtle rounded-google inline-block md:ml-auto bg-[#080808]/50 backdrop-blur-md">
+          <div className="md:text-right space-y-10 sm:space-y-12">
+            <div className="p-8 sm:p-10 border border-subtle rounded-google inline-block md:ml-auto bg-[#080808]/50 backdrop-blur-md">
               <p className="text-[10px] text-[#D4AF37] font-black uppercase tracking-[0.4em] mb-4">{t('footer-values')}</p>
               <p className="text-[10px] text-[#FFFFF0]/20 uppercase tracking-[0.3em]">© 2026. Terrilium — Cultures & Patrimoines.</p>
             </div>
