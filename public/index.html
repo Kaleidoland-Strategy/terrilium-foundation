@@ -2,40 +2,61 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Terrilium - Ingénierie Patrimoniale et Valorisation du Bassin Minier.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terrilium | Cultures & Patrimoines</title>
+    <title>Terrilium | Patrimoines & Innovation</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <style>
-        /* Optimisation visuelle immédiate */
+        :root {
+            --accent: #e0e0e0;
+            --soft-white: #f8f8f8;
+        }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: var(--soft-white); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; }
+        
+        .hero { padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; letter-spacing: -1px; }
+        .tagline { font-style: italic; opacity: 0.8; font-size: 1.1rem; }
+
+        .card { 
+            background: rgba(255,255,255,0.03); 
+            border-radius: 15px; 
+            padding: 30px; 
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+            background: rgba(255,255,255,0.07); 
+        }
+        
+        .nexus-contact {
+            margin-top: 60px;
+            padding: 40px;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+            border-radius: 20px;
+        }
+
         .btn-nexus {
-            display: block;
-            width: 100%;
-            padding: 20px;
-            background: transparent;
-            color: #fff;
-            border: 1px solid #fff;
-            text-align: center;
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--soft-white);
+            color: #000;
+            border-radius: 50px;
             text-decoration: none;
-            font-family: monospace;
-            letter-spacing: 3px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            margin-top: 2rem;
-            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s shadow;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
         .btn-nexus:hover {
-            background: #fff;
-            color: #000;
-            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(255,255,255,0.1);
         }
-        .security-note {
-            font-size: 0.7rem;
-            color: #666;
-            text-align: center;
-            margin-top: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        
+        .security-note { font-size: 0.75rem; opacity: 0.5; margin-top: 1.5rem; }
+        footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 40px 20px; opacity: 0.6; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -65,20 +86,19 @@
         </div>
     </div>
 
-    <!-- Remplacement du formulaire par le Nexus de liaison direct -->
-    <div class="nexus-contact">
-        <h2 style="font-size: 1rem; color: #fff; text-align: center; letter-spacing: 4px;">LIAISON DIRECTE</h2>
-        <a href="mailto:clement@terrilium.org?subject=[NEXUS] Demande de liaison stratégique" class="btn-nexus">
+    <div class="nexus-contact" style="text-align: center;">
+        <h2 style="margin-bottom: 25px;">Liaison Directe</h2>
+        <a href="mailto:clement@terrilium.org?subject=Bonjour Terrilium ! Liaison en cours" class="btn-nexus">
             INITIER LA TRANSMISSION
         </a>
-        <p class="security-note">Protocole chiffré via serveur mail souverain</p>
+        <p class="security-note">Protocole chiffré via serveur mail souverain • Terrilium Foundation</p>
     </div>
 </main>
 
-<footer>
+<footer style="text-align: center;">
     <p>Association TERRILIUM | SIREN : 924 947 183</p>
     <p>25 RUE DE LA JUSTICE, 59000 LILLE</p>
-    <p>Confidentialité et Secret Professionnel garantis par l'Article 9 des Statuts.</p>
+    <p style="margin-top:10px;">Confidentialité et Secret Professionnel garantis par l'Article 9 des Statuts.</p>
 </footer>
 
 </body>
