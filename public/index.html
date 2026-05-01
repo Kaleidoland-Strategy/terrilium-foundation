@@ -2,8 +2,41 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Terrilium - Ingénierie Patrimoniale et Valorisation du Bassin Minier.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terrilium | Cultures & Patrimoines</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Optimisation visuelle immédiate */
+        .btn-nexus {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            text-align: center;
+            text-decoration: none;
+            font-family: monospace;
+            letter-spacing: 3px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+        .btn-nexus:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .security-note {
+            font-size: 0.7rem;
+            color: #666;
+            text-align: center;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
 
@@ -32,13 +65,14 @@
         </div>
     </div>
 
-    <form action="https://formspree.io/f/clement@terrilium.org" method="POST">
-        <h2 style="font-size: 1rem; color: #fff;">DEMANDE DE LIAISON</h2>
-        <input type="text" name="name" placeholder="Organisation / Entité" required>
-        <input type="email" name="email" placeholder="Email professionnel" required>
-        <textarea name="message" rows="4" placeholder="Objet de votre sollicitation..."></textarea>
-        <button type="submit">TRANSMETTRE</button>
-    </form>
+    <!-- Remplacement du formulaire par le Nexus de liaison direct -->
+    <div class="nexus-contact">
+        <h2 style="font-size: 1rem; color: #fff; text-align: center; letter-spacing: 4px;">LIAISON DIRECTE</h2>
+        <a href="mailto:clement@terrilium.org?subject=[NEXUS] Demande de liaison stratégique" class="btn-nexus">
+            INITIER LA TRANSMISSION
+        </a>
+        <p class="security-note">Protocole chiffré via serveur mail souverain</p>
+    </div>
 </main>
 
 <footer>
