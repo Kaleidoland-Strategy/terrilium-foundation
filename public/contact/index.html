@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Institutionnel | Terrilium</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Portail de Contact Terrilium</h2>
+        <p>Pour toute demande de partenariat, subvention (FDVA, JEP) ou accès aux données SIG.</p>
+        <form action="https://formspree.io/f/clement@terrilium.org" method="POST">
+            <label>Nom / Institution :</label>
+            <input type="text" name="name" required placeholder="Ex: Mairie de Loos-en-Gohelle">
+            
+            <label>Email professionnel :</label>
+            <input type="email" name="_replyto" required>
+            
+            <label>Objet de la demande :</label>
+            <select name="subject">
+                <option value="patrimoine">Accès Jumeau Numérique (Terrils)</option>
+                <option value="partenariat">Partenariat Culturel / UNESCO</option>
+                <option value="presse">Relations Presse</option>
+            </select>
+            
+            <label>Message :</label>
+            <textarea name="message" rows="5"></textarea>
+            
+            <button type="submit">Envoyer la demande officielle</button>
+        </form>
+    </div>
+</body>
+</html>
