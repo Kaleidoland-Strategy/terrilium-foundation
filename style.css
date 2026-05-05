@@ -1,6 +1,9 @@
-body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; line-height: 1.6; }
-.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle, #1a1a1a 0%, #000 100%); }
-.matrix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 4rem; }
-.card { border-left: 1px solid #333; padding: 1.5rem; transition: border-color 0.3s; }
-.card:hover { border-left: 1px solid #fff; }
-.btn-primary { background: transparent; border: 1px solid #fff; color: #fff; padding: 1rem 2rem; text-transform: uppercase; letter-spacing: 2px; }
+body { background-color: #000; color: #fff; font-family: 'Inter', -apple-system, sans-serif; margin: 0; line-height: 1.6; }
+.hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle, #111 0%, #000 100%); border-bottom: 1px solid #222; }
+h1 { font-size: 4rem; letter-spacing: 10px; font-weight: 200; margin-bottom: 0; }
+.matrix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem; background: #000; }
+.card { border: 1px solid #222; padding: 2rem; transition: all 0.4s ease; cursor: crosshair; }
+.card:hover { border-color: #fff; background: #050505; }
+.btn-primary { background: transparent; border: 1px solid #fff; color: #fff; padding: 1.2rem 3rem; margin-top: 2rem; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
+.btn-primary:hover { background: #fff; color: #000; }
+footer { padding: 2rem; text-align: center; font-size: 0.7rem; color: #444; border-top: 1px solid #111; }
