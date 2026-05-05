@@ -1,9 +1,37 @@
-body { background-color: #000; color: #fff; font-family: 'Inter', -apple-system, sans-serif; margin: 0; line-height: 1.6; }
-.hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle, #111 0%, #000 100%); border-bottom: 1px solid #222; }
-h1 { font-size: 4rem; letter-spacing: 10px; font-weight: 200; margin-bottom: 0; }
-.matrix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem; background: #000; }
-.card { border: 1px solid #222; padding: 2rem; transition: all 0.4s ease; cursor: crosshair; }
-.card:hover { border-color: #fff; background: #050505; }
-.btn-primary { background: transparent; border: 1px solid #fff; color: #fff; padding: 1.2rem 3rem; margin-top: 2rem; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
-.btn-primary:hover { background: #fff; color: #000; }
-footer { padding: 2rem; text-align: center; font-size: 0.7rem; color: #444; border-top: 1px solid #111; }
+:root { --black: #050505; --gray: #1a1a1a; --accent: #ffffff; }
+body { background-color: var(--black); color: var(--accent); font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
+
+/* Background Morphologique */
+.terril-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, #000 60%, #111 100%);
+    z-index: -1;
+}
+
+.terril-shape {
+    position: absolute; bottom: 0; width: 60%; height: 40vh;
+    background: var(--gray);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    opacity: 0.3; filter: blur(2px);
+}
+
+.hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; z-index: 1; }
+h1 { font-size: 5rem; letter-spacing: 15px; font-weight: 100; text-transform: uppercase; margin: 0; }
+
+/* Grid Stratigraphique */
+.matrix-grid { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1px; background: #222; border-top: 1px solid #222;
+}
+.card { 
+    background: var(--black); padding: 3rem; transition: 0.5s; 
+    border-bottom: 2px solid transparent;
+}
+.card:hover { background: #080808; border-bottom: 2px solid var(--accent); }
+
+.btn-contact {
+    border: 1px solid var(--accent); padding: 1rem 2rem;
+    background: transparent; color: white; cursor: pointer;
+    margin-top: 2rem; transition: 0.3s;
+}
+.btn-contact:hover { background: white; color: black; }
