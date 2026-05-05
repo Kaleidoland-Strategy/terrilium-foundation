@@ -1,9 +1,5 @@
 {
   "name": "terrilium-foundation",
-  "version": "2.0.0",
-  "private": true,
-  "scripts": {
-    "build": "echo 'Build Override: Success'",
-    "install": "echo 'Install Override: Success'"
-  }
+  "version": "3.0.0",
+  "private": true
 }

@@ -1,78 +1,19 @@
-:root { 
-    --vantablack: #050505; 
-    --sang: #8a0303; 
-    --or: #ffcc00;
-    --bleu-f: #002395;
-    --rouge-f: #ed2939;
-    --accent: #ffffff; 
-}
-
-body { 
-    background-color: var(--vantablack); 
-    color: var(--accent); 
-    font-family: 'Inter', -apple-system, sans-serif; 
-    margin: 0; 
-    overflow-x: hidden; 
-}
-
-/* Identité Républicaine */
-.tricolore-top {
-    position: fixed; top: 0; width: 100%; height: 4px;
-    background: linear-gradient(to right, var(--bleu-f) 33.3%, #fff 33.3%, #fff 66.6%, var(--rouge-f) 66.6%);
-    z-index: 1000;
-}
-
-/* Background Orographique */
-.terril-bg {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1;
-}
-
-.terril-shape {
-    position: absolute; bottom: -5vh; width: 70%; height: 50vh;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    filter: blur(40px); opacity: 0.15;
-}
+:root { --vanta: #050505; --sang: #8a0303; --or: #ffcc00; --bleu: #002395; --rouge: #ed2939; }
+body { background: var(--vanta); color: white; font-family: sans-serif; margin: 0; overflow-x: hidden; }
+.tricolore-top { position: fixed; top: 0; width: 100%; height: 5px; background: linear-gradient(to right, var(--bleu) 33%, white 33%, white 66%, var(--rouge) 66%); z-index: 100; }
+.terril-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+.terril-shape { position: absolute; bottom: -10%; width: 70%; height: 60vh; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); filter: blur(60px); opacity: 0.2; }
 .sang { left: -10%; background: var(--sang); }
-.or { right: -10%; background: var(--or); height: 40vh; }
-
-/* Hero Section */
+.or { right: -10%; background: var(--or); height: 50vh; }
 .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-.status-badge { font-size: 0.6rem; letter-spacing: 3px; color: var(--or); margin-bottom: 1rem; border: 1px solid var(--or); padding: 4px 12px; }
-h1 { font-size: clamp(3rem, 10vw, 6rem); letter-spacing: 20px; font-weight: 100; text-transform: uppercase; margin: 0; }
-.tagline { font-size: 0.8rem; letter-spacing: 5px; opacity: 0.6; margin-top: 1rem; text-transform: uppercase; }
-.location-marker { font-size: 0.5rem; letter-spacing: 4px; margin-top: 2rem; color: var(--rouge-f); }
-
-/* Grid Stratigraphique */
-.container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
-.matrix-grid { 
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 2rem; margin-bottom: 5rem;
-}
-.card { 
-    background: rgba(255,255,255,0.02); padding: 3rem; position: relative;
-    border: 1px solid rgba(255,255,255,0.05); transition: 0.4s ease;
-}
-.card:hover { background: rgba(255,255,255,0.05); transform: translateY(-5px); }
-.card-edge { position: absolute; top: 0; left: 0; width: 3px; height: 100%; }
+h1 { font-size: clamp(3rem, 10vw, 7rem); letter-spacing: 15px; font-weight: 100; margin: 0; }
+.status-badge { font-size: 0.6rem; color: var(--or); border: 1px solid var(--or); padding: 5px 15px; margin-bottom: 2rem; letter-spacing: 3px; }
+.matrix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.card { background: #0a0a0a; padding: 2rem; border: 1px solid #1a1a1a; position: relative; }
+.card-edge { position: absolute; left: 0; top: 0; height: 100%; width: 4px; }
 .card-edge.sang { background: var(--sang); }
 .card-edge.or { background: var(--or); }
-.card h3 { font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; color: #fff; }
-.card p { font-size: 0.8rem; line-height: 1.6; color: #888; }
-
-/* Contact Section */
-.contact-section { text-align: center; padding: 6rem 0; border-top: 1px solid rgba(255,255,255,0.05); }
-.sang-or-text { font-size: 1.2rem; letter-spacing: 8px; background: linear-gradient(to right, var(--sang), var(--or)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 2rem; }
-.btn-contact {
-    display: inline-block; padding: 1.2rem 3.5rem; border: 1px solid var(--accent); 
-    background: transparent; color: white; text-decoration: none; font-size: 0.7rem; 
-    letter-spacing: 3px; transition: 0.4s;
-}
-.btn-contact:hover { background: white; color: black; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
-.foundation-id { font-size: 0.6rem; color: #444; margin-top: 2rem; letter-spacing: 4px; }
-
-/* Footer */
-footer { padding: 4rem 2rem; background: #000; border-top: 1px solid var(--sang); }
-.footer-content { max-width: 1200px; margin: 0 auto; text-align: center; opacity: 0.6; }
-footer p { font-size: 0.65rem; letter-spacing: 1px; margin: 0.5rem 0; }
-.confidential { margin-top: 2rem; font-style: italic; color: var(--or); opacity: 0.4; }
+.contact-section { text-align: center; padding: 5rem 0; }
+.btn-contact { border: 1px solid white; padding: 1rem 3rem; color: white; text-decoration: none; letter-spacing: 2px; font-size: 0.7rem; transition: 0.3s; }
+.btn-contact:hover { background: white; color: black; }
+footer { text-align: center; padding: 2rem; font-size: 0.6rem; opacity: 0.4; letter-spacing: 1px; }

@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRILIUM | Ingénierie de Rareté</title>
-    <style>
-        :root { --vanta: #050505; --accent: #ffffff; }
-        body { background: var(--vanta); color: var(--accent); font-family: sans-serif; margin: 0; overflow-x: hidden; }
-        .terril-container { position: fixed; bottom: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
-        .terril { position: absolute; bottom: 0; background: #111; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); opacity: 0.4; }
-        .t1 { width: 80%; height: 60vh; left: -10%; }
-        .t2 { width: 60%; height: 40vh; right: -5%; background: #1a1a1a; opacity: 0.2; }
-        main { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
-        h1 { font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 100; letter-spacing: 0.3em; margin: 0; text-transform: uppercase; }
-        .subtitle { font-size: 0.6rem; letter-spacing: 0.5em; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-top: 1.5rem; }
-        .contact-btn { margin-top: 3rem; padding: 1rem 3rem; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; cursor: pointer; transition: 0.4s; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; }
-        .contact-btn:hover { background: white; color: black; }
-        .grid-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); width: 100%; max-width: 1200px; margin-top: 6rem; border-top: 1px solid rgba(255,255,255,0.05); }
-        .node { padding: 2.5rem; text-align: left; border-right: 1px solid rgba(255,255,255,0.05); }
-        .node h3 { font-size: 0.7rem; color: rgba(255,255,255,0.2); margin-bottom: 1rem; letter-spacing: 0.1em; }
-        .node p { font-size: 0.65rem; line-height: 1.6; color: rgba(255,255,255,0.5); text-transform: uppercase; margin: 0; }
-        footer { position: fixed; bottom: 1.5rem; width: 100%; text-align: center; font-size: 0.5rem; color: rgba(255,255,255,0.15); letter-spacing: 0.3em; text-transform: uppercase; }
-    </style>
+    <title>TERRILIUM | Cultures & Patrimoines</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="terril-container"><div class="terril t1"></div><div class="terril t2"></div></div>
-    <main>
+    <div class="tricolore-top"></div>
+    <div class="terril-bg">
+        <div class="terril-shape sang"></div>
+        <div class="terril-shape or"></div>
+    </div>
+    <section class="hero">
+        <div class="status-badge">SOUVERAINETÉ RÉGALIENNE ACTIVATE</div>
         <h1>TERRILIUM</h1>
-        <div class="subtitle">Valorisation, Préservation & Rayonnement</div>
-        <button class="contact-btn" onclick="window.location.href='mailto:clement@terrilium.org'">ÉCHANGEONS ENSEMBLE</button>
-        <div class="grid-matrix">
-            <div class="node"><h3>VALORISATION TERRITORIALE</h3><p>Faire rayonner les trésors industriels et naturels du Nord-Pas-de-Calais grâce à l'innovation.</p></div>
-            <div class="node"><h3>LIEN SOCIAL & MÉMOIRE</h3><p>Renforcer la connexion entre la mémoire ouvrière et la création contemporaine.</p></div>
-            <div class="node"><h3>TRANSITION ÉCOLOGIQUE</h3><p>Engager nos sites patrimoniaux dans une démarche de préservation durable et solidaire.</p></div>
+        <div class="tagline">Valorisation, Préservation & Rayonnement des Patrimoines</div>
+        <div class="location-marker">25 RUE DE LA JUSTICE, LILLE</div>
+    </section>
+    <main class="container">
+        <div class="matrix-grid">
+            <div class="card"><div class="card-edge sang"></div><h3>VALORISATION TERRITORIALE</h3><p>Innovation numérique au service des trésors du Bassin Minier.</p></div>
+            <div class="card"><div class="card-edge or"></div><h3>LIEN SOCIAL & MÉMOIRE</h3><p>Connecter la mémoire ouvrière à la création contemporaine.</p></div>
+            <div class="card"><div class="card-edge sang"></div><h3>TRANSITION ÉCOLOGIQUE</h3><p>Préservation durable et solidaire de nos sites patrimoniaux.</p></div>
+            <div class="card"><div class="card-edge or"></div><h3>TRANSMISSION</h3><p>Faire vivre la culture commune du Nord-Pas-de-Calais.</p></div>
+        </div>
+        <div class="contact-section">
+            <h2 class="sang-or-text">ÉCHANGEONS ENSEMBLE</h2>
+            <a href="mailto:clement@terrilium.org?subject=Liaison Terrilium" class="btn-contact">PRENDRE CONTACT</a>
+            <p class="foundation-id">SIREN : 993 257 070 | RNA : W595045857</p>
         </div>
     </main>
-    <footer>SIREN : 993 257 070 | LILLE | TERRILIUM - CULTURES & PATRIMOINES</footer>
+    <footer>
+        <p>Association TERRILIUM | Confidentialité garantie (Art. 9 des Statuts)</p>
+    </footer>
 </body>
 </html>
